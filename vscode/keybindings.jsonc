@@ -1,0 +1,537 @@
+[
+    //  _              _     _           _ _                    _
+    // | | _____ _   _| |__ (_)_ __   __| (_)_ __   __ _ ___   (_)___  ___  _ __
+    // | |/ / _ \ | | | '_ \| | '_ \ / _` | | '_ \ / _` / __|  | / __|/ _ \| '_ \
+    // |   <  __/ |_| | |_) | | | | | (_| | | | | | (_| \__ \_ | \__ \ (_) | | | |
+    // |_|\_\___|\__, |_.__/|_|_| |_|\__,_|_|_| |_|\__, |___(_)/ |___/\___/|_| |_|
+    //           |___/                             |___/     |__/
+    // ###################################################################################
+    // # GENERAL                                                                         #
+    // ###################################################################################
+    {
+      "command": "editor.action.quickFix",
+      "key": "ctrl+[Period]",
+      "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+      "command": "workbench.action.gotoSymbol",
+      "key": "cmd+o"
+    },
+    {
+      "command": "workbench.action.showAllSymbols",
+      "key": "cmd+o"
+    },
+    {
+      "command": "workbench.action.navigateBack",
+      "key": "ctrl+shift+o",
+      "when": "canNavigateBack"
+    },
+    {
+      "command": "workbench.action.showCommands",
+      "key": "cmd+k"
+    },
+    {
+      "command": "-workbench.action.showCommands",
+      "key": "shift+cmd+p"
+    },
+    {
+      "command": "list.find",
+      "key": "/",
+      "when": "listFocus && listSupportsKeyboardNavigation && !inputFocus"
+    },
+    // ###################################################################################
+    // # POPUP NAVIGATION                                                                #
+    // ###################################################################################
+    {
+      "command": "workbench.action.quickOpenSelectPrevious",
+      "key": "ctrl+k",
+      "when": "inQuickOpen"
+    },
+    {
+      "command": "workbench.action.quickOpenSelectNext",
+      "key": "ctrl+j",
+      "when": "inQuickOpen"
+    },
+    {
+      "command": "search.focus.nextInputBox",
+      "key": "ctrl+j",
+      "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible"
+    },
+    {
+      "command": "selectNextSuggestion",
+      "key": "ctrl+j",
+      "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+      "command": "selectPrevSuggestion",
+      "key": "ctrl+k",
+      "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+      "command": "acceptSelectedSuggestion",
+      "key": "ctrl+l",
+      "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    // ###################################################################################
+    // # NOTEBOOK COMMANDS                                                               #
+    // ###################################################################################
+    {
+      "command": "notebook.cell.toggleOutputs",
+      "key": "t",
+      "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+      "command": "-notebook.cell.insertCodeCellAboveAndFocusContainer",
+      "key": "a",
+      "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+      "command": "jupyter.restartkernel",
+      "key": "r",
+      "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+      "command": "notebook.cell.changeToCode",
+      "key": "c",
+      "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+      "command": "-notebook.cell.changeToCode",
+      "key": "y",
+      "when": "notebookEditorFocused && !inputFocus && activeEditor == 'workbench.editor.notebook' && notebookCellType == 'markup'"
+    },
+    {
+      "command": "-notebook.cell.cut",
+      "key": "x",
+      "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+      "command": "notebook.cell.insertCodeCellAbove",
+      "key": "shift+o",
+      "when": "notebookCellListFocused && !inputFocus"
+    },
+    {
+      "command": "notebook.cell.insertCodeCellBelow",
+      "key": "o",
+      "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+      "command": "notebook.cell.joinBelow",
+      "key": "shift+l",
+      "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+      "command": "notebook.cell.joinAbove",
+      "key": "shift+h",
+      "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+      "command": "notebook.cell.moveUp",
+      "key": "shift+ctrl+k",
+      "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+      "command": "notebook.cell.moveDown",
+      "key": "shift+ctrl+j",
+      "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+      "command": "notebook.cell.pasteAbove",
+      "key": "shift+p",
+      "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+      "command": "notebook.cell.copy",
+      "key": "y",
+      "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+      "command": "notebook.cell.paste",
+      "key": "p",
+      "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+      "command": "notebook.cell.cut",
+      "key": "x",
+      "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+      "command": "notebook.cell.edit",
+      "key": "i",
+      "when": "notebookCellListFocused && notebookEditable && !inputFocus"
+    },
+    {
+      "command": "default:undo",
+      "key": "u",
+      "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+      "command": "notebook.execute",
+      "key": "ctrl+shift+enter",
+      "when": "notebookCellListFocused && notebookCellType == 'code' || editorTextFocus && inputFocus && notebookEditorFocused"
+    },
+    {
+      "command": "-notebook.cell.execute",
+      "key": "ctrl+enter",
+      "when": "notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0"
+    },
+    // ###################################################################################
+    // # VIM MOVE WINDOWS                                                                #
+    // ###################################################################################
+    {
+      "command": "workbench.action.moveEditorToLeftGroup",
+      "key": "ctrl+w ctrl+h"
+    },
+    {
+      "command": "workbench.action.moveEditorToRightGroup",
+      "key": "ctrl+w ctrl+l"
+    },
+    {
+      "command": "workbench.action.moveEditorToBelowGroup",
+      "key": "ctrl+w ctrl+j"
+    },
+    {
+      "command": "workbench.action.moveEditorToAboveGroup",
+      "key": "ctrl+w ctrl+k"
+    },
+    {
+      "command": "workbench.action.focusLeftGroup",
+      "key": "ctrl+w h"
+    },
+    {
+      "command": "workbench.action.focusRightGroup",
+      "key": "ctrl+w l"
+    },
+    {
+      "command": "workbench.action.focusAboveGroup",
+      "key": "ctrl+w k"
+    },
+    {
+      "command": "workbench.action.focusBelowGroup",
+      "key": "ctrl+w j"
+    },
+    {
+      "command": "workbench.action.evenEditorWidths",
+      "key": "ctrl+w shift+0"
+    },
+    {
+      "command": "workbench.action.toggleEditorWidths",
+      "key": "ctrl+w shift+-"
+    },
+    // ###################################################################################
+    // # LIST COMMANDS                                                                   #
+    // ###################################################################################
+    {
+      "command": "list.expand",
+      "key": "o",
+      "when": "listFocus && !inputFocus && !notebookEditorFocused"
+    },
+    {
+      "command": "list.expandSelectionDown",
+      "key": "shift+j",
+      "when": "listFocus && listSupportsMultiselect && !inputFocus"
+    },
+    {
+      "command": "list.expandSelectionUp",
+      "key": "shift+k",
+      "when": "listFocus && listSupportsMultiselect && !inputFocus"
+    },
+    {
+      "command": "list.toggleExpand",
+      "key": "l",
+      "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+      "command": "list.expandSelectionDown",
+      "key": "shift+o",
+      "when": "!notebookCellListFocused  && listFocus && listSupportsMultiselect && !inputFocus"
+    },
+    {
+      "command": "list.collapse",
+      "key": "c",
+      "when": "!notebookEditorFocused && listFocus && !inputFocus"
+    },
+    {
+      "command": "list.selectAndPreserveFocus",
+      "key": "l",
+      "when": "listFocus && !inputFocus"
+    },
+    {
+      "command": "list.collapseAll",
+      "key": "m",
+      "when": "!notebookEditorFocused && listFocus && !inputFocus"
+    },
+    {
+      "command": "list.toggleExpand",
+      "key": "a",
+      "when": "listFocus && !inputFocus"
+    },
+    {
+      "command": "-list.toggleExpand",
+      "key": "o",
+      "when": "listFocus && !inputFocus"
+    },
+    {
+      "command": "list.focusDown",
+      "key": "n",
+      "when": "listFocus && !inputFocus"
+    },
+    {
+      "command": "list.focusUp",
+      "key": "shift+n",
+      "when": "listFocus && !inputFocus"
+    },
+    // ###################################################################################
+    // # EXPLORER COMMANDS                                                               #
+    // ###################################################################################
+    {
+      "command": "renameFile",
+      "key": "r",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+      "command": "-renameFile",
+      "key": "enter",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+      "command": "filesExplorer.copy",
+      "key": "y",
+      "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+      "command": "filesExplorer.cut",
+      "key": "x",
+      "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+      "command": "filesExplorer.paste",
+      "key": "p",
+      "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+      "command": "deleteFile",
+      "key": "d",
+      "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+      "command": "explorer.newFile",
+      "key": "f",
+      "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+      "command": "explorer.newFolder",
+      "key": "shift+f",
+      "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+      "command": "-explorer.newFile",
+      "key": "a",
+      "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+      "command": "-explorer.newFolder",
+      "key": "shift+a",
+      "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+      "command": "list.select",
+      "key": "enter",
+      "when": "filesExplorerFocus && !inputFocus"
+    },
+    // ###################################################################################
+    // # TOGGLE VSPACE CODE                                                              #
+    // ###################################################################################
+    {
+      "command": "vspacecode.space",
+      "key": "space",
+      "when": "activeEditorGroupEmpty && focusedView == '' && !whichkeyActive && !inputFocus"
+    },
+    {
+      "command": "vspacecode.space",
+      "key": "space",
+      "when": "sideBarFocus && !inputFocus && !whichkeyActive"
+    },
+    {
+      "command": "vspacecode.space",
+      "key": "space",
+      "when": "!inputFocus && !whichkeyActive && terminalFocus || problemFocus || problemsFilterFocus || focusedView == 'workbench.panel.markers.view'"
+    },
+    {
+      "command": "vspacecode.space",
+      "key": "space",
+      "when": "notebookEditorFocused && !inputFocus"
+    },
+    // ###################################################################################
+    // # WINDOW NAVIGATION                                                               #
+    // ###################################################################################
+    // MOVE BETWEEN TABS
+    {
+      "command": "workbench.action.nextEditor",
+      "key": "cmd+l"
+    },
+    {
+      "command": "workbench.action.previousEditor",
+      "key": "cmd+h"
+    },
+    // IN PANEL
+    {
+      "command": "workbench.action.focusActiveEditorGroup",
+      "key": "ctrl+k",
+      "when": "panelFocus"
+    },
+    // IN SIDEBAR
+    {
+      "command": "workbench.action.focusActiveEditorGroup",
+      "key": "ctrl+l",
+      "when": "sideBarFocus"
+    },
+    // IN AUXILIARYBAR
+    {
+      "command": "workbench.action.focusActiveEditorGroup",
+      "key": "ctrl+h",
+      "when": "auxiliaryBarFocus"
+    },
+    // IN EDITOR
+    {
+      "command": "workbench.action.focusSideBar",
+      "key": "ctrl+h",
+      "when": "editorFocus && sideBarVisible"
+    },
+    {
+      "command": "workbench.action.focusAuxiliaryBar",
+      "key": "ctrl+l",
+      "when": "editorFocus && auxiliaryBarVisible"
+    },
+    {
+      "command": "workbench.action.focusPanel",
+      "key": "ctrl+j",
+      "when": "editorFocus"
+    },
+    // ###################################################################################
+    // # QUICK NAVIGATION FOR DIFF VIEW                                                  #
+    // ###################################################################################
+    {
+      "command": "diffEditor.switchSide",
+      "key": "ctrl+w h",
+      "when": "isInDiffEditor && !isInDiffLeftEditor"
+    },
+    {
+      "command": "diffEditor.switchSide",
+      "key": "ctrl+w l",
+      "when": "isInDiffEditor && isInDiffLeftEditor"
+    },
+    // ###################################################################################
+    // # REMOVE KEYBINDINGS                                                              #
+    // ###################################################################################
+    {
+      "command": "-workbench.action.toggleSidebarVisibility",
+      "key": "cmd+b"
+    },
+    // ###################################################################################
+    // # MULTI VISUAL                                                                    #
+    // ###################################################################################
+    {
+      "args": {
+        "after": [
+          "g",
+          "b"
+        ]
+      },
+      "command": "vim.remap",
+      "key": "n",
+      "when": "editorTextFocus && vim.mode == 'Visual'"
+    },
+    {
+      "args": {
+        "after": [
+          "g",
+          "b"
+        ]
+      },
+      "command": "editor.action.focusNextCursor",
+      "key": "]",
+      "when": "editorTextFocus && vim.mode == 'Visual'"
+    },
+    {
+      "args": {
+        "after": [
+          "g",
+          "b"
+        ]
+      },
+      "command": "editor.action.focusPreviousCursor",
+      "key": "[",
+      "when": "editorTextFocus && vim.mode == 'Visual'"
+    },
+    {
+      "command": "editor.action.insertCursorBelow",
+      "key": "ctrl+shift+j",
+      "when": "editorTextFocus"
+    },
+    {
+      "command": "editor.action.insertCursorAbove",
+      "key": "ctrl+shift+k",
+      "when": "editorTextFocus"
+    },
+    // ###################################################################################
+    // # VIM STUFF                                #
+    // ###################################################################################
+    {
+      "command": "vim.showQuickpickCmdLine",
+      "key": "shift+;",
+      "when": "editorTextFocus && vim.mode == 'Normal'"
+    },
+    {
+      "command": "editor.action.showHover",
+      "key": "shift+k",
+      "when": "editorTextFocus && vim.mode == 'Normal'"
+    },
+    {
+      "command": "vspacecode.space",
+      "key": "space",
+      "when": "editorTextFocus && vim.mode == 'Normal'"
+    },
+    {
+      "args": {
+        "after": [
+          "g",
+          "b"
+        ]
+      },
+      "command": "vim.remap",
+      "key": "ctrl+n",
+      "when": "editorTextFocus && vim.mode == 'Normal'"
+    },
+    {
+      "args": {
+        "after": [
+          "g",
+          "b"
+        ]
+      },
+      "command": "vim.remap",
+      "key": "ctrl+n",
+      "when": "editorTextFocus && vim.mode == 'Visual'"
+    },
+    {
+      "key": "ctrl+f",
+      "command": "editor.action.inlineSuggest.showNext",
+      "when": "inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+      "key": "alt+]",
+      "command": "-editor.action.inlineSuggest.showNext",
+      "when": "inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+      "key": "ctrl+b",
+      "command": "editor.action.inlineSuggest.showPrevious",
+      "when": "inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+      "key": "alt+[",
+      "command": "-editor.action.inlineSuggest.showPrevious",
+      "when": "inlineSuggestionVisible && !editorReadonly"
+    }
+  ]

@@ -1,0 +1,25 @@
+.DS_Store
+
+# iterm
+iterm2/*
+!iterm2/*.plist
+
+# raycast
+raycast
+
+# tmux
+tmux/plugins
+
+# op
+op
+
+# zsh
+zsh/*
+!zsh/.zshrc
+
+# brew
+homebrew/*.lock.json
+
+# ssh
+ssh
+!ssh/config

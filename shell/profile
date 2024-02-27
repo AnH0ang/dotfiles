@@ -1,0 +1,54 @@
+#! /usr/bin/env sh
+
+#                     __ _ _
+#    _ __  _ __ ___  / _(_) | ___
+#   | '_ \| '__/ _ \| |_| | |/ _ \
+#  _| |_) | | | (_) |  _| | |  __/
+# (_) .__/|_|  \___/|_| |_|_|\___|
+#   |_|
+
+# language
+export LC_ALL="en_US.UTF-8"
+
+# local scripts
+export PATH="$PATH:$HOME/.config/bin"
+
+# xdg settings
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+
+# cd
+export CDPATH="$CDPATH:$HOME"
+
+# defaults
+export VISUAL="nvim"
+export EDITOR="nvim"
+export GIT_EDITOR="nvim"
+
+# zsh
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export ZGEN_DIR="$XDG_DATA_HOME/zgen/plugins"
+
+# less
+export LESSHISTFILE="-"
+
+# readline
+export INPUTRC="$XDG_CONFIG_HOME/readline/.inputrc"
+
+# fzf
+export FZF_DEFAULT_COMMAND="fd --type f --hidden --exclude .git --max-depth 4"
+
+# starship
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
+
+# pipx
+export PATH="$HOME/.local/bin:$PATH"
+
+# homebrew
+export HOMEBREW_PREFIX="/opt/homebrew"
+export HOMEBREW_CELLAR="/opt/homebrew/Cellar"
+export HOMEBREW_REPOSITORY="/opt/homebrew"
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}"
+export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:"
+export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}"

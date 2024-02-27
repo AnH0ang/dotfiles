@@ -1,0 +1,103 @@
+#! /usr/bin/env bash
+
+# fhistory - repeat a command from history
+unalias fhistory 2>/dev/null
+function fhistory() {
+    print -z "$(fc -l 1 | fzf +s --tac | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')"
+}
+
+# gitkraken - open GitKraken within the current repo
+unalias gitkraken 2>/dev/null
+function gitkraken() {
+    local repo_path=${1:-$(pwd)}
+    local absolute_path=$(realpath "$repo_path")
+    open "gitkraken://repo/$absolute_path"
+}
+
+# fd - cd to selected directory
+unalias fcd 2>/dev/null
+fcd() {
+    local options="--hidden --exclude .git"
+    local dir_preview="eza --icons --group-directories-first {}"
+    local dir_loader="fd . --type d $options"
+    local dir_prompt="Directories> "
+
+    local file_preview="bat --plain --theme ansi --force-colorization {}"
+    local file_loader="fd . --type f $options"
+    local file_prompt="Files> "
+
+    local path_or_file="$(
+        eval "$dir_loader" |
+            fzf \
+                --header 'CTRL-D: Directories / CTRL-F: Files / Tab: Change Directory' \
+                --prompt "$dir_prompt" \
+                --preview "$dir_preview" \
+                --bind "ctrl-d:change-prompt($dir_prompt)+reload($dir_loader)+change-preview($dir_preview)" \
+                --bind "ctrl-f:change-prompt($file_prompt)+reload($file_loader)+change-preview($file_preview)"
+    )"
+
+    if [ -f "$path_or_file" ]; then
+        cd "$(dirname "$path_or_file")"
+    elif [ -d "$path_or_file" ]; then
+        cd "$path_or_file"
+    else
+        return 1
+    fi
+}
+
+# fz - jump to directory listed in z
+unalias fz 2>/dev/null
+fz() {
+    [ $# -gt 0 ] && _z "$*" && return
+    local out="$(
+        zoxide query -s -l 2>&1 |
+            fzf \
+                --header "Ctrl-O: Open | Ctrl-V: VSCode | Ctrl-E: Editor" \
+                --height 40% \
+                --no-sort \
+                --nth 2.. \
+                --reverse \
+                --inline-info +s \
+                --expect ctrl-o,ctrl-v,ctrl-e \
+                --preview 'eza --icons --group-directories-first --color=always {2..}' \
+                --preview-window top,1 \
+                --pointer='👉' \
+                --query "${*##-* }"
+    )"
+    key=$(head -1 <<<"$out")
+    file=$(head -2 <<<"$out" | tail -1 | awk '{print $2}')
+
+    case "$key" in
+    ctrl-o) open "$file" ;;
+    ctrl-v) code "$file" ;;
+    ctrl-e) $EDITOR "$file" ;;
+    *) cd "$file" ;;
+    esac
+}
+
+# ycd - cd with yazi
+unalias ycd 2>/dev/null
+ycd() {
+    tmp="$(mktemp)"
+    yazi --cwd-file="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        if [ -d "$dir" ]; then
+            if [ "$dir" != "$(pwd)" ]; then
+                cd "$dir"
+            fi
+        fi
+    fi
+}
+
+# fgrep - search for a pattern in files with fzf
+unalias fgrep 2>/dev/null
+fgrep() {
+    rg --color=always --line-number --no-heading --smart-case "${*:-}" |
+        fzf --ansi \
+            --color "hl:-1:underline,hl+:-1:underline:reverse" \
+            --delimiter : \
+            --preview 'bat --theme ansi --color always {1} --highlight-line {2}' \
+            --preview-window 'up,60%,border-bottom,+{2}+3/3,~3'
+}

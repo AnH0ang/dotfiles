@@ -1,0 +1,48 @@
+#! /bin/bash
+
+CONFIG_DIR="${XDG_DATA_HOME:-~}/.git_users.json"
+
+function main() {
+    touch "$CONFIG_DIR"
+
+    command=$(echo -e "Select a global user\nSelect a local user\nAdd a new user" | fzf --prompt="What do you want to do? ")
+
+    case "$command" in
+    "Add a new user")
+        read -p "Tag: " tag
+        read -p "User name: " name
+        read -p "User email: " email
+
+        # Add new user to JSON config
+        if [[ -s "$CONFIG_DIR" ]]; then
+            jq --arg t "$tag" --arg n "$name" --arg e "$email" \
+                '. + {($t): {"user.name": $n, "user.email": $e}}' \
+                "$CONFIG_DIR" >"$CONFIG_DIR.tmp" && mv "$CONFIG_DIR.tmp" "$CONFIG_DIR"
+        else
+            echo "{\"$tag\": {\"user.name\": \"$name\", \"user.email\": \"$email\"}}" >"$CONFIG_DIR"
+        fi
+        ;;
+
+    "Select a global user" | "Select a local user")
+        user=$(jq 'keys_unsorted[]' "$CONFIG_DIR" | fzf --prompt="Select a user: ")
+
+        if [ "$user" != "" ]; then
+            user=$(echo "$user" | tr -d '"')
+            user_name=$(jq --raw-output ".$user.\"user.name\"" "$CONFIG_DIR")
+            user_email=$(jq --raw-output ".$user.\"user.email\"" "$CONFIG_DIR")
+
+            scope=""
+            [ "$command" = "Select a global user" ] && scope="--global"
+
+            git config $scope user.name "$user_name"
+            git config $scope user.email "$user_email"
+        fi
+        ;;
+
+    *)
+        echo "Invalid choice"
+        ;;
+    esac
+}
+
+main

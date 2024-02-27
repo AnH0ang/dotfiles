@@ -1,0 +1,26 @@
+[include]
+    path = aliases
+    path = user
+
+[init]
+    defaultBranch = main # use 'main' as the default branch name
+
+[log]
+    date = relative # show relative date
+    follow = true   # follow file renames
+
+[merge]
+    autoStash = true # stash local changes before merging
+
+[pretty]
+    stash = format:%C(bold magenta)%gd %C(blue)%>(13,trunc)%ad %C(reset)%s
+
+[pull]
+    ff = only # fast-forward only
+
+[push]
+    autoSetupRemote = true # push to the upstream branch
+    followTags = true      # always push annotated tag(s)
+
+[rebase]
+    autoStash = true

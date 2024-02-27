@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# shorten long commands
+alias \
+    kc="kubectl" \
+    gk="gitkraken" \
+    yy="yazi"
+
+# new commands
+alias \
+    vim="nvim" \
+    jq="yq" \
+    shred="rm -P" \
+    view="nvim -R" \
+    tree="eza --tree"
+
+# overwrite commands
+alias \
+    exa="eza"
+
+# Colorize commands when possible.
+alias \
+    ls="ls -G" \
+    less="less -R" \
+    grep="grep --color=auto" \
+    diff="diff --color=auto"

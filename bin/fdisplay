@@ -1,0 +1,25 @@
+#! /bin/sh
+
+echo "Press Ctrl-D to delte a arranement and Ctrl-S to save the current one"
+fdisplay_dir="${XDG_DATA_HOME:-~}/fdisplayrc"
+touch "$fdisplay_dir"
+out=$(fzf --expect=ctrl-s,ctrl-d <"$fdisplay_dir")
+key=$(echo "$out" | head -1)
+out=$(echo "$out" | head -2 | tail -1)
+
+if [ "$key" = "ctrl-s" ]; then
+    echo "new display config name: "
+    read -r sessionname
+    current_config=$(displayplacer list | tail -n 1 | grep -o "\".*\"" | sed "s/\"//g")
+    echo "$sessionname >>> $current_config" >>"$fdisplay_dir"
+    echo "write config to $fdisplay_dir"
+
+elif [ "$key" = "ctrl-d" ]; then
+    tmpfile="$(mktemp)"
+    grep -vF "$out" "$fdisplay_dir" >"$tmpfile"
+    mv "$tmpfile" "$fdisplay_dir"
+
+elif [ -n "$out" ]; then
+    chosen_config=$(echo "$out" | sed "s/\(.*\) >>> \(.*\)/\2/")
+    displayplacer "$chosen_config"
+fi

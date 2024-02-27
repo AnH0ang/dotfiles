@@ -1,0 +1,34 @@
+[alias]
+    # Log
+    log-diff = log -p
+
+    # Refs
+    branches = branch --all -vv
+    remotes = remote --verbose
+    tags = tag --list -n1 --sort=-version:refname
+
+    # Stage
+    staged = diff --staged
+    unstage = restore --staged
+    discard = restore --staged --worktree
+    discard-all = !git stash push -u && git stash drop
+    untrack = rm --cached
+    nuke = !git clean -df && git reset HEAD --hard
+
+    # Commit
+    amend = commit -q --amend --no-edit
+    uncommit = reset --soft HEAD~1
+
+    # Push
+    publish = push -q --set-upstream origin HEAD
+    unpublish = !git push -q origin --delete $(git branch --show-current)
+    sync = !git pull --rebase && git push -q
+
+    # Diff
+    difft = difftool
+
+    # Grep
+    grep = !rg
+
+    # List
+    ls-branch = branch --all --list -vv

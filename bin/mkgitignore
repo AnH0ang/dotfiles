@@ -1,0 +1,20 @@
+#! /bin/sh
+
+# Clone gitignore repo if not already present
+if [ ! -d "$HOME/.cache/gitignore" ]; then
+    git clone git@github.com:github/gitignore.git "$HOME/.cache/gitignore"
+fi
+
+# Select gitignore files with fzf
+selections=$(find ~/.cache/gitignore -type f -name "*.gitignore" |
+    sed 's/.*gitignore\///g' |
+    fzf -m --preview "cat $HOME/.cache/gitignore/{}")
+
+# Add templates to .gitignore
+for sec in $selections; do
+    {
+        printf '# ---------- %s ---------- \n\n' "$sec"
+        cat "$HOME/.cache/gitignore/$sec"
+        printf '\n'
+    } >>.gitignore
+done

@@ -1,0 +1,561 @@
+{
+    //           _   _   _                    _
+    //  ___  ___| |_| |_(_)_ __   __ _ ___   (_)___  ___  _ __
+    // / __|/ _ \ __| __| | '_ \ / _` / __|  | / __|/ _ \| '_ \
+    // \__ \  __/ |_| |_| | | | | (_| \__ \_ | \__ \ (_) | | | |
+    // |___/\___|\__|\__|_|_| |_|\__, |___(_)/ |___/\___/|_| |_|
+    //                           |___/     |__/
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "[latex]": {
+        "editor.wordWrap": "wordWrapColumn"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.stickyScroll.enabled": true,
+        "files.insertFinalNewline": true,
+        "files.trimFinalNewlines": true,
+        "files.trimTrailingWhitespace": true
+    },
+    "[shellscript]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.shellcheck": "explicit"
+        }
+    },
+    "[toml]": {
+        "editor.defaultFormatter": "tamasfe.even-better-toml"
+    },
+    "breadcrumbs.enabled": false,
+    "debug.onTaskErrors": "showErrors",
+    "debug.toolBarLocation": "docked",
+    "diffEditor.diffAlgorithm": "advanced",
+    "diffEditor.experimental.showMoves": true,
+    "diffEditor.useInlineViewWhenSpaceIsLimited": false,
+    "diffEditor.wordWrap": "off",
+    "editor.accessibilitySupport": "off",
+    "editor.bracketPairColorization.enabled": false,
+    "editor.codeActionsOnSave": {
+        "source.addMissingImports": "explicit",
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    "editor.codeActionWidget.includeNearbyQuickFixes": true,
+    "editor.cursorBlinking": "solid",
+    "editor.folding": false,
+    "editor.fontFamily": "'FiraCode Nerd Font', SFMono-Regular, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 10.5,
+    "editor.formatOnSave": true,
+    "editor.guides.indentation": false,
+    "editor.inlayHints.enabled": "on",
+    "editor.inlineSuggest.enabled": true,
+    "editor.inlineSuggest.showToolbar": "always",
+    "editor.lineNumbers": "on",
+    "editor.linkedEditing": true,
+    "editor.minimap.enabled": false,
+    "editor.multiCursorModifier": "alt",
+    "editor.quickSuggestionsDelay": 5,
+    "editor.renderLineHighlight": "all",
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
+    "editor.suggest.preview": true,
+    "editor.tabCompletion": "on",
+    "editor.wordWrapColumn": 88,
+    "errorLens.excludeBySource": [
+        "cSpell",
+        "YAML(0)"
+    ],
+    "explorer.autoReveal": "focusNoScroll",
+    "explorer.compactFolders": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmUndo": "light",
+    "explorer.incrementalNaming": "smart",
+    "explorer.openEditors.sortOrder": "fullPath",
+    "extensions.ignoreRecommendations": true,
+    "files.associations": {
+        "*.cfg": "raw",
+        "*.plist": "xml",
+        ".envrc*": "shellscript",
+        "config": "raw"
+    },
+    "files.exclude": {
+        "**/*.egg-info": true,
+        "**/.mypy_cache": true,
+        "**/.pytest_cache": true,
+        "**/.ruff_cache": true,
+        "**/__pycache__": true
+    },
+    "git.autofetch": false,
+    "git.autoRepositoryDetection": "openEditors",
+    "git.confirmSync": false,
+    "git.inputValidation": true,
+    "git.mergeEditor": true,
+    "git.openRepositoryInParentFolders": "never",
+    "github.copilot.enable": {
+        "*": true,
+        "markdown": true,
+        "plaintext": true,
+        "scminput": false
+    },
+    "gitlens.codeLens.enabled": false,
+    "jupyter.askForKernelRestart": false,
+    "jupyter.debugJustMyCode": false,
+    "notebook.consolidatedRunButton": true,
+    "notebook.dragAndDropEnabled": false,
+    "notebook.formatOnSave.enabled": true,
+    "notebook.globalToolbarShowLabel": "never",
+    "notebook.insertToolbarLocation": "hidden",
+    "notebook.output.scrolling": true,
+    "notebook.output.textLineLimit": 20,
+    "notebook.showCellStatusBar": "visible",
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.pytestParameters": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "search.quickOpen.includeHistory": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "shellcheck.exclude": [
+        "2155",
+        "2164",
+        "1091"
+    ],
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.fontSize": 11.5,
+    "terminal.integrated.scrollback": 10000,
+    "terminal.integrated.stickyScroll.enabled": false,
+    "testing.alwaysRevealTestOnStateChange": true,
+    "testing.automaticallyOpenPeekView": "failureAnywhere",
+    "testing.defaultGutterClickAction": "debug",
+    "testing.followRunningTest": false,
+    "testing.openTesting": "openOnTestFailure",
+    "vim.camelCaseMotion.enable": true,
+    "vim.easymotion": true,
+    "vim.highlightedyank.duration": 300,
+    "vim.highlightedyank.enable": true,
+    "vim.hlsearch": true,
+    "vim.incsearch": true,
+    "vim.leader": ";",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "g",
+                "c"
+            ],
+            "commands": [
+                "editor.showCallHierarchy"
+            ]
+        },
+        {
+            "before": [
+                "[",
+                "b"
+            ],
+            "commands": [
+                "editor.debug.action.goToPreviousBreakpoint"
+            ]
+        },
+        {
+            "before": [
+                "]",
+                "b"
+            ],
+            "commands": [
+                "editor.debug.action.goToNextBreakpoint"
+            ]
+        },
+        {
+            "before": [
+                "]",
+                "p"
+            ],
+            "commands": [
+                "editor.action.marker.nextInFiles"
+            ]
+        },
+        {
+            "before": [
+                "[",
+                "p"
+            ],
+            "commands": [
+                "editor.action.marker.prevInFiles"
+            ]
+        },
+        {
+            "before": [
+                "]",
+                "c"
+            ],
+            "commands": [
+                "workbench.action.editor.nextChange",
+                "workbench.action.compareEditor.nextChange"
+            ]
+        },
+        {
+            "before": [
+                "[",
+                "c"
+            ],
+            "commands": [
+                "workbench.action.editor.previousChange",
+                "workbench.action.compareEditor.previousChange"
+            ]
+        },
+        {
+            "before": [
+                "z",
+                "g"
+            ],
+            "commands": [
+                "cSpell.addWordToDictionary"
+            ]
+        },
+        {
+            "after": [
+                "y",
+                "$"
+            ],
+            "before": [
+                "Y"
+            ]
+        },
+        {
+            "after": [
+                "N",
+                "z",
+                "z"
+            ],
+            "before": [
+                "N"
+            ]
+        },
+        {
+            "after": [
+                "n",
+                "z",
+                "z"
+            ],
+            "before": [
+                "n"
+            ]
+        },
+        {
+            "before": [
+                "z",
+                "="
+            ],
+            "commands": [
+                "cSpell.goToNextSpellingIssueAndSuggest"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "t"
+            ],
+            "commands": [
+                "editor.action.goToTypeDefinition"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "r"
+            ],
+            "commands": [
+                "editor.action.goToReferences"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "i"
+            ],
+            "commands": [
+                "editor.action.goToImplementation"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "l"
+            ],
+            "commands": [
+                "references-view.showCallHierarchy"
+            ]
+        },
+        {
+            "before": [
+                "<space>"
+            ],
+            "commands": [
+                "vspacecode.space"
+            ]
+        },
+        {
+            "before": [
+                ","
+            ],
+            "commands": [
+                "vspacecode.space",
+                {
+                    "args": "m",
+                    "command": "whichkey.triggerKey"
+                }
+            ]
+        }
+    ],
+    "vim.targets.enable": true,
+    "vim.useSystemClipboard": true,
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<space>"
+            ],
+            "commands": [
+                "vspacecode.space"
+            ]
+        },
+        {
+            "before": [
+                ","
+            ],
+            "commands": [
+                "vspacecode.space",
+                {
+                    "args": "m",
+                    "command": "whichkey.triggerKey"
+                }
+            ]
+        }
+    ],
+    "vim.visualstar": true,
+    "vspacecode.bindingOverrides": [
+        {
+            "command": "terminal.focus",
+            "icon": "terminal-view-icon",
+            "keys": ";",
+            "name": "Open Terminal",
+            "type": "command"
+        },
+        {
+            "command": "workbench.view.testing.focus",
+            "icon": "test-view-icon",
+            "keys": "S.t",
+            "name": "Show tests",
+            "type": "command"
+        },
+        {
+            "command": "dockerContainers.focus",
+            "icon": "server",
+            "keys": "S.k",
+            "name": "Show docker",
+            "type": "command"
+        },
+        {
+            "command": "workbench.panel.chat.view.copilot.focus",
+            "icon": "comment-discussion",
+            "keys": "S.c",
+            "name": "Show chat",
+            "type": "command"
+        },
+        {
+            "command": "workbench.action.toggleSidebarVisibility",
+            "icon": "layout-sidebar-left",
+            "keys": "T.h",
+            "name": "Toggle Primary Side Bar",
+            "type": "command"
+        },
+        {
+            "command": "workbench.action.toggleAuxiliaryBar",
+            "icon": "layout-sidebar-right",
+            "keys": "T.l",
+            "name": "Toggle Secondary Side Bar",
+            "type": "command"
+        },
+        {
+            "command": "workbench.action.toggleStatusbarVisibility",
+            "icon": "layout-statusbar",
+            "keys": "T.a",
+            "name": "Toggle Status Bar",
+            "type": "command"
+        },
+        {
+            "command": "outline.focus",
+            "icon": "outline-view-icon",
+            "keys": "S.o",
+            "name": "Show outline",
+            "type": "command"
+        },
+        {
+            "command": "workbench.view.debug",
+            "icon": "breakpoints-view-icon",
+            "keys": "S.D",
+            "name": "Show debug Explorer",
+            "type": "command"
+        },
+        {
+            "command": "testing.debugAtCursor",
+            "icon": "debug-alt-small",
+            "keys": "d.t",
+            "name": "Run test at cursor",
+            "type": "command"
+        },
+        {
+            "command": "workbench.debug.action.focusCallStackView",
+            "keys": "d.a",
+            "name": "Call Stack",
+            "type": "command"
+        },
+        {
+            "command": "workbench.action.debug.selectandstart",
+            "icon": "debug",
+            "keys": "d.D",
+            "name": "Select and start debugging",
+            "type": "command"
+        },
+        {
+            "keys": "g",
+            "position": -1
+        },
+        {
+            "bindings": [
+                {
+                    "bindings": [
+                        {
+                            "command": "gitlens.views.unstageDirectory",
+                            "key": "a",
+                            "name": "Stage all files",
+                            "type": "command"
+                        },
+                        {
+                            "command": "git.unstageSelectedRanges",
+                            "key": "s",
+                            "name": "Stage selected range",
+                            "type": "command"
+                        },
+                        {
+                            "command": "git.unstage",
+                            "key": "c",
+                            "name": "Stage change in file",
+                            "type": "command"
+                        }
+                    ],
+                    "key": "u",
+                    "name": "Unstage...",
+                    "type": "bindings"
+                },
+                {
+                    "bindings": [
+                        {
+                            "command": "git.stageAll",
+                            "key": "a",
+                            "name": "Stage all files",
+                            "type": "command"
+                        },
+                        {
+                            "command": "git.stageSelectedRanges",
+                            "key": "s",
+                            "name": "Stage selected range",
+                            "type": "command"
+                        },
+                        {
+                            "command": "git.stage",
+                            "key": "c",
+                            "name": "Stage change in file",
+                            "type": "command"
+                        }
+                    ],
+                    "key": "s",
+                    "name": "Stage...",
+                    "type": "bindings"
+                },
+                {
+                    "bindings": [
+                        {
+                            "command": "git.revertSelectedRanges",
+                            "key": "s",
+                            "name": "Stage selected range",
+                            "type": "command"
+                        },
+                        {
+                            "command": "git.revertChange",
+                            "key": "c",
+                            "name": "Stage change in file",
+                            "type": "command"
+                        }
+                    ],
+                    "key": "r",
+                    "name": "Revert...",
+                    "type": "bindings"
+                },
+                {
+                    "command": "gitlens.diffWithPrevious",
+                    "key": "d",
+                    "name": "Compare with Previous Revision",
+                    "type": "command"
+                },
+                {
+                    "command": "gitlens.views.fileHistory.focus",
+                    "key": "h",
+                    "name": "File History",
+                    "type": "command"
+                },
+                {
+                    "command": "gitlens.showLineHistoryView",
+                    "key": "l",
+                    "name": "Line History",
+                    "type": "command"
+                },
+                {
+                    "command": "gitlens.showSearchAndCompareView",
+                    "key": "p",
+                    "name": "Search and Compare",
+                    "type": "command"
+                },
+                {
+                    "command": "gitlens.showCommitsView",
+                    "key": "o",
+                    "name": "Show Commits",
+                    "type": "command"
+                },
+                {
+                    "command": "gitlens.showBranchesView",
+                    "key": "b",
+                    "name": "Show Branches",
+                    "type": "command"
+                },
+                {
+                    "command": "gitlens.toggleFileBlame",
+                    "key": "a",
+                    "name": "Blame",
+                    "type": "command"
+                }
+            ],
+            "keys": "g",
+            "name": "Git...",
+            "type": "bindings"
+        }
+    ],
+    "whichkey.delay": 500,
+    "window.autoDetectColorScheme": true,
+    "window.commandCenter": false,
+    "window.title": "${rootName}",
+    "window.zoomLevel": 0.5,
+    "workbench.activityBar.location": "hidden",
+    "workbench.colorTheme": "Default Light Modern",
+    "workbench.editor.tabActionCloseVisibility": false,
+    "workbench.iconTheme": null,
+    "workbench.layoutControl.enabled": false,
+    "workbench.preferredDarkColorTheme": "Default Dark Modern",
+    "workbench.preferredLightColorTheme": "Default Light Modern",
+    "workbench.startupEditor": "none"
+}

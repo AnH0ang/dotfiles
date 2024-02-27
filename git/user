@@ -1,0 +1,13 @@
+[user]
+    name = An Hoang
+    email = anhoang31415@gmail.com
+    signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDfcQt9fjpTjI/8oSdVXFHWedU4EzSWHsvzpQ5D4prsvJ/EL1FvVUYmlKTkPnX01CLoRp3FQBkwryQyKAM7p7RcmU7Y9QLqaZQOxAw2/4GeGnByc4wFPPJAKb7h5PlJeawbSxgcTwDapZMGDmF6pm6wlYmYz723KhRu/LkJ/k8F9ipsmWX4HFToFFl+fdqEt0cz+pyVA7bW7GYHXTIu3lPwXOC3NshHHfeJP4Hoo0kR5SDspXM17vD9zOfgPlEMUhPXwzlxcz0ORhlOFqpYuE/wG9+ZjQVtq0JyT9zaBpqhuXITyJ6Y4BAl3AtZobhnXezHUj828651aGvtPs3bJXA7qNZDalYcsQX5tF1oEWGxvcYn0o7iZj0gfoCsdjtwr7y7JIxu/6QYuTaL78ude81jGAFa5Y6D4/8gP/bmUItg65Ln2siPJ80l4xF0Tfvm3RAEK4Yi4WD/I4wKXto8v9YPo5tkf1A4rxhqA6ssH0RoQHgolUh365CP/Thb6Z2+2sdHPR6C4pMFcP42A5MTK9ju8395FPbaMDs4nkA7aZZOrj080n6QjvasQDmfmHG0m1Cdy3y5QkaGwYgZLW+miTjzDrEW/p2IvjfdJd91WZvCJmjrY5aEQZN2UNiVH9nwHBEtXtshhh5pyiNb4QtJWWqbQgyndQbHQQYuMZ/LdjhIHQ==
+
+[gpg]
+    format = ssh
+
+[gpg "ssh"]
+    program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[commit]
+    gpgsign = true
