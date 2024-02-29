@@ -114,6 +114,21 @@ echo "Configure iTerm2..."
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.config/iterm2"
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -int 1
 
+# ------------------------ Mail ------------------------
+echo "Configure Mail..."
+
+# Always include the whole message in the reply
+defaults write com.apple.finder AlwaysIncludeOriginalMessage -int 1
+
+# Mark the whole converteration as read
+defaults write com.apple.finder ConversationViewMarkAllAsRead -int 1
+
+# Have the newest message at the top
+defaults write com.apple.finder ConversationViewSortDescending -int 1
+
+# Show 3 lines of the message in the snippet
+defaults write com.apple.finder NumberOfSnippetLines -int 3
+
 # ------------------------ Finder ------------------------
 echo "Configure Finder..."
 
