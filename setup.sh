@@ -159,6 +159,12 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
+# Synchronize Desktop & Documents folder with iCloud
+defaults write com.apple.finder FXICloudDriveEnabled -bool true
+defaults write com.apple.finder FXICloudDriveDesktop -bool true
+defaults write com.apple.finder FXICloudDriveDocuments -bool true
+defaults write com.apple.finder SidebarShowingiCloudDesktop -bool true
+
 # Disable create .DS_Store files
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
