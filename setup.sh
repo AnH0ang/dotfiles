@@ -92,7 +92,23 @@ defaults write com.apple.dock mru-spaces -bool FALSE
 # swtich screen when activated
 defaults write -g AppleSpacesSwitchOnActivate -bool true
 
+# ------------------------ Safari ------------------------
+echo "Configure Safari..."
+
+# Disable Password AutoFill
+defaults write -g AutoFillPasswords -int 0
+
+# Enable Extensions
+defaults write -g ExtensionsEnabled -int 1
+
+# Restore last open windows and tabs at launch
+defaults write -g AlwaysRestoreSessionAtLaunch -int 1
+
+# Disable Password Protection of Private Browsing
+defaults write -g PrivateBrowsingRequiresAuthentication -int 0
+
 # ------------------------ iTerm2 ------------------------
+echo "Configure iTerm2..."
 # write perferences folder
 # shellcheck disable=SC2088
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.config/iterm2"
