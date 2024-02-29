@@ -1,0 +1,4 @@
+confirmOnQuit: false
+
+gui:
+  nerdFontsVersion: "3"

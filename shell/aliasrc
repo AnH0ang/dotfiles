@@ -4,6 +4,7 @@
 alias \
     kc="kubectl" \
     gk="gitkraken" \
+    lg="lazygit" \
     yy="yazi"
 
 # new commands

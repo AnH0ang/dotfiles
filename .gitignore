@@ -27,3 +27,7 @@ homebrew/*.lock.json
 # ssh
 ssh
 !ssh/config
+
+# lazygit
+lazygit/*
+!lazygit/config.yml
