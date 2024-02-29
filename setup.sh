@@ -6,34 +6,40 @@
 # homebrew
 # /opt/homebrew/bin/brew tap --force homebrew/cask
 # /opt/homebrew/bin/brew tap --force homebrew/core
+echo "Install homebrew packages..."
 /opt/homebrew/bin/brew bundle install --file="${HOME}"/.config/homebrew/Brewfile
 
 # ssh
+echo "Configure ssh..."
 ln -fs "${HOME}"/.config/ssh "${HOME}"/.ssh
 
 # vscode
+echo "Configure vscode..."
 mkdir -p "${HOME}"/Library/'Application Support'/Code/User
 rm -f "${HOME}"/Library/'Application Support'/Code/User/settings.json
-ln -f "${HOME}"/.config/vscode/settings.jsonc "${HOME}"/Library/'Application Support'/Code/User/settings.json
+ln -sf "${HOME}"/.config/vscode/settings.jsonc "${HOME}"/Library/'Application Support'/Code/User/settings.json
 rm -f "${HOME}"/Library/'Application Support'/Code/User/keybindings.json
-ln -f "${HOME}"/.config/vscode/keybindings.jsonc "${HOME}"/Library/'Application Support'/Code/User/keybindings.json
+ln -sf "${HOME}"/.config/vscode/keybindings.jsonc "${HOME}"/Library/'Application Support'/Code/User/keybindings.json
 
 # zsh
-ln -f "${HOME}"/.config/shell/profile "${HOME}"/.zprofile
+echo "Configure zsh..."
+ln -sf "${HOME}"/.config/shell/profile "${HOME}"/.zprofile
 touch "${HOME}"/.hushlogin
 
 # sh
-ln -f "${HOME}"/.config/shell/profile "${HOME}"/.profile
+echo "Configure shell..."
+ln -sf "${HOME}"/.config/shell/profile "${HOME}"/.profile
 
 # hidutil (key remaps)
+echo "Configure hidutil..."
 mkdir -p "$HOME"/Library/LaunchAgents
-ln -f "$HOME"/.config/hidutil/com.local.KeyRemapping.plist "$HOME"/Library/LaunchAgents/com.local.KeyRemapping.plist
+ln -sf "$HOME"/.config/hidutil/com.local.KeyRemapping.plist "$HOME"/Library/LaunchAgents/com.local.KeyRemapping.plist
 
 ###############################################################################
 # MacOS Setting                                                               #
 ###############################################################################
 # ------------------------ UI & UX ------------------------
-echo "Configure general ui settings..."
+echo "Configure UI & UX..."
 
 # Set language and text formats
 defaults write NSGlobalDomain AppleLanguages -array "en" "de"
