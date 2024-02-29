@@ -45,6 +45,9 @@ export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 # pipx
 export PATH="$HOME/.local/bin:$PATH"
 
+# aichat
+export AICHAT_CONFIG_DIR="$XDG_CONFIG_HOME/aichat"
+
 # homebrew
 export HOMEBREW_PREFIX="/opt/homebrew"
 export HOMEBREW_CELLAR="/opt/homebrew/Cellar"

@@ -1,5 +1,9 @@
 .DS_Store
 
+# aichat
+aichat/*
+!aichat/roles.yaml
+
 # iterm
 iterm2/*
 !iterm2/*.plist

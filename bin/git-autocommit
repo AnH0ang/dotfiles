@@ -1,0 +1,7 @@
+#! /bin/sh
+
+echo "Generating commit message..."
+msg="$(git diff --staged -U5 | aichat -r commit)"
+
+echo "Make commit..."
+git commit "$@" -m "$msg"

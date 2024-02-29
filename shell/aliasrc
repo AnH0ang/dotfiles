@@ -12,7 +12,8 @@ alias \
     jq="yq" \
     shred="rm -P" \
     view="nvim -R" \
-    tree="eza --tree"
+    tree="eza --tree" \
+    help="aichat -r shell:zsh"
 
 # overwrite commands
 alias \
