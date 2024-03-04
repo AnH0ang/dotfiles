@@ -135,6 +135,12 @@ defaults write com.apple.finder ConversationViewSortDescending -int 1
 # Show 3 lines of the message in the snippet
 defaults write com.apple.finder NumberOfSnippetLines -int 3
 
+# ------------------------ Spotlight ------------------------
+echo "Configure Spotlight..."
+
+defaults write com.apple.Spotlight "NSStatusItem Visible Item-0" -bool false
+defaults write com.apple.Spotlight MenuItemHidden -bool true
+
 # ------------------------ Finder ------------------------
 echo "Configure Finder..."
 
