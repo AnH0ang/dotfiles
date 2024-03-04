@@ -54,14 +54,14 @@ bindkey -v '^?' backward-delete-char
 # generate init file and run it
 local init_file="${HOME}/.config/zsh/init.zsh"
 [[ -f "$init_file" ]] || {
-    [[ $(command -v starship) ]] && (echo "$(starship init zsh)" >>"$init_file") || true
-    [[ $(command -v pyenv) ]] && (echo "$(pyenv init -)" >>"$init_file") || true
+    [[ $(command -v starship) ]] && (starship init zsh >>"$init_file") || true
+    [[ $(command -v pyenv) ]] && (pyenv init - >>"$init_file") || true
     [[ $(command -v zoxide) ]] && (zoxide init zsh >>"$init_file") || true
+    [[ $(command -v atuin) ]] && (atuin init zsh --disable-up-arrow >>"$init_file") || true
 }
 source "$init_file"
 
 # keybindings
-bindkey -s '^r' 'fhistory\n'
 bindkey -s '^o' 'fz\n'
 bindkey -s '^g' 'fcd\n'
 bindkey -s '^l' 'ycd\n'
