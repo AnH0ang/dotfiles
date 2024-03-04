@@ -14,11 +14,11 @@
         "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
     },
     {
-        "command": "workbench.action.gotoSymbol",
-        "key": "cmd+o"
+        "command": "workbench.action.showAllSymbols",
+        "key": "shift+cmd+o"
     },
     {
-        "command": "workbench.action.showAllSymbols",
+        "command": "workbench.action.gotoSymbol",
         "key": "cmd+o"
     },
     {
