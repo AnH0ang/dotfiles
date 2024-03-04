@@ -121,6 +121,8 @@
     "python.analysis.inlayHints.variableTypes": true,
     "python.analysis.typeCheckingMode": "basic",
     "search.quickOpen.includeHistory": false,
+    "search.searchEditor.defaultNumberOfContextLines": null,
+    "search.smartCase": true,
     "security.workspace.trust.untrustedFiles": "open",
     "shellcheck.exclude": [
         "2155",
@@ -552,6 +554,7 @@
     "window.zoomLevel": 0.5,
     "workbench.activityBar.location": "hidden",
     "workbench.colorTheme": "Default Light Modern",
+    "workbench.editor.highlightModifiedTabs": false,
     "workbench.editor.tabActionCloseVisibility": false,
     "workbench.iconTheme": null,
     "workbench.layoutControl.enabled": false,
