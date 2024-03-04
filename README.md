@@ -31,3 +31,7 @@ There are configurations for the following programs and tools:
 - vscode
 - yazi
 - zsh
+
+## License
+
+[The MIT License](LICENSE)
