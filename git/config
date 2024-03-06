@@ -1,3 +1,6 @@
+[core]
+    pager = delta
+
 [include]
     path = aliases
     path = user
@@ -11,6 +14,7 @@
 
 [merge]
     autoStash = true # stash local changes before merging
+    conflictstyle = diff3
 
 [pretty]
     stash = format:%C(bold magenta)%gd %C(blue)%>(13,trunc)%ad %C(reset)%s
@@ -24,3 +28,15 @@
 
 [rebase]
     autoStash = true
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    side-by-side = true
+    light = false
+    features = catppuccin-macchiato
+
+[diff]
+    colorMoved = default
