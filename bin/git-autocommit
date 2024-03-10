@@ -4,4 +4,4 @@ echo "Generating commit message..."
 msg="$(git diff --staged -U5 | aichat -r commit)"
 
 echo "Make commit..."
-git commit "$@" -m "$msg"
+git commit "$@" --message "$msg" --edit
