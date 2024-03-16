@@ -1,0 +1,8 @@
+#! /bin/bash
+
+for file in "$@"; do
+    extension="${file##*.}"
+    filename="${file%.*}"
+    echo "Compressing $file..."
+    convert "$file" -quality 5 "$filename.suffix.$extension"
+done
