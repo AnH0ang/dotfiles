@@ -69,6 +69,7 @@
         "cSpell",
         "YAML(0)"
     ],
+    "evenBetterToml.formatter.columnWidth": 100,
     "explorer.autoReveal": "focusNoScroll",
     "explorer.compactFolders": false,
     "explorer.confirmDelete": false,
