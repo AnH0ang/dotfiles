@@ -184,8 +184,8 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # Set default view style to column
 defaults write com.apple.finder "FXPreferredViewStyle" -string "clmv"
 
-# Allow quitting via ⌘Q
-defaults write com.apple.finder QuitMenuItem -bool "true"
+# Don't allow quitting via ⌘Q
+defaults write com.apple.finder QuitMenuItem -bool false
 
 # ------------------------ Dock ------------------------
 echo "Configure Dock..."
