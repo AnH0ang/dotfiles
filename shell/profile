@@ -45,6 +45,8 @@ export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 # pipx
 export PATH="$HOME/.local/bin:$PATH"
 
+export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/startup.py"
+
 # aichat
 export AICHAT_CONFIG_DIR="$XDG_CONFIG_HOME/aichat"
 
