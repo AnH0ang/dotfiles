@@ -31,3 +31,6 @@ ssh
 # lazygit
 lazygit/*
 !lazygit/config.yml
+
+gh/*
+!gh/config.yml
