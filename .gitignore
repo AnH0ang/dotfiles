@@ -25,7 +25,7 @@ zsh/*
 homebrew/*.lock.json
 
 # ssh
-ssh
+ssh/*
 !ssh/config
 
 # lazygit

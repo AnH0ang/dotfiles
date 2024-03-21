@@ -11,6 +11,7 @@ echo "Install homebrew packages..."
 
 # ssh
 echo "Configure ssh..."
+rm -rf "${HOME}"/.ssh
 ln -fs "${HOME}"/.config/ssh "${HOME}"/.ssh
 
 # vscode
