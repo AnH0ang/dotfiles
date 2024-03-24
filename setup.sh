@@ -269,6 +269,9 @@ echo "Configure Calendar..."
 # Week starts on monday
 defaults write com.apple.iCal "first day of week" -int 2
 
+# Show 16 hours in day view
+defaults write com.apple.iCal "number of hours displayed" -int 16
+
 # ------------------------ Software Updates ------------------------
 echo "Configure Software Updates ..."
 
