@@ -1,24 +1,30 @@
 #! /bin/sh
 
-echo "Press Ctrl-D to delte a arranement and Ctrl-S to save the current one"
+# Create a file to store display configurations
 fdisplay_dir="${XDG_DATA_HOME:-~}/fdisplayrc"
 touch "$fdisplay_dir"
-out=$(fzf --expect=ctrl-s,ctrl-d <"$fdisplay_dir")
+
+# Get User's choice
+header="Press Ctrl+D to delete an arrangement and Ctrl+S to save the current one."
+out=$(fzf --header "$header" --expect=ctrl-s,ctrl-d <"$fdisplay_dir")
 key=$(echo "$out" | head -1)
 out=$(echo "$out" | head -2 | tail -1)
 
+# If user pressed Ctrl+S, save the current display configuration
 if [ "$key" = "ctrl-s" ]; then
-    echo "new display config name: "
+    echo "New display configuration name:"
     read -r sessionname
     current_config=$(displayplacer list | tail -n 1 | grep -o "\".*\"" | sed "s/\"//g")
     echo "$sessionname >>> $current_config" >>"$fdisplay_dir"
-    echo "write config to $fdisplay_dir"
+    echo "Write config to $fdisplay_dir"
 
+# If user pressed Ctrl+D, delete the selected display configuration
 elif [ "$key" = "ctrl-d" ]; then
     tmpfile="$(mktemp)"
     grep -vF "$out" "$fdisplay_dir" >"$tmpfile"
     mv "$tmpfile" "$fdisplay_dir"
 
+# If user selected a display configuration, apply it
 elif [ -n "$out" ]; then
     chosen_config=$(echo "$out" | sed "s/\(.*\) >>> \(.*\)/\2/")
     displayplacer "$chosen_config"
