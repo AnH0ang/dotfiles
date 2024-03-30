@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Check if at least one argument is provided
+if [ "$#" -lt 1 ]; then
+    echo "Usage: $(basename "$0") <image_file> [border_size]"
+    exit 1
+fi
+
+# Input image
+input_image="$1"
+
+# Optional border size argument
+border_size="${2:-200}" # Default to 200px if not provided
+
+# Validate border size is a number
+if ! [[ "$border_size" =~ ^[0-9]+$ ]]; then
+    echo "Border size must be a positive integer."
+    exit 1
+fi
+
+# Output image (change the name as per requirement)
+output_image="bordered_${input_image}"
+
+# Add white borders around the image
+convert "$input_image" -bordercolor White -border "${border_size}x${border_size}" "$output_image"
+
+echo "Output saved as $output_image"
