@@ -36,6 +36,10 @@ echo "Configure hidutil..."
 mkdir -p "$HOME"/Library/LaunchAgents
 ln -sf "$HOME"/.config/hidutil/com.local.KeyRemapping.plist "$HOME"/Library/LaunchAgents/com.local.KeyRemapping.plist
 
+# mise
+echo "Install mise packages..."
+/opt/homebrew/bin/mise install
+
 ###############################################################################
 # MacOS Setting                                                               #
 ###############################################################################
