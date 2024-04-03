@@ -34,3 +34,6 @@ lazygit/*
 
 gh/*
 !gh/config.yml
+
+poetry/*
+!poetry/config.toml
