@@ -18,7 +18,8 @@ alias \
 
 # overwrite commands
 alias \
-    exa="eza"
+    exa="eza" \
+    asdf="mise"
 
 # Colorize commands when possible.
 alias \
