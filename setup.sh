@@ -268,8 +268,9 @@ defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 126 "<di
 # Disable Spotlight
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 61 "<dict><key>enabled</key><false/></dict>"
 
-# Disable Next Input
+# Disable Prev/Next Input
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 "<dict><key>enabled</key><false/></dict>"
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 60 "<dict><key>enabled</key><false/></dict>"
 
 # ------------------------ Calendar ------------------------
 echo "Configure Calendar..."
