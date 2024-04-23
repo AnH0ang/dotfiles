@@ -16,7 +16,6 @@
     },
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff",
-        "editor.stickyScroll.enabled": true,
         "files.insertFinalNewline": true,
         "files.trimFinalNewlines": true,
         "files.trimTrailingWhitespace": true
@@ -62,6 +61,7 @@
     "editor.renderLineHighlight": "all",
     "editor.scrollbar.horizontal": "hidden",
     "editor.scrollbar.vertical": "hidden",
+    "editor.stickyScroll.enabled": true,
     "editor.suggest.preview": true,
     "editor.tabCompletion": "on",
     "editor.wordWrapColumn": 88,
@@ -119,7 +119,7 @@
     "python.analysis.diagnosticMode": "workspace",
     "python.analysis.inlayHints.functionReturnTypes": true,
     "python.analysis.inlayHints.pytestParameters": true,
-    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.inlayHints.variableTypes": false,
     "python.analysis.typeCheckingMode": "basic",
     "search.quickOpen.includeHistory": false,
     "search.searchEditor.defaultNumberOfContextLines": null,
@@ -406,6 +406,13 @@
             "type": "command"
         },
         {
+            "command": "issuesAndMrs.focus",
+            "icon": "notebook-open-as-text",
+            "keys": "S.l",
+            "name": "Show Gitlab",
+            "type": "command"
+        },
+        {
             "command": "testing.debugAtCursor",
             "icon": "debug-alt-small",
             "keys": "d.t",
@@ -553,13 +560,14 @@
     "window.commandCenter": false,
     "window.title": "${rootName}",
     "window.zoomLevel": 0.5,
-    "workbench.activityBar.location": "hidden",
-    "workbench.colorTheme": "Default Light Modern",
+    "workbench.activityBar.iconClickBehavior": "toggle",
     "workbench.editor.highlightModifiedTabs": false,
     "workbench.editor.tabActionCloseVisibility": false,
     "workbench.iconTheme": null,
     "workbench.layoutControl.enabled": false,
     "workbench.preferredDarkColorTheme": "Default Dark Modern",
     "workbench.preferredLightColorTheme": "Default Light Modern",
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Default Light Modern",
+    "workbench.activityBar.location": "hidden"
 }
