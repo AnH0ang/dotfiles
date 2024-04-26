@@ -561,13 +561,13 @@
     "window.title": "${rootName}",
     "window.zoomLevel": 0.5,
     "workbench.activityBar.iconClickBehavior": "toggle",
+    "workbench.activityBar.location": "hidden",
+    "workbench.colorTheme": "Default Light Modern",
     "workbench.editor.highlightModifiedTabs": false,
     "workbench.editor.tabActionCloseVisibility": false,
     "workbench.iconTheme": null,
     "workbench.layoutControl.enabled": false,
     "workbench.preferredDarkColorTheme": "Default Dark Modern",
     "workbench.preferredLightColorTheme": "Default Light Modern",
-    "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Default Light Modern",
-    "workbench.activityBar.location": "hidden"
+    "workbench.startupEditor": "none"
 }

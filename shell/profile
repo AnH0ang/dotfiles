@@ -63,3 +63,7 @@ export VIRTUAL_ENV_DISABLE_PROMPT=true
 
 # poetry
 export POETRY_CONFIG_DIR="$XDG_CONFIG_HOME/poetry"
+
+# rye
+export RYE_HOME="$XDG_CONFIG_HOME/rye"
+export PATH="$HOME/.config/rye/shims:$PATH"

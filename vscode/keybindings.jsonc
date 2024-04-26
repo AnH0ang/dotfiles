@@ -115,6 +115,11 @@
         "when": "notebookEditorFocused && !inputFocus"
     },
     {
+        "command": "notebook.cell.cancelExecution",
+        "key": "s",
+        "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
         "command": "notebook.cell.changeToCode",
         "key": "c",
         "when": "notebookEditorFocused && !inputFocus"
