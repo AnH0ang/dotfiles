@@ -2,4 +2,6 @@
 yes = true
 
 [tools]
-python = "3"
+usage = "latest"
+pdm = "latest"
+python = "3.11"
