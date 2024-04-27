@@ -3,7 +3,4 @@ yes = true
 
 [tools]
 usage = "latest"
-pdm = "latest"
 python = "3.11"
-rye = "latest"
-uv = "latest"
