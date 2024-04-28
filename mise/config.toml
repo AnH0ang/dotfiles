@@ -3,4 +3,4 @@ yes = true
 
 [tools]
 usage = "latest"
-python = "3.11"
+python = "3.12"
