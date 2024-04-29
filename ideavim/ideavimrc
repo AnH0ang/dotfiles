@@ -1,0 +1,21 @@
+set number
+set relativenumber
+set visualbell
+set clipboard+=unnamed
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+set wrapscan
+set notimeout
+
+" Plugins
+set surround
+set multiple-cursors
+set which-key
+set highlightedyank
+set easymotion
+set nerdtree
+set commentary
+set argtextobj
+set exchange
