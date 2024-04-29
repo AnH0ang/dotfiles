@@ -41,3 +41,5 @@ gh/*
 
 poetry/*
 !poetry/config.toml
+
+github-copilot
