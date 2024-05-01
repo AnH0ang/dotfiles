@@ -106,6 +106,9 @@
     "gitlens.codeLens.enabled": false,
     "jupyter.askForKernelRestart": false,
     "jupyter.debugJustMyCode": false,
+    "notebook.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    },
     "notebook.consolidatedRunButton": true,
     "notebook.dragAndDropEnabled": false,
     "notebook.formatOnSave.enabled": true,
