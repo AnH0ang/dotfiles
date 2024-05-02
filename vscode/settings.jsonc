@@ -45,7 +45,7 @@
     "editor.codeActionWidget.includeNearbyQuickFixes": true,
     "editor.cursorBlinking": "solid",
     "editor.folding": false,
-    "editor.fontFamily": "'FiraCode Nerd Font', SFMono-Regular, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "SFMono-Regular, 'FiraCode Nerd Font', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.fontSize": 10.5,
     "editor.formatOnSave": true,
