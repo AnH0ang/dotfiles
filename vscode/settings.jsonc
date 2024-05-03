@@ -114,6 +114,7 @@
     "notebook.formatOnSave.enabled": true,
     "notebook.globalToolbarShowLabel": "never",
     "notebook.insertToolbarLocation": "hidden",
+    "notebook.output.minimalErrorRendering": true,
     "notebook.output.scrolling": true,
     "notebook.output.textLineLimit": 20,
     "notebook.showCellStatusBar": "visible",
