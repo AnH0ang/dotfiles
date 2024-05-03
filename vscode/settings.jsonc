@@ -566,7 +566,6 @@
     "window.zoomLevel": 0.5,
     "workbench.activityBar.iconClickBehavior": "toggle",
     "workbench.activityBar.location": "hidden",
-    "workbench.colorTheme": "Default Light Modern",
     "workbench.editor.highlightModifiedTabs": false,
     "workbench.editor.tabActionCloseVisibility": false,
     "workbench.iconTheme": null,
