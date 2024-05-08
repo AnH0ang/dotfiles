@@ -68,3 +68,6 @@ export POETRY_CONFIG_DIR="$XDG_CONFIG_HOME/poetry"
 # rye
 export RYE_HOME="$XDG_CONFIG_HOME/rye"
 export PATH="$HOME/.config/rye/shims:$PATH"
+
+# rust
+export PATH="$HOME/.cargo/bin:$PATH"

@@ -104,7 +104,7 @@ defaults write com.apple.screencapture type -string "png"
 # disable autosort of desktops
 defaults write com.apple.dock mru-spaces -bool FALSE
 
-# swtich screen when activated
+# switch screen when activated
 defaults write -g AppleSpacesSwitchOnActivate -bool true
 
 # ------------------------ Safari ------------------------
@@ -124,7 +124,7 @@ defaults write -g PrivateBrowsingRequiresAuthentication -int 0
 
 # ------------------------ iTerm2 ------------------------
 echo "Configure iTerm2..."
-# write perferences folder
+# write preferences folder
 # shellcheck disable=SC2088
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.config/iterm2"
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -int 1
