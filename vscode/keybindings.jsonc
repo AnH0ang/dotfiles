@@ -75,25 +75,24 @@
     // ###################################################################################
     // # AUTOCOMPLETE                                                                    #
     // ###################################################################################
-
     {
-        "key": "ctrl+f",
         "command": "acceptSelectedSuggestion",
+        "key": "ctrl+f",
         "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
     },
     {
-        "key": "ctrl+f",
         "command": "editor.action.inlineSuggest.commit",
+        "key": "ctrl+f",
         "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
     },
     {
-        "key": "ctrl+f",
         "command": "editor.action.inlineEdit.accept",
+        "key": "ctrl+f",
         "when": "cursorAtInlineEdit && inlineEditVisible && !editorReadonly"
     },
     {
-        "key": "ctrl+f",
         "command": "insertSnippet",
+        "key": "ctrl+f",
         "when": "editorTextFocus && hasSnippetCompletions && !editorTabMovesFocus && !inSnippetMode"
     },
     // ###################################################################################
@@ -544,23 +543,32 @@
         "when": "editorTextFocus && vim.mode == 'Visual'"
     },
     {
-        "key": "ctrl+f",
         "command": "editor.action.inlineSuggest.showNext",
+        "key": "ctrl+f",
         "when": "inlineSuggestionVisible && !editorReadonly"
     },
     {
-        "key": "alt+]",
         "command": "-editor.action.inlineSuggest.showNext",
+        "key": "alt+]",
         "when": "inlineSuggestionVisible && !editorReadonly"
     },
     {
-        "key": "ctrl+b",
         "command": "editor.action.inlineSuggest.showPrevious",
+        "key": "ctrl+b",
         "when": "inlineSuggestionVisible && !editorReadonly"
     },
     {
-        "key": "alt+[",
         "command": "-editor.action.inlineSuggest.showPrevious",
+        "key": "alt+[",
         "when": "inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+        "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
+        "key": "shift+cmd+p",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "command": "workbench.action.quickTextSearch",
+        "key": "shift+cmd+p"
     }
 ]

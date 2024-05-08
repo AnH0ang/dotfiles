@@ -38,6 +38,8 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*:make:*:targets' call-command true
 zmodload zsh/complist
 fpath+=($HOMEBREW_PREFIX/share/zsh/site-functions)
+mkdir -p ~/.zfunc
+fpath+=~/.zfunc
 compinit
 bashcompinit
 
@@ -57,6 +59,11 @@ local init_file="${HOME}/.config/zsh/init.zsh"
     [[ $(command -v mise) ]] && (mise activate zsh >>"$init_file") || true
     [[ $(command -v zoxide) ]] && (zoxide init zsh >>"$init_file") || true
     [[ $(command -v atuin) ]] && (atuin init zsh --disable-up-arrow >>"$init_file") || true
+    [[ $(command -v rustup) ]] && (
+        echo "source \"\$HOME/.cargo/env\"" >>"$init_file"
+        rustup completions zsh >~/.zfunc/_rustup
+        rustup completions zsh cargo >~/.zfunc/_cargo
+    ) || true
 }
 source "$init_file"
 
