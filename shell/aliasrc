@@ -3,7 +3,6 @@
 # shorten long commands
 alias \
     kc="kubectl" \
-    gk="gitkraken" \
     lg="lazygit" \
     yy="yazi"
 

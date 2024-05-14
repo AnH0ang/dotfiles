@@ -6,14 +6,6 @@ function fhistory() {
     print -z "$(fc -l 1 | fzf +s --tac | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')"
 }
 
-# gitkraken - open GitKraken within the current repo
-unalias gitkraken 2>/dev/null
-function gitkraken() {
-    local repo_path=${1:-$(git rev-parse --show-toplevel)}
-    local absolute_path=$(realpath "$repo_path")
-    open "gitkraken://repo/$absolute_path"
-}
-
 # fd - cd to selected directory
 unalias fcd 2>/dev/null
 fcd() {
