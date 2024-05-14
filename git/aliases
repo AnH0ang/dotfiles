@@ -1,4 +1,14 @@
 [alias]
+    # Abbreviations
+    ad = add
+    br = branch
+    co = commit
+    lo = log
+    me = merge
+    pu = push
+    re = rebase
+    st = status
+
     # Log
     log-diff = log -p
 
