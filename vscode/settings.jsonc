@@ -31,6 +31,7 @@
     "breadcrumbs.enabled": false,
     "debug.onTaskErrors": "showErrors",
     "debug.toolBarLocation": "docked",
+    "debug.inlineValues": "auto",
     "diffEditor.diffAlgorithm": "advanced",
     "diffEditor.experimental.showMoves": true,
     "diffEditor.useInlineViewWhenSpaceIsLimited": false,
