@@ -29,9 +29,9 @@
         "editor.defaultFormatter": "tamasfe.even-better-toml"
     },
     "breadcrumbs.enabled": false,
+    "debug.inlineValues": "auto",
     "debug.onTaskErrors": "showErrors",
     "debug.toolBarLocation": "docked",
-    "debug.inlineValues": "auto",
     "diffEditor.diffAlgorithm": "advanced",
     "diffEditor.experimental.showMoves": true,
     "diffEditor.useInlineViewWhenSpaceIsLimited": false,
@@ -108,7 +108,8 @@
     "jupyter.askForKernelRestart": false,
     "jupyter.debugJustMyCode": false,
     "notebook.codeActionsOnSave": {
-        "source.fixAll": "explicit"
+        "notebook.source.fixAll": "explicit",
+        "notebook.source.organizeImports": "explicit"
     },
     "notebook.consolidatedRunButton": true,
     "notebook.dragAndDropEnabled": false,
@@ -126,6 +127,7 @@
     "python.analysis.inlayHints.pytestParameters": true,
     "python.analysis.inlayHints.variableTypes": false,
     "python.analysis.typeCheckingMode": "basic",
+    "ruff.nativeServer": true,
     "rust-analyzer.inlayHints.bindingModeHints.enable": false,
     "rust-analyzer.inlayHints.chainingHints.enable": false,
     "rust-analyzer.inlayHints.closingBraceHints.enable": false,
@@ -133,6 +135,7 @@
     "search.quickOpen.includeHistory": false,
     "search.searchEditor.defaultNumberOfContextLines": null,
     "search.smartCase": true,
+    "security.promptForRemoteFileProtocolHandling": false,
     "security.workspace.trust.untrustedFiles": "open",
     "shellcheck.exclude": [
         "2155",
@@ -578,5 +581,6 @@
     "workbench.layoutControl.enabled": false,
     "workbench.preferredDarkColorTheme": "Default Dark Modern",
     "workbench.preferredLightColorTheme": "Default Light Modern",
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "github.copilot.editor.enableAutoCompletions": true
 }
