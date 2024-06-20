@@ -98,6 +98,7 @@
     "git.inputValidation": true,
     "git.mergeEditor": true,
     "git.openRepositoryInParentFolders": "never",
+    "github.copilot.editor.enableAutoCompletions": true,
     "github.copilot.enable": {
         "*": true,
         "markdown": true,
@@ -575,12 +576,14 @@
     "window.zoomLevel": 0.5,
     "workbench.activityBar.iconClickBehavior": "toggle",
     "workbench.activityBar.location": "hidden",
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground": "#B5BA0033"
+    },
     "workbench.editor.highlightModifiedTabs": false,
     "workbench.editor.tabActionCloseVisibility": false,
     "workbench.iconTheme": null,
     "workbench.layoutControl.enabled": false,
     "workbench.preferredDarkColorTheme": "Default Dark Modern",
     "workbench.preferredLightColorTheme": "Default Light Modern",
-    "workbench.startupEditor": "none",
-    "github.copilot.editor.enableAutoCompletions": true
+    "workbench.startupEditor": "none"
 }
