@@ -11,9 +11,6 @@
     "[latex]": {
         "editor.wordWrap": "wordWrapColumn"
     },
-    "[markdown]": {
-        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
-    },
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff",
         "files.insertFinalNewline": true,
@@ -29,9 +26,14 @@
         "editor.defaultFormatter": "tamasfe.even-better-toml"
     },
     "breadcrumbs.enabled": false,
+    "debug.allowBreakpointsEverywhere": true,
+    "debug.console.closeOnEnd": true,
+    "debug.enableStatusBarColor": true,
     "debug.inlineValues": "auto",
     "debug.onTaskErrors": "showErrors",
     "debug.toolBarLocation": "docked",
+    "debugpy.debugJustMyCode": false,
+    "debugpy.showPythonInlineValues": true,
     "diffEditor.diffAlgorithm": "advanced",
     "diffEditor.experimental.showMoves": true,
     "diffEditor.useInlineViewWhenSpaceIsLimited": false,
@@ -128,6 +130,7 @@
     "python.analysis.inlayHints.pytestParameters": true,
     "python.analysis.inlayHints.variableTypes": false,
     "python.analysis.typeCheckingMode": "basic",
+    "ruff.nativeServer": "off",
     "rust-analyzer.inlayHints.bindingModeHints.enable": false,
     "rust-analyzer.inlayHints.chainingHints.enable": false,
     "rust-analyzer.inlayHints.closingBraceHints.enable": false,
@@ -576,7 +579,7 @@
     "workbench.activityBar.iconClickBehavior": "toggle",
     "workbench.activityBar.location": "hidden",
     "workbench.colorCustomizations": {
-        "editor.lineHighlightBackground": "#B5BA0033"
+        "editor.lineHighlightBackground": "#B5BA002A"
     },
     "workbench.editor.highlightModifiedTabs": false,
     "workbench.editor.tabActionCloseVisibility": false,
