@@ -46,3 +46,7 @@ poetry/*
 !poetry/config.toml
 
 github-copilot
+
+# zed
+zed/*
+!zed/settings.json
