@@ -5,6 +5,6 @@
 [manager]
 prepend_keymap = [
     # Goto
-    { on = ["g", "k"], exec = "cd ~/Desktop", desc = "Go to desktop" },
-    { on = ["g", "o"], exec = "cd ~/Documents", desc = "Go to documents" },
+    { on = ["g", "k"], run = "cd ~/Desktop", desc = "Go to desktop" },
+    { on = ["g", "o"], run = "cd ~/Documents", desc = "Go to documents" },
 ]

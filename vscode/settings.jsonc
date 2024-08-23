@@ -13,6 +13,7 @@
     },
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
         "files.insertFinalNewline": true,
         "files.trimFinalNewlines": true,
         "files.trimTrailingWhitespace": true
@@ -51,7 +52,6 @@
     "editor.fontFamily": "'SF Mono', 'Cascadia Code', 'FiraCode Nerd Font', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.fontSize": 10.5,
-    "editor.formatOnSave": true,
     "editor.guides.indentation": false,
     "editor.inlayHints.enabled": "on",
     "editor.inlineSuggest.enabled": true,
@@ -77,6 +77,7 @@
     "explorer.compactFolders": false,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
+    "explorer.confirmPasteNative": false,
     "explorer.confirmUndo": "light",
     "explorer.incrementalNaming": "smart",
     "explorer.openEditors.sortOrder": "fullPath",
@@ -110,10 +111,9 @@
     "gitlens.codeLens.enabled": false,
     "jupyter.askForKernelRestart": false,
     "jupyter.debugJustMyCode": false,
-    "notebook.codeActionsOnSave": {
-        "source.fixAll": "explicit",
-        "source.organizeImports": "explicit"
-    },
+    // "notebook.codeActionsOnSave": {
+    //     "source.fixAll": "explicit"
+    // },
     "notebook.consolidatedRunButton": true,
     "notebook.dragAndDropEnabled": false,
     "notebook.formatOnSave.enabled": true,
@@ -130,7 +130,7 @@
     "python.analysis.inlayHints.pytestParameters": true,
     "python.analysis.inlayHints.variableTypes": false,
     "python.analysis.typeCheckingMode": "basic",
-    "ruff.nativeServer": "off",
+    // "ruff.nativeServer": "off",
     "rust-analyzer.inlayHints.bindingModeHints.enable": false,
     "rust-analyzer.inlayHints.chainingHints.enable": false,
     "rust-analyzer.inlayHints.closingBraceHints.enable": false,
