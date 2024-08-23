@@ -71,3 +71,6 @@ export PATH="$HOME/.config/rye/shims:$PATH"
 
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# mise
+export MISE_ENV_FILE=.env
