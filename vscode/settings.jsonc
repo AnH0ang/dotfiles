@@ -26,6 +26,7 @@
     "[toml]": {
         "editor.defaultFormatter": "tamasfe.even-better-toml"
     },
+    "accessibility.underlineLinks": true,
     "breadcrumbs.enabled": false,
     "debug.allowBreakpointsEverywhere": true,
     "debug.console.closeOnEnd": true,
@@ -130,7 +131,9 @@
     "python.analysis.inlayHints.pytestParameters": true,
     "python.analysis.inlayHints.variableTypes": false,
     "python.analysis.typeCheckingMode": "basic",
-    // "ruff.nativeServer": "off",
+    // turn of native server because it is buggy for jupyter notebooks
+    "ruff.nativeServer": true,
+    "ruff.organizeImports": true,
     "rust-analyzer.inlayHints.bindingModeHints.enable": false,
     "rust-analyzer.inlayHints.chainingHints.enable": false,
     "rust-analyzer.inlayHints.closingBraceHints.enable": false,
