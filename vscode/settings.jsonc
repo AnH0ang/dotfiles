@@ -167,6 +167,35 @@
     "vim.leader": ";",
     "vim.normalModeKeyBindingsNonRecursive": [
         {
+            "after": [
+                "<C-u>",
+                "z",
+                "z",
+            ],
+            "before": [
+                "<C-u>"
+            ]
+        },
+        {
+            "after": [
+                "<C-d>",
+                "z",
+                "z",
+            ],
+            "before": [
+                "<C-d>"
+            ]
+        },
+        {
+            "after": [
+                "@",
+                "q"
+            ],
+            "before": [
+                "Q"
+            ]
+        },
+        {
             "before": [
                 "g",
                 "c"
