@@ -9,6 +9,12 @@
 echo "Install homebrew packages..."
 /opt/homebrew/bin/brew bundle install --file="${HOME}"/.config/homebrew/Brewfile
 
+# Need to install custom version of libomp for lightgbm (See https://auto.gluon.ai/stable/install.html)
+brew uninstall -f libomp
+wget https://raw.githubusercontent.com/Homebrew/homebrew-core/fb8323f2b170bd4ae97e1bac9bf3e2983af3fdb0/Formula/libomp.rb
+brew install libomp.rb
+rm libomp.rb
+
 # ssh
 echo "Configure ssh..."
 rm -rf "${HOME}"/.ssh
