@@ -3,4 +3,6 @@ yes = true
 
 [tools]
 usage = "latest"
-python = "3.12"
+python = "latest"
+yarn = "latest"
+node = "latest"
