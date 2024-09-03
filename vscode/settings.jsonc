@@ -197,15 +197,6 @@
         },
         {
             "before": [
-                "g",
-                "c"
-            ],
-            "commands": [
-                "editor.showCallHierarchy"
-            ]
-        },
-        {
-            "before": [
                 "[",
                 "b"
             ],
@@ -471,6 +462,13 @@
             "command": "workbench.debug.action.focusCallStackView",
             "keys": "d.a",
             "name": "Call Stack",
+            "type": "command"
+        },
+        {
+            "command": "jupyter.runAndDebugCell",
+            "icon": "notebook",
+            "keys": "d.e",
+            "name": "Run and Debug Jupyter Cell",
             "type": "command"
         },
         {
