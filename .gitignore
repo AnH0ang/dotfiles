@@ -2,7 +2,8 @@
 
 # aichat
 aichat/*
-!aichat/roles.yaml
+!aichat/roles
+!aichat/roles/*.yaml
 
 # iterm
 iterm2/*
