@@ -209,6 +209,9 @@ defaults write com.apple.finder QuitMenuItem -bool false
 # ------------------------ Dock ------------------------
 echo "Configure Dock..."
 
+# Clear the Dock persistent-apps list (remove all apps)
+defaults write com.apple.dock persistent-apps -array
+
 # size
 defaults write com.apple.dock tilesize -int 48
 
