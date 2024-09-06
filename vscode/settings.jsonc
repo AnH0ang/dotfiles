@@ -500,7 +500,7 @@
                         },
                         {
                             "command": "git.unstage",
-                            "key": "c",
+                            "key": "f",
                             "name": "Stage change in file",
                             "type": "command"
                         }
@@ -525,7 +525,7 @@
                         },
                         {
                             "command": "git.stage",
-                            "key": "c",
+                            "key": "f",
                             "name": "Stage change in file",
                             "type": "command"
                         }
@@ -544,7 +544,7 @@
                         },
                         {
                             "command": "git.revertChange",
-                            "key": "c",
+                            "key": "f",
                             "name": "Stage change in file",
                             "type": "command"
                         }
@@ -607,7 +607,6 @@
     "window.title": "${rootName}",
     "window.zoomLevel": 0.5,
     "workbench.activityBar.iconClickBehavior": "toggle",
-    "workbench.activityBar.location": "hidden",
     "workbench.colorCustomizations": {
         "editor.lineHighlightBackground": "#B5BA002A"
     },
@@ -617,5 +616,7 @@
     "workbench.layoutControl.enabled": false,
     "workbench.preferredDarkColorTheme": "Default Dark Modern",
     "workbench.preferredLightColorTheme": "Default Light Modern",
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "workbench.activityBar.location": "hidden",
+    "workbench.statusBar.visible": false
 }
