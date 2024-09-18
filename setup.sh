@@ -15,10 +15,6 @@ echo "Install homebrew packages..."
 /opt/homebrew/bin/brew install libomp.rb
 rm libomp.rb
 
-# setup autoupdate every 12 hours
-brew tap domt4/autoupdate
-brew autoupdate start 43200 --upgrade --cleanup --immediate
-
 # ssh
 echo "Configure ssh..."
 rm -rf "${HOME}"/.ssh
