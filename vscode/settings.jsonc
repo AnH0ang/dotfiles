@@ -31,7 +31,7 @@
     "debug.allowBreakpointsEverywhere": true,
     "debug.console.closeOnEnd": true,
     "debug.enableStatusBarColor": true,
-    "debug.inlineValues": "auto",
+    "debug.inlineValues": false,
     "debug.onTaskErrors": "showErrors",
     "debug.toolBarLocation": "docked",
     "debugpy.debugJustMyCode": false,
@@ -617,6 +617,5 @@
     "workbench.preferredDarkColorTheme": "Default Dark Modern",
     "workbench.preferredLightColorTheme": "Default Light Modern",
     "workbench.startupEditor": "none",
-    "workbench.activityBar.location": "hidden",
-    "workbench.statusBar.visible": false
+    "workbench.activityBar.location": "hidden"
 }
