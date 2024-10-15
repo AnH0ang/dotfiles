@@ -544,7 +544,7 @@
                             "type": "command"
                         },
                         {
-                            "command": "git.revertChange",
+                            "command": "git.clean",
                             "key": "f",
                             "name": "Stage change in file",
                             "type": "command"
