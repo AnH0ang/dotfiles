@@ -1,4 +1,4 @@
-import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+import = ["~/.config/alacritty/catppuccin-frappe.toml"]
 
 [shell]
 program = "/opt/homebrew/bin/fish"
