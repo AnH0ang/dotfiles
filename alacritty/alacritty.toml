@@ -1,13 +1,11 @@
-import = [
-  "~/.config/alacritty/catppuccin-mocha.toml"
-]
+import = ["~/.config/alacritty/catppuccin-mocha.toml"]
 
 [shell]
 program = "/opt/homebrew/bin/fish"
 
 [window]
 dynamic_title = false
-dimensions = { columns = 88, lines = 28}
+dimensions = { columns = 88, lines = 28 }
 padding = { x = 10, y = 10 }
 
 [font]
