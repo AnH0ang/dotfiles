@@ -88,6 +88,7 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # See: https://stackoverflow.com/questions/39972335/how-do-i-press-and-hold-a-key-and-have-it-repeat-in-vscode
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false      # For VS Code
+defaults write com.todesktop.230313mzl4w4u92 ApplePressAndHoldEnabled -bool false    # For Cursor
 defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool false # For VS Codium
 defaults write com.jetbrains.pycharm ApplePressAndHoldEnabled -bool falsde    # For PyCharm
 defaults write com.jetbrains.pycharm.ce ApplePressAndHoldEnabled -bool falsde # For PyCharm Custom Edition
