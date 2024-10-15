@@ -15,7 +15,7 @@ end
 if status is-interactive
     starship init fish | source
     zoxide init fish | source
-    atuin init fish | source
+    atuin init fish --disable-up-arrow | source
     mise activate fish | source
 
     bind -M insert \cn down-or-search

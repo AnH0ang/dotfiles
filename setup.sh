@@ -46,6 +46,11 @@ ln -sf "$HOME"/.config/hidutil/com.local.KeyRemapping.plist "$HOME"/Library/Laun
 echo "Install mise packages..."
 /opt/homebrew/bin/mise install
 
+# fish
+echo /usr/local/bin/fish | sudo tee -a /etc/shells > /dev/null
+chsh -s /usr/local/bin/fish
+
+
 ###############################################################################
 # MacOS Setting                                                               #
 ###############################################################################
