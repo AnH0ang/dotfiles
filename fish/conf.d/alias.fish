@@ -4,18 +4,18 @@ abbr lg "lazygit"
 abbr yy "yazi"
 
 # new commands
-abbr vim "nvim"
-abbr jq "yq"
-abbr shred "rm -P"
-abbr view "nvim -R"
-abbr tree "eza --tree"
-abbr help "aichat -r shell:zsh"
-
-# overwrite commands
-abbr exa "eza"
+alias exa="eza"
+alias vim="nvim"
+alias lf="yazi"
+alias ranger="yazi"
+alias jq="yq"
+alias shred="rm -P"
+alias view="nvim -R"
+alias tree="eza --tree"
+alias help="aichat -r shell:zsh"
 
 # Colorize commands when possible.
-abbr ls "ls -G"
-abbr less "less -R"
-abbr grep "grep --color=auto"
-abbr diff "diff --color=auto"
+alias ls="ls -G"
+alias less="less -R"
+alias grep="grep --color=auto"
+alias diff="diff --color=auto"
