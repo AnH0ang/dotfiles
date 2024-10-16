@@ -42,6 +42,7 @@
     "diffEditor.wordWrap": "off",
     "editor.accessibilitySupport": "off",
     "editor.bracketPairColorization.enabled": false,
+    "editor.codeActionWidget.includeNearbyQuickFixes": true,
     "editor.codeActionsOnSave": {
         "source.addMissingImports": "explicit",
         "source.fixAll": "explicit",
@@ -96,12 +97,13 @@
         "**/.ruff_cache": true,
         "**/__pycache__": true
     },
-    "git.autofetch": false,
     "git.autoRepositoryDetection": "openEditors",
+    "git.autofetch": false,
     "git.confirmSync": false,
     "git.inputValidation": true,
     "git.mergeEditor": true,
     "git.openRepositoryInParentFolders": "never",
+    "github.copilot.chat.search.semanticTextResults": true,
     "github.copilot.editor.enableAutoCompletions": true,
     "github.copilot.enable": {
         "*": true,
@@ -146,7 +148,6 @@
         "1091"
     ],
     "terminal.integrated.defaultProfile.osx": "fish",
-    "terminal.integrated.shellIntegration.enabled": true,
     "terminal.integrated.fontSize": 11.5,
     "terminal.integrated.scrollback": 10000,
     "terminal.integrated.stickyScroll.enabled": false,
@@ -168,7 +169,7 @@
             "after": [
                 "<C-u>",
                 "z",
-                "z",
+                "z"
             ],
             "before": [
                 "<C-u>"
@@ -178,7 +179,7 @@
             "after": [
                 "<C-d>",
                 "z",
-                "z",
+                "z"
             ],
             "before": [
                 "<C-d>"
@@ -602,9 +603,11 @@
     "whichkey.delay": 500,
     "window.autoDetectColorScheme": true,
     "window.commandCenter": false,
+    "window.customTitleBarVisibility": "never",
     "window.title": "${rootName}",
     "window.zoomLevel": 0.5,
     "workbench.activityBar.iconClickBehavior": "toggle",
+    "workbench.activityBar.location": "hidden",
     "workbench.colorCustomizations": {
         "editor.lineHighlightBackground": "#B5BA002A"
     },
@@ -614,6 +617,5 @@
     "workbench.layoutControl.enabled": false,
     "workbench.preferredDarkColorTheme": "Default Dark Modern",
     "workbench.preferredLightColorTheme": "Default Light Modern",
-    "workbench.startupEditor": "none",
-    "workbench.activityBar.location": "hidden"
+    "workbench.startupEditor": "none"
 }
