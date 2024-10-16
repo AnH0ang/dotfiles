@@ -47,8 +47,8 @@ echo "Install mise packages..."
 /opt/homebrew/bin/mise install
 
 # fish
-echo /usr/local/bin/fish | sudo tee -a /etc/shells > /dev/null
-chsh -s /usr/local/bin/fish
+echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells > /dev/null
+chsh -s /opt/homebrew/bin/fish
 
 
 ###############################################################################
@@ -273,7 +273,7 @@ echo "Configure Symbolic Hotkey..."
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 118 "<dict> <key>enabled</key> <true/> <key>value</key> <dict> <key>parameters</key> <array> <integer>65535</integer> <integer>10</integer> <integer>524288</integer> </array> <key>type</key> <string>standard</string> </dict> </dict>"
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 119 "<dict> <key>enabled</key> <true/> <key>value</key> <dict> <key>parameters</key> <array> <integer>49</integer> <integer>18</integer> <integer>524288</integer> </array> <key>type</key> <string>standard</string> </dict> </dict>"
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 120 "<dict> <key>enabled</key> <true/> <key>value</key> <dict> <key>parameters</key> <array> <integer>50</integer> <integer>19</integer> <integer>524288</integer> </array> <key>type</key> <string>standard</string> </dict> </dict>"
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 121 "<dict> <key>enabled</key> <true/> <key>value</key> <dict> <key>parameters</key> <array> <integer>51</integer> <integer>20</integer> <integer>524288</integer> </array> <key>type</key> <string>standard</string> </dict> </dict>"
+
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 122 "<dict> <key>enabled</key> <true/> <key>value</key> <dict> <key>parameters</key> <array> <integer>52</integer> <integer>21</integer> <integer>524288</integer> </array> <key>type</key> <string>standard</string> </dict> </dict>"
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 123 "<dict> <key>enabled</key> <true/> <key>value</key> <dict> <key>parameters</key> <array> <integer>53</integer> <integer>23</integer> <integer>524288</integer> </array> <key>type</key> <string>standard</string> </dict> </dict>"
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 124 "<dict> <key>enabled</key> <true/> <key>value</key> <dict> <key>parameters</key> <array> <integer>54</integer> <integer>22</integer> <integer>524288</integer> </array> <key>type</key> <string>standard</string> </dict> </dict>"
