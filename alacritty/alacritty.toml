@@ -2,6 +2,7 @@ import = ["~/.config/alacritty/catppuccin-mocha.toml"]
 
 [shell]
 program = "/opt/homebrew/bin/fish"
+args = ["--login", "-c", "/opt/homebrew/bin/tmux new-session -A -s main"]
 
 [window]
 dynamic_title = false

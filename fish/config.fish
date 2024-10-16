@@ -1,15 +1,5 @@
 set -g fish_greeting
 
-function yazi-cd
-    yazi --cwd-file /tmp/yazi-cwd;
-    cd (cat /tmp/yazi-cwd);
-    commandline -f repaint;
-end
-
-function z-cd
-    cd (zoxide query --interactive);
-    commandline -f repaint;
-end
 
 if status is-interactive
     starship init fish | source
@@ -22,6 +12,7 @@ if status is-interactive
 
     bind -M insert \cl yazi-cd
     bind -M insert \co z-cd
+    bind -M insert \cg fzf-cd
     bind -M insert \cf accept-autosuggestion
     bind -M insert \ce edit_command_buffer
 
