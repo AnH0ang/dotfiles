@@ -3,6 +3,7 @@ abbr kc "kubectl"
 abbr lg "lazygit"
 abbr yy "yazi"
 abbr ls "eza"
+abbr cat "bat"
 
 # new commands
 alias exa="eza"
