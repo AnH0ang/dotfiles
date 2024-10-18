@@ -51,7 +51,6 @@
         "source.fixAll": "explicit",
         "source.organizeImports": "explicit"
     },
-    "editor.codeActionWidget.includeNearbyQuickFixes": true,
     "editor.cursorBlinking": "solid",
     "editor.folding": false,
     "editor.fontFamily": "'SF Mono', 'Cascadia Code', 'FiraCode Nerd Font', Menlo, Monaco, 'Courier New', monospace",
