@@ -8,6 +8,9 @@
     "[dockerfile]": {
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
     "[latex]": {
         "editor.wordWrap": "wordWrapColumn"
     },
