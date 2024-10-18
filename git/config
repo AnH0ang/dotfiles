@@ -44,3 +44,6 @@
 
 [help]
     autocorrect = immediate
+
+[branch]
+    autosetuprebase = always
