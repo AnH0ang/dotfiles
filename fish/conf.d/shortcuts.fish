@@ -26,7 +26,11 @@ function yazi-cd
 end
 
 function z-cd
-    cd (zoxide query --interactive);
+    set path (zoxide query --interactive);
+    if test -n "$path"
+        cd $path;
+    end
+
     commandline -f repaint;
 end
 
