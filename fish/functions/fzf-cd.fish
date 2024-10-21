@@ -18,27 +18,3 @@ function fzf-cd
     end
     commandline -f repaint
 end
-
-function yazi-cd
-    yazi --cwd-file /tmp/yazi-cwd;
-    cd (cat /tmp/yazi-cwd);
-    commandline -f repaint;
-end
-
-function z-cd
-    set path (zoxide query --interactive);
-    if test -n "$path"
-        cd $path;
-    end
-
-    commandline -f repaint;
-end
-
-function fgrep
-    rg --color=always --line-number --no-heading --smart-case $argv |
-        fzf --ansi \
-            --color "hl:-1:underline,hl+:-1:underline:reverse" \
-            --delimiter : \
-            --preview 'bat --theme ansi --color always {1} --highlight-line {2}' \
-            --preview-window 'up,60%,border-bottom,+{2}+3/3,~3'
-end
