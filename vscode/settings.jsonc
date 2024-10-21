@@ -14,9 +14,11 @@
     "[latex]": {
         "editor.wordWrap": "wordWrapColumn"
     },
+    "[fish]": {
+        "editor.defaultFormatter": "bmalehorn.vscode-fish"
+    },
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff",
-        "editor.formatOnSave": true,
         "files.insertFinalNewline": true,
         "files.trimFinalNewlines": true,
         "files.trimTrailingWhitespace": true
@@ -31,10 +33,11 @@
     },
     "accessibility.underlineLinks": true,
     "breadcrumbs.enabled": false,
+    "editor.formatOnSave": true,
     "debug.allowBreakpointsEverywhere": true,
     "debug.console.closeOnEnd": true,
     "debug.enableStatusBarColor": true,
-    "debug.inlineValues": false,
+    "debug.inlineValues": "auto",
     "debug.onTaskErrors": "showErrors",
     "debug.toolBarLocation": "docked",
     "debugpy.debugJustMyCode": false,
