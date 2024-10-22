@@ -8,6 +8,7 @@ if status is-interactive
     mise activate fish | source
     direnv export fish | source
 
+    fish_vi_key_bindings
     bind -M insert \cn down-or-search
     bind -M insert \cp up-or-search
     bind -M insert \cl yazi-cd
@@ -15,6 +16,4 @@ if status is-interactive
     bind -M insert \cg fzf-cd
     bind -M insert \cf accept-autosuggestion
     bind -M insert \ce edit_command_buffer
-
-    fish_vi_key_bindings
 end

@@ -8,14 +8,11 @@
     "[dockerfile]": {
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
-    "[yaml]": {
-        "editor.defaultFormatter": "redhat.vscode-yaml"
+    "[fish]": {
+        "editor.defaultFormatter": "bmalehorn.vscode-fish"
     },
     "[latex]": {
         "editor.wordWrap": "wordWrapColumn"
-    },
-    "[fish]": {
-        "editor.defaultFormatter": "bmalehorn.vscode-fish"
     },
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff",
@@ -31,9 +28,11 @@
     "[toml]": {
         "editor.defaultFormatter": "tamasfe.even-better-toml"
     },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
     "accessibility.underlineLinks": true,
     "breadcrumbs.enabled": false,
-    "editor.formatOnSave": true,
     "debug.allowBreakpointsEverywhere": true,
     "debug.console.closeOnEnd": true,
     "debug.enableStatusBarColor": true,
@@ -59,6 +58,7 @@
     "editor.fontFamily": "'SF Mono', 'Cascadia Code', 'FiraCode Nerd Font', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.fontSize": 10.5,
+    "editor.formatOnSave": true,
     "editor.guides.indentation": false,
     "editor.inlayHints.enabled": "on",
     "editor.inlineSuggest.enabled": true,
@@ -162,6 +162,7 @@
     "testing.defaultGutterClickAction": "debug",
     "testing.followRunningTest": false,
     "testing.openTesting": "openOnTestFailure",
+    "typos.config": "~/.config/typos/typos.toml",
     "vim.camelCaseMotion.enable": true,
     "vim.easymotion": true,
     "vim.highlightedyank.duration": 300,
