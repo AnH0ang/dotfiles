@@ -50,7 +50,7 @@ echo "Install mise packages..."
 /opt/homebrew/bin/mise install
 
 # fish
-echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells > /dev/null
+echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells >/dev/null
 chsh -s /opt/homebrew/bin/fish
 
 # update alacritty icon
@@ -65,7 +65,7 @@ update_alacritty_icon() {
     mv "$icon_path" "$icon_path.backup-$hash"
     echo "Downloading replacement icon"
     icon_url=https://github.com/hmarr/dotfiles/files/8549877/alacritty.icns.gz
-    curl -sL $icon_url | gunzip > "$icon_path"
+    curl -sL $icon_url | gunzip >"$icon_path"
     touch /Applications/Alacritty.app
 }
 update_alacritty_icon
@@ -106,14 +106,14 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # Enable Press and Hold for vscode (You need to log out for this to take effect)
 # See: https://stackoverflow.com/questions/39972335/how-do-i-press-and-hold-a-key-and-have-it-repeat-in-vscode
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
-defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false      # For VS Code
-defaults write com.todesktop.230313mzl4w4u92 ApplePressAndHoldEnabled -bool false    # For Cursor
-defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool false # For VS Codium
-defaults write com.jetbrains.pycharm ApplePressAndHoldEnabled -bool falsde    # For PyCharm
-defaults write com.jetbrains.pycharm.ce ApplePressAndHoldEnabled -bool falsde # For PyCharm Custom Edition
-defaults write com.jetbrains.intellij ApplePressAndHoldEnabled -bool false    # IntelliJ Ultimate
-defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false # IntelliJ Community Edition
-defaults delete -g ApplePressAndHoldEnabled                                   # If necessary, reset global default
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false          # For VS Code
+defaults write com.todesktop.230313mzl4w4u92 ApplePressAndHoldEnabled -bool false # For Cursor
+defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool false     # For VS Codium
+defaults write com.jetbrains.pycharm ApplePressAndHoldEnabled -bool falsde        # For PyCharm
+defaults write com.jetbrains.pycharm.ce ApplePressAndHoldEnabled -bool falsde     # For PyCharm Custom Edition
+defaults write com.jetbrains.intellij ApplePressAndHoldEnabled -bool false        # IntelliJ Ultimate
+defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false     # IntelliJ Community Edition
+defaults delete -g ApplePressAndHoldEnabled                                       # If necessary, reset global default
 
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 1
