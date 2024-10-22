@@ -8,7 +8,11 @@ args = ["--login", "-c", "/opt/homebrew/bin/tmux new-session -A -s main"]
 dynamic_title = false
 dimensions = { columns = 88, lines = 28 }
 padding = { x = 10, y = 10 }
+decorations = "full"
 
 [font]
 size = 15.0
 normal.family = "FiraCode Nerd Font"
+
+[selection]
+save_to_clipboard = true
