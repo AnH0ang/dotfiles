@@ -4,6 +4,7 @@ abbr lg lazygit
 abbr yy yazi
 
 # new commands
+abbr du "dust --depth 1"
 abbr benchmark hyperfine
 abbr cat bat
 abbr convert magick
