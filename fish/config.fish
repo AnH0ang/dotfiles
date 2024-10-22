@@ -1,4 +1,5 @@
 set -g fish_greeting
+set -g direnv_fish_mode disable_arrow
 
 if status is-interactive
     starship init fish | source
@@ -6,7 +7,6 @@ if status is-interactive
     atuin init fish --disable-up-arrow | source
     mise activate fish | source
     direnv export fish | source
-    set -g direnv_fish_mode disable_arrow
 
     bind -M insert \cn down-or-search
     bind -M insert \cp up-or-search

@@ -93,6 +93,7 @@ mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Reeder", id: 1529448980
+vscode "bmalehorn.vscode-fish"
 vscode "charliermarsh.ruff"
 vscode "christian-kohler.path-intellisense"
 vscode "eamodio.gitlens"
