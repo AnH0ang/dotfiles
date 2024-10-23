@@ -9,3 +9,12 @@ vimcmd_replace_one_symbol = "🦄"
 vimcmd_replace_symbol = "🦄"
 vimcmd_symbol = "🦄"
 vimcmd_visual_symbol = "🦄"
+
+[direnv]
+symbol = "🌍 "
+style = "bold green"
+format = 'with [${symbol}${allowed}${loaded}]($style) '
+disabled = false
+allowed_msg = ""
+denied_msg = "*"
+unloaded_msg = "unloaded"
