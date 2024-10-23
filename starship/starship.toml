@@ -18,3 +18,4 @@ disabled = false
 allowed_msg = ""
 denied_msg = "*"
 unloaded_msg = "unloaded"
+detect_files = [".envrc", ".env"]

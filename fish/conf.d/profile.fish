@@ -12,12 +12,12 @@ set -x XDG_CACHE_HOME "$HOME/.cache"
 set -x CDPATH $CDPATH $HOME
 
 # defaults
-set -x VISUAL "nvim"
-set -x EDITOR "nvim"
-set -x GIT_EDITOR "nvim"
+set -x VISUAL nvim
+set -x EDITOR nvim
+set -x GIT_EDITOR nvim
 
 # less
-set -x LESSHISTFILE "-"
+set -x LESSHISTFILE -
 
 # readline
 set -x INPUTRC "$XDG_CONFIG_HOME/readline/.inputrc"
@@ -39,12 +39,12 @@ set -x AICHAT_CONFIG_DIR "$XDG_CONFIG_HOME/aichat"
 
 # homebrew
 set -x HOMEBREW_NO_ENV_HINTS 1
-set -x HOMEBREW_PREFIX "/opt/homebrew"
-set -x HOMEBREW_CELLAR "/opt/homebrew/Cellar"
-set -x HOMEBREW_REPOSITORY "/opt/homebrew"
-set -x PATH "/opt/homebrew/bin" "/opt/homebrew/sbin" $PATH
-set -x MANPATH "/opt/homebrew/share/man" $MANPATH
-set -x INFOPATH "/opt/homebrew/share/info" $INFOPATH
+set -x HOMEBREW_PREFIX /opt/homebrew
+set -x HOMEBREW_CELLAR /opt/homebrew/Cellar
+set -x HOMEBREW_REPOSITORY /opt/homebrew
+set -x PATH /opt/homebrew/bin /opt/homebrew/sbin $PATH
+set -x MANPATH /opt/homebrew/share/man $MANPATH
+set -x INFOPATH /opt/homebrew/share/info $INFOPATH
 
 # python venv
 set -x VIRTUAL_ENV_DISABLE_PROMPT true
@@ -58,3 +58,6 @@ set -x PATH "$HOME/.config/rye/shims" $PATH
 
 # rust
 set -x PATH "$HOME/.cargo/bin" $PATH
+
+# direnv
+set -x DIRENV_LOG_FORMAT ""

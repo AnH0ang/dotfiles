@@ -18,6 +18,7 @@ abbr ranger yazi
 abbr shred "rm -P"
 abbr tree "eza --tree"
 abbr view "nvim -R"
+abbr vi nvim
 abbr vim nvim
 
 # Colorize commands when possible.
