@@ -15,7 +15,6 @@ abbr lf yazi
 abbr ls eza
 abbr neofetch fastfetch
 abbr ranger yazi
-abbr rm rip
 abbr shred "rm -P"
 abbr tree "eza --tree"
 abbr vi nvim
