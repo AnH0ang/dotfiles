@@ -4,10 +4,10 @@ abbr lg lazygit
 abbr yy yazi
 
 # new commands
-abbr du "dust --depth 1"
 abbr benchmark hyperfine
 abbr cat bat
 abbr convert magick
+abbr du "dust --depth 1"
 abbr exa eza
 abbr help "aichat -r shell:zsh"
 abbr jq yq
@@ -15,10 +15,11 @@ abbr lf yazi
 abbr ls eza
 abbr neofetch fastfetch
 abbr ranger yazi
+abbr rm rip
 abbr shred "rm -P"
 abbr tree "eza --tree"
-abbr view "nvim -R"
 abbr vi nvim
+abbr view "nvim -R"
 abbr vim nvim
 
 # Colorize commands when possible.
