@@ -6,7 +6,11 @@ if status is-interactive
     set fish_cursor_replace_one underscore
     set fish_cursor_visual block
 
-    starship init fish | source
+    # NOTE: Don't run starship in vscode because the terminal integration breaks
+    if [ $TERM_PROGRAM != vscode ]
+        starship init fish | source
+    end
+
     zoxide init fish | source
     atuin init fish --disable-up-arrow | source
     mise activate fish | source
