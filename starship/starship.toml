@@ -3,12 +3,9 @@
 add_newline = true
 
 [character]
-success_symbol = "🦄"
-error_symbol = "🚨"
-vimcmd_replace_one_symbol = "🦄"
-vimcmd_replace_symbol = "🦄"
-vimcmd_symbol = "🦄"
-vimcmd_visual_symbol = "🦄"
+success_symbol = "🦄 [❯](green)"
+error_symbol = "🦄 [❯](red)"
+vimcmd_symbol = "🦄 [❮](subtext1)"
 
 [direnv]
 symbol = "🌍 "
@@ -20,3 +17,6 @@ denied_msg = "**"
 not_allowed_msg = "*"
 unloaded_msg = "unloaded"
 detect_files = [".envrc", ".env"]
+
+[directory]
+truncation_length = 4
