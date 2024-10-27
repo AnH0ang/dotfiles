@@ -6,15 +6,16 @@ if status is-interactive
     set fish_cursor_replace_one underscore
     set fish_cursor_visual block
 
-    # NOTE: Don't run starship in vscode because the terminal integration breaks
-    if [ $TERM_PROGRAM != vscode ]
-        starship init fish | source
-    end
-
     zoxide init fish | source
     atuin init fish --disable-up-arrow | source
     mise activate fish | source
     direnv export fish | source
+    starship init fish | source
+
+    # See https://github.com/microsoft/vscode/issues/208465
+    if [ $TERM_PROGRAM = vscode ]
+        . (code --locate-shell-integration-path fish)
+    end
 
     fish_vi_key_bindings
     bind -M insert \cn down-or-search
