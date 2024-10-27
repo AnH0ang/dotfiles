@@ -10,7 +10,7 @@ vimcmd_symbol = "🦄 [❮](subtext1)"
 [direnv]
 symbol = "🌍 "
 style = "bold green"
-format = 'with [${symbol}${allowed}${loaded}]($style) '
+format = 'is [${symbol}${allowed}${loaded}]($style) '
 disabled = false
 allowed_msg = ""
 denied_msg = "**"
