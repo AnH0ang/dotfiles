@@ -20,6 +20,7 @@ abbr tree "eza --tree"
 abbr vi nvim
 abbr view "nvim -R"
 abbr vim nvim
+abbr ps procs
 
 # Colorize commands when possible.
 alias ls="ls -G"
