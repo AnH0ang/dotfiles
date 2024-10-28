@@ -11,6 +11,9 @@
     "[fish]": {
         "editor.defaultFormatter": "bmalehorn.vscode-fish"
     },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
     "[latex]": {
         "editor.wordWrap": "wordWrapColumn"
     },
@@ -21,9 +24,7 @@
         "files.trimTrailingWhitespace": true
     },
     "[shellscript]": {
-        "editor.codeActionsOnSave": {
-            "source.fixAll.shellcheck": "explicit"
-        }
+        "editor.defaultFormatter": "foxundermoon.shell-format"
     },
     "[toml]": {
         "editor.defaultFormatter": "tamasfe.even-better-toml"
@@ -118,9 +119,9 @@
     "gitlens.codeLens.enabled": false,
     "jupyter.askForKernelRestart": false,
     "jupyter.debugJustMyCode": false,
-    // "notebook.codeActionsOnSave": {
-    //     "source.fixAll": "explicit"
-    // },
+    "notebook.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    },
     "notebook.consolidatedRunButton": true,
     "notebook.dragAndDropEnabled": false,
     "notebook.formatOnSave.enabled": true,
