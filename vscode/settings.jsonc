@@ -46,7 +46,6 @@
     "diffEditor.useInlineViewWhenSpaceIsLimited": false,
     "diffEditor.wordWrap": "off",
     "editor.accessibilitySupport": "off",
-    "editor.bracketPairColorization.enabled": false,
     "editor.codeActionWidget.includeNearbyQuickFixes": true,
     "editor.codeActionsOnSave": {
         "source.addMissingImports": "explicit",
