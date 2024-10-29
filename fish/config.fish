@@ -18,11 +18,14 @@ if status is-interactive
     end
 
     fish_vi_key_bindings
+
+    bind -M insert \cf forward-char
+    bind -M insert \cb backward-char
     bind -M insert \cn down-or-search
     bind -M insert \cp up-or-search
+
     bind -M insert \cl yazi-cd
     bind -M insert \co z-cd
     bind -M insert \cg fzf-cd
-    bind -M insert \cf accept-autosuggestion
     bind -M insert \ce edit_command_buffer
 end
