@@ -67,8 +67,12 @@
     "editor.linkedEditing": true,
     "editor.minimap.enabled": false,
     "editor.multiCursorModifier": "alt",
+    "editor.occurrencesHighlightDelay": 0,
     "editor.quickSuggestionsDelay": 5,
     "editor.renderLineHighlight": "all",
+    "editor.rulers": [
+        100
+    ],
     "editor.scrollbar.horizontal": "hidden",
     "editor.scrollbar.vertical": "hidden",
     "editor.stickyScroll.enabled": true,
@@ -108,6 +112,8 @@
     "git.inputValidation": true,
     "git.mergeEditor": true,
     "git.openRepositoryInParentFolders": "never",
+    "github.copilot.chat.edits.enabled": true,
+    "github.copilot.chat.followUps": "always",
     "github.copilot.chat.search.semanticTextResults": true,
     "github.copilot.editor.enableAutoCompletions": true,
     "github.copilot.enable": {
@@ -131,11 +137,16 @@
     "notebook.output.scrolling": true,
     "notebook.output.textLineLimit": 20,
     "notebook.showCellStatusBar": "visible",
+    "python.analysis.aiCodeActions": {
+        "implementAbstractClasses": true
+    },
     "python.analysis.autoFormatStrings": true,
     "python.analysis.autoImportCompletions": true,
     "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.includeAliasesFromUserFiles": true,
     "python.analysis.inlayHints.functionReturnTypes": true,
     "python.analysis.inlayHints.pytestParameters": true,
+    "python.analysis.supportDocstringTemplate": true,
     "python.analysis.typeCheckingMode": "basic",
     "ruff.organizeImports": true,
     "rust-analyzer.inlayHints.bindingModeHints.enable": false,
@@ -625,6 +636,7 @@
     "workbench.editor.tabActionCloseVisibility": false,
     "workbench.iconTheme": null,
     "workbench.layoutControl.enabled": false,
+    "workbench.panel.showLabels": false,
     "workbench.preferredDarkColorTheme": "Default Dark Modern",
     "workbench.preferredLightColorTheme": "Default Light Modern",
     "workbench.startupEditor": "none",
