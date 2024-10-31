@@ -6,6 +6,9 @@ add_newline = true
 success_symbol = "🦄 [❯](green)"
 error_symbol = "🦄 [❯](red)"
 vimcmd_symbol = "🦄 [❮](subtext1)"
+vimcmd_replace_one_symbol = "🦄 [❮](purple)"
+vimcmd_replace_symbol = "🦄 [❮](purple)"
+vimcmd_visual_symbol = "🦄 [❮](yellow)"
 
 [direnv]
 symbol = "🌍 "
