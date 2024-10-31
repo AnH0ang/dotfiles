@@ -70,9 +70,6 @@
     "editor.occurrencesHighlightDelay": 0,
     "editor.quickSuggestionsDelay": 5,
     "editor.renderLineHighlight": "all",
-    "editor.rulers": [
-        100
-    ],
     "editor.scrollbar.horizontal": "hidden",
     "editor.scrollbar.vertical": "hidden",
     "editor.stickyScroll.enabled": true,

@@ -4,6 +4,7 @@ abbr lg lazygit
 abbr yy yazi
 
 # new commands
+abbr pipx "uv tool"
 abbr benchmark hyperfine
 abbr cat bat
 abbr convert magick
