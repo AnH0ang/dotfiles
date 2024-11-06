@@ -13,7 +13,7 @@ if status is-interactive
     starship init fish | source
 
     # See https://github.com/microsoft/vscode/issues/208465
-    if [ $TERM_PROGRAM = vscode ]
+    if test "$TERM_PROGRAM" = "vscode"
         . (code --locate-shell-integration-path fish)
     end
 
