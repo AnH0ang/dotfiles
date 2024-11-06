@@ -7,4 +7,7 @@ prepend_keymap = [
     # Goto
     { on = ["g", "k"], run = "cd ~/Desktop", desc = "Go to desktop" },
     { on = ["g", "o"], run = "cd ~/Documents", desc = "Go to documents" },
+
+    # Copy
+    { on = ["c", "t"], desc = "Copy contents of file", run = ''' shell 'cat "$0" | pbcopy' --confirm''' },
 ]

@@ -22,6 +22,7 @@ abbr vi nvim
 abbr view "nvim -R"
 abbr vim nvim
 abbr ps procs
+abbr code cursor
 
 # Colorize commands when possible.
 alias ls="ls -G"
