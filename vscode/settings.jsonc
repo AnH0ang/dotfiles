@@ -145,6 +145,7 @@
     "python.analysis.inlayHints.pytestParameters": true,
     "python.analysis.supportDocstringTemplate": true,
     "python.analysis.typeCheckingMode": "basic",
+    "ruff.nativeServer": "off",
     "ruff.organizeImports": true,
     "rust-analyzer.inlayHints.bindingModeHints.enable": false,
     "rust-analyzer.inlayHints.chainingHints.enable": false,
