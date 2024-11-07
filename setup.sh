@@ -70,6 +70,19 @@ update_alacritty_icon() {
 }
 update_alacritty_icon
 
+# use touch id for sudo
+# If you fuck up read: https://medium.com/@zmre/quick-tip-fixing-the-sudo-file-on-macos-cf3c2a2584d4
+use_touch_id_for_sudo() {
+    # NOTE: In this future only this line will be needed
+    # sudo sed -i '' -e 's/^#auth/auth/' /etc/pam.d/sudo_local.template
+    line="auth       sufficient     pam_tid.so"
+    file="/etc/pam.d/sudo_test"
+    sudo grep -Fxq "$line" "$file" || sudo sed -i '' "2i\\
+$line
+" "$file"
+}
+use_touch_id_for_sudo
+
 ###############################################################################
 # MacOS Setting                                                               #
 ###############################################################################
