@@ -2,7 +2,7 @@
 
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title Ruff Format Clipboard
+# @raycast.title Format Python in Clipboard
 # @raycast.mode fullOutput
 
 # Optional parameters:
