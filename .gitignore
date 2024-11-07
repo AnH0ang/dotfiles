@@ -10,7 +10,8 @@ iterm2/*
 !iterm2/*.plist
 
 # raycast
-raycast
+raycast/*
+!raycast/scripts
 
 # tmux
 tmux/plugins

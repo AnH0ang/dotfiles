@@ -2,9 +2,6 @@
 program = "/opt/homebrew/bin/zellij"
 args = ["attach", "-c", "main"]
 
-# program = "/opt/homebrew/bin/fish"
-# args = ["--login", "-c", "/opt/homebrew/bin/tmux new-session -A -s main"]
-
 [window]
 dynamic_title = false
 dimensions = { columns = 88, lines = 28 }
