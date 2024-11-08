@@ -176,6 +176,6 @@ layout {
                 datetime_format   "%Y-%m-%d 󰅐 %H:%M"
                 datetime_timezone "Europe/Stockholm"
             }
-        }       
+        }
     }
 }

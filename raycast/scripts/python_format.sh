@@ -11,7 +11,7 @@
 
 # Extract the text from the clipboard, remove any leading '%' characters, and format the text
 percent_lines=$(pbpaste | grep '^%')
-formatted_out=$(pbpaste | grep -v '^%' | ~/.local/bin/ruff format -)
+formatted_out=$(pbpaste | grep -v '^%' | ~/.local/share/mise/installs/pipx-ruff/latest/bin/ruff format -)
 
 echo -e "Formatted text copied to clipboard:"
 echo -e "-----------------------------------\n"

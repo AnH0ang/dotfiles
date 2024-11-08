@@ -10,7 +10,7 @@
 # @raycast.packageName Writing
 
 # Extract the text from the clipboard, remove any leading '%' characters, and format the text
-formatted_out=$(pbpaste | ~/.local/bin/sqlfluff format --dialect hive --config ~/.config/sqlfluff/.sqlfluff -)
+formatted_out=$(pbpaste | ~/.local/share/mise/installs/pipx-sqlfluff/latest/bin/sqlfluff format --dialect hive --config ~/.config/sqlfluff/.sqlfluff -)
 
 echo -e "Formatted text copied to clipboard:"
 echo -e "-----------------------------------\n"

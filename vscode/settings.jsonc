@@ -44,6 +44,7 @@
     "debugpy.showPythonInlineValues": true,
     "diffEditor.diffAlgorithm": "advanced",
     "diffEditor.experimental.showMoves": true,
+    "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.useInlineViewWhenSpaceIsLimited": false,
     "diffEditor.wordWrap": "off",
     "editor.accessibilitySupport": "off",
