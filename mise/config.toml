@@ -1,8 +1,17 @@
 [settings]
 yes = true
+experimental = true
+
+[settings.pipx]
+uvx = true
 
 [tools]
 usage = "latest"
 python = "latest"
 yarn = "latest"
 node = "latest"
+rye = "latest"
+uv = "latest"
+deno = "latest"
+"pipx:sqlfluff" = "latest"
+"pipx:ruff" = "latest"
