@@ -83,6 +83,13 @@ $line
 }
 use_touch_id_for_sudo
 
+# uv tool (pipx)
+uv tool install ruff
+uv tool install sqlfluff
+uv tool install nbconvert
+uv tool install pex
+uv tool install pydoclint
+
 ###############################################################################
 # MacOS Setting                                                               #
 ###############################################################################
