@@ -1,6 +1,14 @@
 line-length = 120
 
 [lint]
-unfixable = [
-    "F401",
+unfixable = ["F401"]
+
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "UP",  # pyupgrade
+    "RUF", # ruff rules
+    "PL",  # pylint
 ]

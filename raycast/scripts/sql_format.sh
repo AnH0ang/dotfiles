@@ -9,11 +9,15 @@
 # @raycast.icon 👔
 # @raycast.packageName Writing
 
-# Extract the text from the clipboard, remove any leading '%' characters, and format the text
-formatted_out=$(pbpaste | ~/.local/share/mise/installs/pipx-sqlfluff/latest/bin/sqlfluff format --dialect hive --config ~/.config/sqlfluff/.sqlfluff -)
+# Check if sqlfluff is installed
+if ! command -v ~/.local/bin/sqlfluff &>/dev/null; then
+    echo "Error: sqlfluff is not installed"
+    echo "Please install it using: uv tool install sqlfluff"
+    exit 1
+fi
 
-echo -e "Formatted text copied to clipboard:"
-echo -e "-----------------------------------\n"
+# Extract the text from the clipboard, remove any leading '%' characters, and format the text
+formatted_out=$(pbpaste | ~/.local/bin/sqlfluff format --dialect hive --config ~/.config/sqlfluff/.sqlfluff -)
 
 # Output the formatted text
 echo "$formatted_out" | pbcopy

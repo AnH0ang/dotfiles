@@ -9,12 +9,16 @@
 # @raycast.icon 👔
 # @raycast.packageName Writing
 
+# Check if ruff is installed
+if ! command -v ~/.local/bin/ruff &>/dev/null; then
+    echo "Error: ruff is not installed"
+    echo "Please install it using: uv tool install ruff"
+    exit 1
+fi
+
 # Extract the text from the clipboard, remove any leading '%' characters, and format the text
 percent_lines=$(pbpaste | grep '^%')
-formatted_out=$(pbpaste | grep -v '^%' | ~/.local/share/mise/installs/pipx-ruff/latest/bin/ruff format -)
-
-echo -e "Formatted text copied to clipboard:"
-echo -e "-----------------------------------\n"
+formatted_out=$(pbpaste | grep -v '^%' | ~/.local/bin/ruff format - | ~/.local/bin/ruff check --fix -)
 
 # Output the formatted text
 if [ -n "$percent_lines" ]; then
