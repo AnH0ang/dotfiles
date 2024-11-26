@@ -124,7 +124,9 @@
     "jupyter.askForKernelRestart": false,
     "jupyter.debugJustMyCode": false,
     "notebook.codeActionsOnSave": {
-        "source.fixAll": "explicit"
+        "source.convertImportFormat": "explicit",
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
     },
     "notebook.consolidatedRunButton": true,
     "notebook.dragAndDropEnabled": false,
@@ -464,10 +466,10 @@
             "type": "command"
         },
         {
-            "command": "issuesAndMrs.focus",
+            "command": "gitlens.showSearchAndCompareView",
             "icon": "notebook-open-as-text",
             "keys": "S.l",
-            "name": "Show Gitlab",
+            "name": "Show Gitlense",
             "type": "command"
         },
         {
