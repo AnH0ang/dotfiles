@@ -3,4 +3,4 @@
 input_file="$1"
 output_file="${input_file%.*}-scanned.pdf"
 
-convert -density 150 "${input_file}" -colorspace gray +noise Gaussian -rotate 0.5 -depth 2 "${output_file}"
+magick convert -density 150 "${input_file}" -colorspace gray +noise Gaussian -rotate 0.5 -depth 2 "${output_file}"
