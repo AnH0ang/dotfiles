@@ -1,0 +1,56 @@
+#!/bin/bash
+
+# Check if any arguments are provided
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 <fd-arguments>"
+    echo "Example: $0 -e txt"
+    echo "         $0 '*.jpg'"
+    echo "         $0 -t f -d 2 'test*'"
+    exit 1
+fi
+
+# Find files matching pattern and store in temporary file
+temp_file=$(mktemp)
+fd "$@" >"$temp_file"
+
+# Check if any files were found
+if [ ! -s "$temp_file" ]; then
+    echo "No files found matching: $*"
+    rm "$temp_file"
+    exit 1
+fi
+
+# Create a second temp file for editing
+edit_file=$(mktemp)
+cp "$temp_file" "$edit_file"
+
+# Open vim to edit the filenames
+# Use vim -c to show a helpful message about quitting
+vim -c "echo 'Edit filenames (use :cq to abort)'" "$edit_file"
+vim_status=$?
+
+# Check if user aborted with :cq
+if [ $vim_status -ne 0 ]; then
+    echo "Operation aborted by user"
+    rm "$temp_file" "$edit_file"
+    exit 1
+fi
+
+# Check if files are different (user made changes)
+if cmp -s "$temp_file" "$edit_file"; then
+    echo "No changes made to filenames."
+    rm "$temp_file" "$edit_file"
+    exit 0
+fi
+
+# Read both files line by line and rename
+paste "$temp_file" "$edit_file" | while IFS=$'\t' read -r old_name new_name; do
+    if [ "$old_name" != "$new_name" ] && [ -n "$new_name" ]; then
+        if mv -i "$old_name" "$new_name"; then
+            echo "Renamed: $old_name → $new_name"
+        fi
+    fi
+done
+
+# Cleanup temporary files
+rm "$temp_file" "$edit_file"
