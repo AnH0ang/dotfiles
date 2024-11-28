@@ -410,67 +410,371 @@
             "type": "command"
         },
         {
-            "command": "workbench.view.testing.focus",
-            "icon": "test-view-icon",
-            "keys": "S.t",
-            "name": "Show tests",
-            "type": "command"
+            "keys": "t",
+            "position": -1
         },
         {
-            "command": "dockerContainers.focus",
-            "icon": "server",
-            "keys": "S.k",
-            "name": "Show docker",
-            "type": "command"
+            "bindings": [
+                {
+                    "command": "workbench.action.toggleSidebarVisibility",
+                    "icon": "split-horizontal",
+                    "key": "b",
+                    "name": "Toggle side bar visibility",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.action.toggleCenteredLayout",
+                    "icon": "list-flat",
+                    "key": "c",
+                    "name": "Toggle centered layout",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.action.selectIconTheme",
+                    "icon": "symbol-misc",
+                    "key": "i",
+                    "name": "Select icon theme",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.action.togglePanel",
+                    "icon": "output",
+                    "key": "j",
+                    "name": "Toggle panel visibility",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.action.toggleMaximizedPanel",
+                    "icon": "chevron-up",
+                    "key": "m",
+                    "name": "Toggle maximized panel",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.action.selectTheme",
+                    "icon": "paintcan",
+                    "key": "s",
+                    "name": "Select theme",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.action.toggleActivityBarVisibility",
+                    "icon": "tools",
+                    "key": "t",
+                    "name": "Toggle tool/activity bar visibility",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.action.toggleZenMode",
+                    "icon": "eye",
+                    "key": "z",
+                    "name": "Toggle zen mode",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.action.toggleFullScreen",
+                    "icon": "screen-full",
+                    "key": "F",
+                    "name": "Toggle full screen",
+                    "type": "command"
+                },
+                {
+                    "command": "editor.action.toggleMinimap",
+                    "icon": "symbol-ruler",
+                    "key": "M",
+                    "name": "Toggle minimap",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.action.toggleTabsVisibility",
+                    "icon": "files",
+                    "key": "T",
+                    "name": "Toggle tab visibility",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.action.toggleSidebarVisibility",
+                    "icon": "layout-sidebar-left",
+                    "key": "h",
+                    "name": "Toggle Primary Side Bar",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.action.toggleAuxiliaryBar",
+                    "icon": "layout-sidebar-right",
+                    "key": "l",
+                    "name": "Toggle Secondary Side Bar",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.action.toggleStatusbarVisibility",
+                    "icon": "layout-statusbar",
+                    "key": "a",
+                    "name": "Toggle Status Bar",
+                    "type": "command"
+                }
+            ],
+            "icon": "tools",
+            "keys": "t",
+            "name": "+UI toggles",
+            "type": "bindings"
         },
         {
-            "command": "workbench.panel.chat.view.copilot.focus",
-            "icon": "comment-discussion",
-            "keys": "S.c",
-            "name": "Show chat",
-            "type": "command"
+            "keys": "S",
+            "position": -1
         },
         {
-            "command": "workbench.action.toggleSidebarVisibility",
-            "icon": "layout-sidebar-left",
-            "keys": "T.h",
-            "name": "Toggle Primary Side Bar",
-            "type": "command"
+            "bindings": [
+                {
+                    "args": {
+                        "commands": [
+                            {
+                                "command": ":noh"
+                            }
+                        ]
+                    },
+                    "command": "vim.remap",
+                    "icon": "clear-all",
+                    "key": "c",
+                    "name": "Clear highlight",
+                    "type": "command"
+                },
+                {
+                    "command": "editor.action.rename",
+                    "icon": "edit",
+                    "key": "e",
+                    "name": "Edit symbol",
+                    "type": "command"
+                },
+                {
+                    "bindings": [
+                        {
+                            "commands": [
+                                "editor.action.addSelectionToNextFindMatch",
+                                "workbench.action.findInFiles"
+                            ],
+                            "icon": "selection",
+                            "key": "/",
+                            "name": "Search in project with selection",
+                            "type": "commands"
+                        },
+                        {
+                            "command": "editor.action.wordHighlight.next",
+                            "icon": "arrow-down",
+                            "key": "n",
+                            "name": "Next occurrence",
+                            "type": "command"
+                        },
+                        {
+                            "command": "editor.action.wordHighlight.prev",
+                            "icon": "arrow-up",
+                            "key": "p",
+                            "name": "Previous occurrence",
+                            "type": "command"
+                        },
+                        {
+                            "command": "editor.action.wordHighlight.prev",
+                            "icon": "arrow-up",
+                            "key": "N",
+                            "name": "Previous occurrence",
+                            "type": "command"
+                        }
+                    ],
+                    "command": "editor.action.wordHighlight.trigger",
+                    "icon": "symbol-color",
+                    "key": "h",
+                    "name": "Highlight symbol",
+                    "type": "transient"
+                },
+                {
+                    "command": "workbench.action.gotoSymbol",
+                    "icon": "symbol-class",
+                    "key": "j",
+                    "name": "Jump to symbol in buffer",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.action.findInFiles",
+                    "icon": "search",
+                    "key": "p",
+                    "name": "Search in project",
+                    "type": "command"
+                },
+                {
+                    "command": "editor.action.referenceSearch.trigger",
+                    "icon": "references",
+                    "key": "r",
+                    "name": "Search all references",
+                    "type": "command"
+                },
+                {
+                    "command": "fuzzySearch.activeTextEditorWithCurrentSelection",
+                    "icon": "file",
+                    "key": "s",
+                    "name": "Fuzzy search in current buffer",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.action.showAllSymbols",
+                    "icon": "symbol-class",
+                    "key": "J",
+                    "name": "Jump to symbol in project",
+                    "type": "command"
+                },
+                {
+                    "commands": [
+                        "editor.action.addSelectionToNextFindMatch",
+                        "workbench.action.findInFiles"
+                    ],
+                    "icon": "selection",
+                    "key": "P",
+                    "name": "Search in project with selection",
+                    "type": "commands"
+                },
+                {
+                    "command": "references-view.find",
+                    "icon": "references",
+                    "key": "R",
+                    "name": "Search all references in side bar",
+                    "type": "command"
+                },
+                {
+                    "commands": [
+                        "editor.action.addSelectionToNextFindMatch",
+                        "fuzzySearch.activeTextEditorWithCurrentSelection"
+                    ],
+                    "icon": "selection",
+                    "key": "S",
+                    "name": "Fuzzy search with selection in current buffer",
+                    "type": "commands"
+                }
+            ],
+            "keys": "S",
+            "name": "+Search",
+            "type": "bindings"
         },
         {
-            "command": "workbench.action.toggleAuxiliaryBar",
-            "icon": "layout-sidebar-right",
-            "keys": "T.l",
-            "name": "Toggle Secondary Side Bar",
-            "type": "command"
+            "keys": "s",
+            "position": -1
         },
         {
-            "command": "workbench.action.toggleStatusbarVisibility",
-            "icon": "layout-statusbar",
-            "keys": "T.a",
-            "name": "Toggle Status Bar",
-            "type": "command"
-        },
-        {
-            "command": "outline.focus",
-            "icon": "outline-view-icon",
-            "keys": "S.o",
-            "name": "Show outline",
-            "type": "command"
-        },
-        {
-            "command": "workbench.view.debug",
-            "icon": "breakpoints-view-icon",
-            "keys": "S.D",
-            "name": "Show debug Explorer",
-            "type": "command"
-        },
-        {
-            "command": "gitlens.showSearchAndCompareView",
-            "icon": "notebook-open-as-text",
-            "keys": "S.l",
-            "name": "Show Gitlense",
-            "type": "command"
+            "bindings": [
+                {
+                    "command": "workbench.debug.action.toggleRepl",
+                    "icon": "debug-console",
+                    "key": "d",
+                    "name": "Show debug console",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.view.explorer",
+                    "icon": "list-tree",
+                    "key": "e",
+                    "name": "Show explorer",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.view.scm",
+                    "icon": "source-control",
+                    "key": "g",
+                    "name": "Show source control",
+                    "type": "command"
+                },
+                {
+                    "command": "notifications.toggleList",
+                    "icon": "comment",
+                    "key": "n",
+                    "name": "Show notification",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.action.output.toggleOutput",
+                    "icon": "output",
+                    "key": "o",
+                    "name": "Show output",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.actions.view.problems",
+                    "icon": "error",
+                    "key": "p",
+                    "name": "Show problem",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.view.remote",
+                    "icon": "remote-explorer",
+                    "key": "r",
+                    "name": "Show remote explorer",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.view.search",
+                    "icon": "search",
+                    "key": "s",
+                    "name": "Show search",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.view.extension.test",
+                    "icon": "beaker",
+                    "key": "t",
+                    "name": "Show test",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.view.extensions",
+                    "icon": "extensions",
+                    "key": "x",
+                    "name": "Show extensions",
+                    "type": "command"
+                },
+                {
+                    "command": "outline.focus",
+                    "icon": "outline-view-icon",
+                    "key": "o",
+                    "name": "show outline",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.view.debug",
+                    "icon": "breakpoints-view-icon",
+                    "key": "D",
+                    "name": "show debug Explorer",
+                    "type": "command"
+                },
+                {
+                    "command": "gitlens.showSearchAndCompareView",
+                    "icon": "notebook-open-as-text",
+                    "key": "l",
+                    "name": "show Gitlense",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.view.testing.focus",
+                    "icon": "test-view-icon",
+                    "key": "t",
+                    "name": "Show tests",
+                    "type": "command"
+                },
+                {
+                    "command": "dockerContainers.focus",
+                    "icon": "server",
+                    "key": "k",
+                    "name": "Show docker",
+                    "type": "command"
+                },
+                {
+                    "command": "workbench.panel.chat.view.copilot.focus",
+                    "icon": "comment-discussion",
+                    "key": "c",
+                    "name": "Show chat",
+                    "type": "command"
+                }
+            ],
+            "keys": "s",
+            "name": "+Show",
+            "type": "bindings"
         },
         {
             "command": "testing.debugAtCursor",
