@@ -7,7 +7,7 @@
 
 # Optional parameters:
 # @raycast.icon 👔
-# @raycast.packageName Writing
+# @raycast.packageName Format Python
 
 # Check if ruff is installed
 if ! command -v ~/.local/bin/ruff &>/dev/null; then

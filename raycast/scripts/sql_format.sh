@@ -7,7 +7,8 @@
 
 # Optional parameters:
 # @raycast.icon 👔
-# @raycast.packageName Writing
+# @raycast.packageName Format SQL
+# @raycast.argument1 { "type": "dropdown", "placeholder": "hive", "data": [{"title": "hive", "value": "hive"}, {"title": "BigQuery", "value": "bigquery"}] }
 
 # Check if sqlfluff is installed
 if ! command -v ~/.local/bin/sqlfluff &>/dev/null; then
@@ -17,7 +18,7 @@ if ! command -v ~/.local/bin/sqlfluff &>/dev/null; then
 fi
 
 # Extract the text from the clipboard, remove any leading '%' characters, and format the text
-formatted_out=$(pbpaste | ~/.local/bin/sqlfluff format --dialect hive --config ~/.config/sqlfluff/.sqlfluff -)
+formatted_out=$(pbpaste | ~/.local/bin/sqlfluff format --dialect "$1" --config ~/.config/sqlfluff/.sqlfluff -)
 
 # Output the formatted text
 echo "$formatted_out" | pbcopy
