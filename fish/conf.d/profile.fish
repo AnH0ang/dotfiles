@@ -61,3 +61,6 @@ set -x PATH "$HOME/.cargo/bin" $PATH
 
 # direnv
 set -x DIRENV_LOG_FORMAT ""
+
+# tex
+set -x PATH /Library/TeX/texbin $PATH
