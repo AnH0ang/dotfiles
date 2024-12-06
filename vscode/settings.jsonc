@@ -11,7 +11,13 @@
     "[fish]": {
         "editor.defaultFormatter": "bmalehorn.vscode-fish"
     },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[latex]": {
@@ -28,6 +34,16 @@
     },
     "[toml]": {
         "editor.defaultFormatter": "tamasfe.even-better-toml"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[typst]": {
+        "editor.defaultFormatter": "myriad-dreamin.tinymist",
+        "editor.formatOnSave": true
     },
     "[yaml]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
@@ -109,7 +125,6 @@
     "git.confirmSync": false,
     "git.inputValidation": true,
     "git.mergeEditor": true,
-    "git.openRepositoryInParentFolders": "never",
     "github.copilot.chat.edits.enabled": true,
     "github.copilot.chat.followUps": "always",
     "github.copilot.chat.search.semanticTextResults": true,
@@ -166,6 +181,7 @@
     ],
     "terminal.integrated.confirmOnKill": "never",
     "terminal.integrated.defaultProfile.osx": "fish",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
     "terminal.integrated.enableVisualBell": true,
     "terminal.integrated.fontSize": 11.5,
     "terminal.integrated.shellIntegration.enabled": false,
@@ -178,6 +194,7 @@
     "testing.defaultGutterClickAction": "debug",
     "testing.followRunningTest": false,
     "testing.openTesting": "openOnTestFailure",
+    "tinymist.formatterMode": "typstyle",
     "typos.config": "~/.config/typos/typos.toml",
     "vim.camelCaseMotion.enable": true,
     "vim.easymotion": true,

@@ -21,5 +21,8 @@ not_allowed_msg = "*"
 unloaded_msg = "unloaded"
 detect_files = [".envrc", ".env"]
 
+[typst]
+symbol = "📝 "
+
 [directory]
 truncation_length = 4
