@@ -1,0 +1,25 @@
+title = ""
+initial-command = "/opt/homebrew/bin/zellij attach -c main"
+
+font-size = 14
+font-family = "SF Mono"
+
+theme = "catppuccin-mocha"
+
+shell-integration = fish
+
+window-width = 88
+window-height = 30
+window-padding-x = 20
+window-padding-y = 10
+window-save-state = never
+
+quick-terminal-position = center
+
+quit-after-last-window-closed = true
+
+confirm-close-surface = false
+
+clipboard-read = "allow"
+clipboard-write = "allow"
+copy-on-select = true
