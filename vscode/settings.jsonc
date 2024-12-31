@@ -24,10 +24,7 @@
         "editor.wordWrap": "wordWrapColumn"
     },
     "[python]": {
-        "editor.defaultFormatter": "charliermarsh.ruff",
-        "files.insertFinalNewline": true,
-        "files.trimFinalNewlines": true,
-        "files.trimTrailingWhitespace": true
+        "editor.defaultFormatter": "charliermarsh.ruff"
     },
     "[shellscript]": {
         "editor.defaultFormatter": "foxundermoon.shell-format"
@@ -39,7 +36,7 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[typescriptreact]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[typst]": {
         "editor.defaultFormatter": "myriad-dreamin.tinymist",
@@ -62,7 +59,6 @@
     "diffEditor.experimental.showMoves": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.useInlineViewWhenSpaceIsLimited": false,
-    "diffEditor.wordWrap": "off",
     "editor.accessibilitySupport": "off",
     "editor.codeActionWidget.includeNearbyQuickFixes": true,
     "editor.codeActionsOnSave": {
@@ -104,6 +100,20 @@
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmPasteNative": false,
     "explorer.confirmUndo": "light",
+    "explorer.fileNesting.patterns": {
+        "*.db": "${capture}.${extname}-*",
+        "*.db3": "${capture}.${extname}-*",
+        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+        "*.jsx": "${capture}.js",
+        "*.s3db": "${capture}.${extname}-*",
+        "*.sdb": "${capture}.${extname}-*",
+        "*.sqlite": "${capture}.${extname}-*",
+        "*.sqlite3": "${capture}.${extname}-*",
+        "*.ts": "${capture}.js",
+        "*.tsx": "${capture}.ts",
+        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+        "tsconfig.json": "tsconfig.*.json"
+    },
     "explorer.incrementalNaming": "smart",
     "explorer.openEditors.sortOrder": "fullPath",
     "extensions.ignoreRecommendations": true,
@@ -120,6 +130,10 @@
         "**/.ruff_cache": true,
         "**/__pycache__": true
     },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "diffEditor.wordWrap": "off",
     "git.autoRepositoryDetection": "openEditors",
     "git.autofetch": false,
     "git.confirmSync": false,
@@ -181,7 +195,7 @@
     ],
     "terminal.integrated.confirmOnKill": "never",
     "terminal.integrated.defaultProfile.osx": "fish",
-    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
     "terminal.integrated.enableVisualBell": true,
     "terminal.integrated.fontSize": 11.5,
     "terminal.integrated.shellIntegration.enabled": false,
@@ -191,9 +205,9 @@
     "terminal.integrated.tabs.hideCondition": "never",
     "testing.alwaysRevealTestOnStateChange": true,
     "testing.automaticallyOpenPeekView": "failureAnywhere",
+    "testing.automaticallyOpenTestResults": "openOnTestFailure",
     "testing.defaultGutterClickAction": "debug",
     "testing.followRunningTest": false,
-    "testing.openTesting": "openOnTestFailure",
     "tinymist.formatterMode": "typstyle",
     "typos.config": "~/.config/typos/typos.toml",
     "vim.camelCaseMotion.enable": true,

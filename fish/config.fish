@@ -9,11 +9,11 @@ if status is-interactive
     zoxide init fish | source
     atuin init fish --disable-up-arrow | source
     mise activate fish | source
-    direnv export fish | source
+    # direnv export fish | source
     starship init fish | source
 
     # See https://github.com/microsoft/vscode/issues/208465
-    if test "$TERM_PROGRAM" = "vscode"
+    if test "$TERM_PROGRAM" = vscode
         . (code --locate-shell-integration-path fish)
     end
 

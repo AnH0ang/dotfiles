@@ -59,6 +59,9 @@ set -x PATH "$HOME/.config/rye/shims" $PATH
 # rust
 set -x PATH "$HOME/.cargo/bin" $PATH
 
+# mise
+set -x MISE_ENV_FILE ".env"
+
 # direnv
 set -x DIRENV_LOG_FORMAT ""
 
