@@ -59,6 +59,7 @@
     "diffEditor.experimental.showMoves": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.useInlineViewWhenSpaceIsLimited": false,
+    "diffEditor.wordWrap": "off",
     "editor.accessibilitySupport": "off",
     "editor.codeActionWidget.includeNearbyQuickFixes": true,
     "editor.codeActionsOnSave": {
@@ -133,7 +134,6 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
-    "diffEditor.wordWrap": "off",
     "git.autoRepositoryDetection": "openEditors",
     "git.autofetch": false,
     "git.confirmSync": false,
@@ -166,6 +166,7 @@
     "notebook.output.scrolling": true,
     "notebook.output.textLineLimit": 20,
     "notebook.showCellStatusBar": "visible",
+    "prettier.useEditorConfig": false,
     "python.analysis.aiCodeActions": {
         "implementAbstractClasses": true
     },
