@@ -1,9 +1,5 @@
 [settings]
 yes = true
-experimental = true
-
-[settings.pipx]
-uvx = true
 
 [tools]
 usage = "latest"
