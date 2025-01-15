@@ -43,7 +43,7 @@
     colorMoved = default
 
 [help]
-    autocorrect = immediate
+    autocorrect = prompt
 
 [branch]
     autosetuprebase = always
