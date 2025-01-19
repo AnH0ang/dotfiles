@@ -38,6 +38,9 @@
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "[typst-code]": {
+        "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+    },
     "[typst]": {
         "editor.defaultFormatter": "myriad-dreamin.tinymist",
         "editor.formatOnSave": true,

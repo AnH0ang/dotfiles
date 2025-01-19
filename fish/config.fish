@@ -6,11 +6,23 @@ if status is-interactive
     set fish_cursor_replace_one underscore
     set fish_cursor_visual block
 
-    zoxide init fish | source
-    atuin init fish --disable-up-arrow | source
-    mise activate fish | source
+    if command -q zoxide
+        zoxide init fish | source
+    end
+
+    if command -q atuin
+        atuin init fish --disable-up-arrow | source
+    end
+
+    if command -q mise
+        mise activate fish | source
+    end
+
+    if command -q starship
+        starship init fish | source
+    end
+
     # direnv export fish | source
-    starship init fish | source
 
     # See https://github.com/microsoft/vscode/issues/208465
     if test "$TERM_PROGRAM" = vscode
