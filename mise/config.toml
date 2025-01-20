@@ -1,17 +1,6 @@
-<<<<<<< HEAD
 [settings]
 yes = true
 
-||||||| parent of 1ca4fc7 (Update)
-[settings]
-yes = true
-experimental = true
-
-[settings.pipx]
-uvx = true
-
-=======
->>>>>>> 1ca4fc7 (Update)
 [tools]
 usage = "latest"
 python = "latest"
