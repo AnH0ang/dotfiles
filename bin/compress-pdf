@@ -1,0 +1,85 @@
+#!/bin/bash
+
+# PDF Compression Script
+# This script compresses PDF files while maintaining high image quality
+# Usage: ./compress_pdf.sh input.pdf [output.pdf]
+
+# Check if Ghostscript is installed
+if ! command -v gs &>/dev/null; then
+    echo "Error: Ghostscript is not installed. Please install it first:"
+    echo "For Ubuntu/Debian: sudo apt-get install ghostscript"
+    echo "For MacOS: brew install ghostscript"
+    echo "For CentOS/RHEL: sudo yum install ghostscript"
+    exit 1
+fi
+
+# Check if input file is provided
+if [ $# -eq 0 ]; then
+    echo "Error: No input file provided"
+    echo "Usage: $0 input.pdf [output.pdf]"
+    exit 1
+fi
+
+input_file="$1"
+output_file="${2:-${input_file%.*}_compressed.pdf}"
+
+# Check if input file exists
+if [ ! -f "$input_file" ]; then
+    echo "Error: Input file '$input_file' does not exist"
+    exit 1
+fi
+
+# Check if input file is a PDF
+if ! file "$input_file" | grep -i "pdf" >/dev/null; then
+    echo "Error: Input file '$input_file' is not a PDF"
+    exit 1
+fi
+
+# Get original file size
+original_size=$(stat -f %z "$input_file" 2>/dev/null || stat -c %s "$input_file")
+
+echo "Compressing PDF file..."
+echo "Input: $input_file"
+echo "Output: $output_file"
+
+# Compress PDF using Ghostscript with high-quality settings
+gs -sDEVICE=pdfwrite \
+    -dCompatibilityLevel=1.4 \
+    -dPDFSETTINGS=/printer \
+    -dNOPAUSE \
+    -dQUIET \
+    -dBATCH \
+    -dColorImageResolution=150 \
+    -dGrayImageResolution=150 \
+    -dColorImageDownsampleType=/Bicubic \
+    -dGrayImageDownsampleType=/Bicubic \
+    -dMonoImageDownsampleType=/Bicubic \
+    -dColorImageDownsampleThreshold=1.0 \
+    -dGrayImageDownsampleThreshold=1.0 \
+    -dMonoImageDownsampleThreshold=1.0 \
+    -sOutputFile="$output_file" \
+    "$input_file"
+
+# Check if compression was successful
+if [ $? -eq 0 ]; then
+    # Get compressed file size
+    compressed_size=$(stat -f %z "$output_file" 2>/dev/null || stat -c %s "$output_file")
+
+    # Calculate compression ratio
+    ratio=$(echo "scale=2; $compressed_size * 100 / $original_size" | bc)
+    saved=$(echo "scale=2; ($original_size - $compressed_size) * 100 / $original_size" | bc)
+
+    # Convert sizes to human-readable format
+    original_hr=$(numfmt --to=iec-i --suffix=B --format="%.1f" "$original_size" 2>/dev/null || echo "$(($original_size / 1024 / 1024))MB")
+    compressed_hr=$(numfmt --to=iec-i --suffix=B --format="%.1f" "$compressed_size" 2>/dev/null || echo "$(($compressed_size / 1024 / 1024))MB")
+
+    echo "Compression completed successfully!"
+    echo "Original size: $original_hr"
+    echo "Compressed size: $compressed_hr"
+    echo "Compression ratio: ${ratio}%"
+    echo "Space saved: ${saved}%"
+else
+    echo "Error: Compression failed"
+    rm -f "$output_file"
+    exit 1
+fi
