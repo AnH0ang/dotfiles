@@ -1,4 +1,7 @@
 # shorten long commands
+abbr g git
+abbr l eza
+abbr c cd
 abbr kc kubectl
 abbr lg lazygit
 abbr yy yazi
@@ -23,6 +26,7 @@ abbr view "nvim -R"
 abbr vim nvim
 abbr ps procs
 abbr npm pnpm
+
 
 # Colorize commands when possible.
 alias ls="ls -G"
