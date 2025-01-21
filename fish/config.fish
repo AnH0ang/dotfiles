@@ -22,6 +22,11 @@ if status is-interactive
         starship init fish | source
     end
 
+    if command -q gcloud
+        complete -c gcloud -f -a '(__fish_argcomplete_complete gcloud)'
+        complete -c gsutil -f -a '(__fish_argcomplete_complete gsutil)'
+    end
+
     # direnv export fish | source
 
     # See https://github.com/microsoft/vscode/issues/208465

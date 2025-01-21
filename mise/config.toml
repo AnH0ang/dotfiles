@@ -4,6 +4,4 @@ yes = true
 [tools]
 usage = "latest"
 python = "latest"
-rye = "latest"
 uv = "latest"
-ruby = "3"

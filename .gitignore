@@ -52,3 +52,6 @@ github-copilot
 # zed
 zed/*
 !zed/settings.json
+
+#gcloud
+gcloud/*
