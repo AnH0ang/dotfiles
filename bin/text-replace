@@ -1,0 +1,47 @@
+#!/bin/sh
+
+# Function to show usage examples
+show_usage() {
+    echo "Usage: $0 <search_string> <replace_string> [<directory>]"
+    echo "Examples:"
+    echo "  $0 foo bar              # Replace 'foo' with 'bar' in current directory"
+    echo "  $0 foo bar /path/to/dir # Replace 'foo' with 'bar' in specified directory"
+    exit 1
+}
+
+# Check if the correct number of arguments is provided
+if [ $# -lt 2 ] || [ $# -gt 3 ]; then
+    show_usage
+fi
+
+# Assign arguments to variables
+SEARCH_STRING=$1
+REPLACE_STRING=$2
+DIRECTORY=${3:-.}  # Default to current directory if not provided
+
+# Check if the directory exists
+if [ ! -d "$DIRECTORY" ]; then
+    echo "Error: Directory '$DIRECTORY' does not exist."
+    exit 1
+fi
+
+# Function to replace text in file contents
+replace_in_files() {
+    find "$DIRECTORY" -type f -exec sed -i "s/$SEARCH_STRING/$REPLACE_STRING/g" {} +
+}
+
+# Function to replace text in file names
+replace_in_filenames() {
+    find "$DIRECTORY" -type f -name "*$SEARCH_STRING*" | while read -r file; do
+        new_file=$(echo "$file" | sed "s/$SEARCH_STRING/$REPLACE_STRING/g")
+        if [ "$file" != "$new_file" ]; then
+            mv "$file" "$new_file"
+        fi
+    done
+}
+
+# Perform the replacements
+replace_in_files
+replace_in_filenames
+
+echo "Replacement complete."
