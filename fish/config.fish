@@ -27,8 +27,6 @@ if status is-interactive
         complete -c gsutil -f -a '(__fish_argcomplete_complete gsutil)'
     end
 
-    # direnv export fish | source
-
     # See https://github.com/microsoft/vscode/issues/208465
     if test "$TERM_PROGRAM" = vscode
         . (code --locate-shell-integration-path fish)
