@@ -3,12 +3,12 @@
 add_newline = true
 
 [character]
-success_symbol = "[[🦄](green) ❯](peach)"
-error_symbol = "[[🦄](red) ❯](peach)"
+success_symbol = "[[🦄](green) ❯](red)"
+error_symbol = "[[🦄](red) ❯](green)"
 vimcmd_symbol = "[🦄 ❮](subtext1)"
-vimcmd_replace_one_symbol = "[🦄 ❮](subtext1)"
-vimcmd_replace_symbol = "[🦄 ❮](subtext1)"
-vimcmd_visual_symbol = "[🦄 ❮](subtext1)"
+vimcmd_replace_one_symbol = "[🦄 ❮](purple)"
+vimcmd_replace_symbol = "[🦄 ❮](purple)"
+vimcmd_visual_symbol = "[🦄 ❮](yellow)"
 
 [direnv]
 symbol = "🌍 "
