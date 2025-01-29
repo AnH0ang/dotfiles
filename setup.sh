@@ -31,12 +31,6 @@ ln -sf "${HOME}"/.config/vscode/settings.jsonc "${HOME}"/Library/'Application Su
 rm -f "${HOME}"/Library/'Application Support'/Code/User/keybindings.json
 ln -sf "${HOME}"/.config/vscode/keybindings.jsonc "${HOME}"/Library/'Application Support'/Code/User/keybindings.json
 
-mkdir -p "${HOME}"/Library/'Application Support'/Cursor/User
-rm -f "${HOME}"/Library/'Application Support'/Cursor/User/settings.json
-ln -sf "${HOME}"/.config/vscode/settings.jsonc "${HOME}"/Library/'Application Support'/Cursor/User/settings.json
-rm -f "${HOME}"/Library/'Application Support'/Cursor/User/keybindings.json
-ln -sf "${HOME}"/.config/vscode/keybindings.jsonc "${HOME}"/Library/'Application Support'/Cursor/User/keybindings.json
-
 # zsh
 echo "Configure zsh..."
 ln -sf "${HOME}"/.config/shell/profile "${HOME}"/.zprofile

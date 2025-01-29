@@ -4,12 +4,6 @@
 #  _ / /\__ \ | | | | | (__
 # (_)___|___/_| |_|_|  \___|
 
-# install tmux plugin manager if not exists
-if [ ! -d "$HOME/.config/tmux/plugins/tpm" ]; then
-    git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
-    sh ~/.config/tmux/plugins/tpm/scripts/install_plugins.sh
-fi
-
 # install zgen if not exists
 ZGEN_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zgen"
 [ ! -d $ZGEN_HOME ] && git clone https://github.com/tarjoilija/zgen.git "${ZGEN_HOME}"
