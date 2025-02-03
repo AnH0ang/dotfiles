@@ -4,4 +4,3 @@ yes = true
 [tools]
 usage = "latest"
 python = "latest"
-uv = "latest"

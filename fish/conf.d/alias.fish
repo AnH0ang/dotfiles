@@ -2,6 +2,7 @@
 abbr g git
 abbr l eza
 abbr c cd
+abbr o code .
 abbr kc kubectl
 abbr lg lazygit
 abbr yy yazi
