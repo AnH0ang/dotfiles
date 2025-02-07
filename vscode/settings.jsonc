@@ -123,23 +123,23 @@
     "explorer.openEditors.sortOrder": "fullPath",
     "extensions.ignoreRecommendations": true,
     "files.associations": {
+        ".envrc*": "shellscript",
         "*.cfg": "raw",
         "*.plist": "xml",
-        ".envrc*": "shellscript",
         "config": "raw"
     },
     "files.exclude": {
-        "**/*.egg-info": true,
+        "**/__pycache__": true,
         "**/.mypy_cache": true,
         "**/.pytest_cache": true,
         "**/.ruff_cache": true,
-        "**/__pycache__": true
+        "**/*.egg-info": true
     },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
-    "git.autoRepositoryDetection": "openEditors",
     "git.autofetch": false,
+    "git.autoRepositoryDetection": "openEditors",
     "git.confirmSync": false,
     "git.inputValidation": true,
     "git.mergeEditor": true,
@@ -172,6 +172,8 @@
     "notebook.showCellStatusBar": "visible",
     "prettier.useEditorConfig": false,
     "python.analysis.aiCodeActions": {
+        "generateDocstring": true,
+        "generateSymbol": true,
         "implementAbstractClasses": true
     },
     "python.analysis.autoFormatStrings": true,
@@ -184,7 +186,6 @@
     "python.analysis.languageServerMode": "full",
     "python.analysis.supportDocstringTemplate": true,
     "python.analysis.typeCheckingMode": "standard",
-    "ruff.nativeServer": "off",
     "ruff.organizeImports": true,
     "rust-analyzer.inlayHints.bindingModeHints.enable": false,
     "rust-analyzer.inlayHints.chainingHints.enable": false,
@@ -204,6 +205,7 @@
     "terminal.integrated.defaultProfile.osx": "fish",
     "terminal.integrated.enableMultiLinePasteWarning": "never",
     "terminal.integrated.enableVisualBell": true,
+    "terminal.integrated.fontLigatures.enabled": true,
     "terminal.integrated.fontSize": 11.5,
     "terminal.integrated.shellIntegration.enabled": false,
     "terminal.integrated.shellIntegration.history": 1000,
