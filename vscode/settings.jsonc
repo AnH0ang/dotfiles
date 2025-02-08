@@ -148,7 +148,7 @@
     "github.copilot.chat.search.semanticTextResults": true,
     "github.copilot.editor.enableAutoCompletions": true,
     "github.copilot.enable": {
-        "*": false,
+        "*": true,
         "markdown": true,
         "plaintext": true,
         "scminput": false
