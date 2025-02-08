@@ -55,3 +55,6 @@ zed/*
 
 #gcloud
 gcloud/*
+
+# fish
+fish/completions
