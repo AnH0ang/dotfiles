@@ -1,36 +1,38 @@
 # shorten long commands
-abbr g git
-abbr l eza
 abbr c cd
-abbr o code .
+abbr g git
 abbr kc kubectl
+abbr l eza
 abbr lg lazygit
+abbr o code .
 abbr yy yazi
 
-# new commands
-abbr pipx "uv tool"
-abbr benchmark hyperfine
+# tools replacements
 abbr cat bat
 abbr convert magick
 abbr du "dust --depth 1"
 abbr exa eza
-abbr help "aichat -r shell:zsh"
+abbr grep rg
 abbr jq yq
 abbr lf yazi
 abbr ls eza
 abbr neofetch fastfetch
+abbr npm pnpm
+abbr pipx "uv tool"
+abbr ps procs
 abbr ranger yazi
-abbr shred "rm -P"
 abbr tree "eza --tree"
 abbr vi nvim
-abbr view "nvim -R"
 abbr vim nvim
-abbr ps procs
-abbr npm pnpm
 
+# new commands
+abbr benchmark hyperfine
+abbr help "aichat -r shell:zsh"
+abbr shred "rm -P"
+abbr view "nvim -R"
 
 # Colorize commands when possible.
-alias ls="ls -G"
-alias less="less -R"
-alias grep="grep --color=auto"
 alias diff="diff --color=auto"
+alias grep="grep --color=auto"
+alias less="less -R"
+alias ls="ls -G"
