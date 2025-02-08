@@ -23,6 +23,7 @@ abbr du "dust --depth 1"
 abbr exa eza
 abbr grep rg
 abbr jq yq
+abbr less delta
 abbr lf yazi
 abbr ls eza
 abbr neofetch fastfetch
