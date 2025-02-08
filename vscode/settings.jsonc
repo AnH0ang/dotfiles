@@ -65,12 +65,12 @@
     "diffEditor.useInlineViewWhenSpaceIsLimited": false,
     "diffEditor.wordWrap": "off",
     "editor.accessibilitySupport": "off",
-    "editor.codeActionWidget.includeNearbyQuickFixes": true,
     "editor.codeActionsOnSave": {
         "source.addMissingImports": "explicit",
         "source.fixAll": "explicit",
         "source.organizeImports": "explicit"
     },
+    "editor.codeActionWidget.includeNearbyQuickFixes": true,
     "editor.cursorBlinking": "solid",
     "editor.folding": false,
     "editor.fontFamily": "'SF Mono', 'Cascadia Code', 'FiraCode Nerd Font', Menlo, Monaco, 'Courier New', monospace",
@@ -148,7 +148,7 @@
     "github.copilot.chat.search.semanticTextResults": true,
     "github.copilot.editor.enableAutoCompletions": true,
     "github.copilot.enable": {
-        "*": true,
+        "*": false,
         "markdown": true,
         "plaintext": true,
         "scminput": false
@@ -156,6 +156,7 @@
     "gitlens.codeLens.enabled": false,
     "jupyter.askForKernelRestart": false,
     "jupyter.debugJustMyCode": false,
+    "lldb.suppressUpdateNotifications": true,
     "notebook.codeActionsOnSave": {
         "source.convertImportFormat": "explicit",
         "source.fixAll": "explicit",
