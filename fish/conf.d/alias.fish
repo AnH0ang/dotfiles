@@ -7,6 +7,15 @@ abbr lg lazygit
 abbr o code .
 abbr yy yazi
 
+# git commands
+abbr gp git push
+abbr gc git commit
+abbr ga git amend
+abbr gau git autocommit
+abbr gs git status
+abbr gl git log
+abbr gd git diff
+
 # tools replacements
 abbr cat bat
 abbr convert magick
