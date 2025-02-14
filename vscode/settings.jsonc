@@ -188,6 +188,8 @@
     "python.analysis.supportDocstringTemplate": true,
     "python.analysis.typeCheckingMode": "standard",
     "ruff.organizeImports": true,
+    "rust-analyzer.check.command": "clippy",
+    "rust-analyzer.checkOnSave": true,
     "rust-analyzer.inlayHints.bindingModeHints.enable": false,
     "rust-analyzer.inlayHints.chainingHints.enable": false,
     "rust-analyzer.inlayHints.closingBraceHints.enable": false,
