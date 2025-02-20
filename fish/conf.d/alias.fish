@@ -1,3 +1,9 @@
+# cd
+abbr .. "cd ../"
+abbr ... "cd ../../"
+abbr .... "cd ../../../"
+abbr ..... "cd ../../../../"
+
 # shorten long commands
 abbr c cd
 abbr g git
