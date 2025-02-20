@@ -982,6 +982,9 @@
     "workbench.colorCustomizations": {
         "editor.lineHighlightBackground": "#B5BA002A"
     },
+    "workbench.commandPalette.experimental.askChatLocation": "quickChat",
+    "workbench.commandPalette.experimental.enableNaturalLanguageSearch": true,
+    "workbench.commandPalette.experimental.suggestCommands": true,
     "workbench.editor.highlightModifiedTabs": false,
     "workbench.editor.tabActionCloseVisibility": false,
     "workbench.iconTheme": null,
