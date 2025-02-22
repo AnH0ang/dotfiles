@@ -143,20 +143,16 @@
     "git.confirmSync": false,
     "git.inputValidation": true,
     "git.mergeEditor": true,
-    "github.copilot.chat.edits.enabled": true,
     "github.copilot.chat.followUps": "always",
     "github.copilot.chat.search.semanticTextResults": true,
     "github.copilot.editor.enableAutoCompletions": true,
     "github.copilot.enable": {
         "*": true,
-        "markdown": true,
-        "plaintext": true,
         "scminput": false
     },
     "gitlens.codeLens.enabled": false,
     "jupyter.askForKernelRestart": false,
     "jupyter.debugJustMyCode": false,
-    "lldb.suppressUpdateNotifications": true,
     "notebook.codeActionsOnSave": {
         "source.convertImportFormat": "explicit",
         "source.fixAll": "explicit",
@@ -171,7 +167,6 @@
     "notebook.output.scrolling": true,
     "notebook.output.textLineLimit": 20,
     "notebook.showCellStatusBar": "visible",
-    "prettier.useEditorConfig": false,
     "python.analysis.aiCodeActions": {
         "generateDocstring": true,
         "generateSymbol": true,
@@ -976,7 +971,7 @@
     "window.commandCenter": false,
     "window.customTitleBarVisibility": "never",
     "window.title": "${rootName}",
-    "window.zoomLevel": 0.5,
+    "window.zoomLevel": 1,
     "workbench.activityBar.iconClickBehavior": "toggle",
     "workbench.activityBar.location": "hidden",
     "workbench.colorCustomizations": {
