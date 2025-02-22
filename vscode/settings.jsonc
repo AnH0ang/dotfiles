@@ -700,10 +700,10 @@
         {
             "bindings": [
                 {
-                    "command": "workbench.debug.action.toggleRepl",
+                    "command": "workbench.action.chat.newEditSession",
                     "icon": "debug-console",
                     "key": "d",
-                    "name": "Show debug console",
+                    "name": "New edit session",
                     "type": "command"
                 },
                 {
