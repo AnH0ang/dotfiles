@@ -154,8 +154,7 @@
     "jupyter.askForKernelRestart": false,
     "jupyter.debugJustMyCode": false,
     "notebook.codeActionsOnSave": {
-        "source.convertImportFormat": "explicit",
-        "source.fixAll": "explicit",
+        "notebook.source.fixAll": "explicit",
         "source.organizeImports": "explicit"
     },
     "notebook.consolidatedRunButton": true,
@@ -182,8 +181,6 @@
     "python.analysis.languageServerMode": "full",
     "python.analysis.supportDocstringTemplate": true,
     "python.analysis.typeCheckingMode": "standard",
-    "ruff.nativeServer": "off",
-    "ruff.organizeImports": true,
     "rust-analyzer.check.command": "clippy",
     "rust-analyzer.checkOnSave": true,
     "rust-analyzer.inlayHints.bindingModeHints.enable": false,
