@@ -58,3 +58,7 @@ gcloud/*
 
 # fish
 fish/completions
+
+# karabiner
+karabiner/*
+!karabiner/karabiner.json
