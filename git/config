@@ -7,14 +7,25 @@
     path = user
 
 [init]
-    defaultBranch = main # use 'main' as the default branch name
+    defaultBranch = main
+
+[commit]
+    verbose = true
+
+[rerere]
+    enabled = true
+    autoupdate = true
+
+[branch]
+    autosetuprebase = always
+    sort = -committerdate
 
 [log]
     date = relative # show relative date
     follow = true   # follow file renames
 
 [merge]
-    autoStash = true # stash local changes before merging
+    autoStash = true
     conflictstyle = diff3
 
 [pretty]
@@ -22,10 +33,12 @@
 
 [pull]
     ff = only # fast-forward only
+    rebase = true
 
 [push]
-    autoSetupRemote = true # push to the upstream branch
-    followTags = true      # always push annotated tag(s)
+    autoSetupRemote = true
+    followTags = true
+    default = simple
 
 [rebase]
     autoStash = true
@@ -33,20 +46,25 @@
 [interactive]
     diffFilter = delta --color-only
 
+[fetch]
+    prune = true
+    pruneTags = true
+    all = true
+
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
+
+[help]
+    autocorrect = prompt
+
 [delta]
     navigate = true    # use n and N to move between diff sections
     side-by-side = true
     light = false
     features = catppuccin-macchiato
-
-[diff]
-    colorMoved = default
-
-[help]
-    autocorrect = prompt
-
-[branch]
-    autosetuprebase = always
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
