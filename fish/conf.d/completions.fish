@@ -16,3 +16,10 @@ if command -q poetry
         poetry completions fish >"$cache_file"
     end
 end
+
+if command -q aichat
+    set cache_file "$completions_dir/aichat.fish"
+    if not test -f "$cache_file"
+        curl https://raw.githubusercontent.com/sigoden/aichat/main/scripts/completions/aichat.fish >"$cache_file"
+    end
+end
