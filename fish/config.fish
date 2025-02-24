@@ -22,11 +22,6 @@ if status is-interactive
         starship init fish | source
     end
 
-    if command -q gcloud
-        complete -c gcloud -f -a '(__fish_argcomplete_complete gcloud)'
-        complete -c gsutil -f -a '(__fish_argcomplete_complete gsutil)'
-    end
-
     # See https://github.com/microsoft/vscode/issues/208465
     if test "$TERM_PROGRAM" = vscode
         . (code --locate-shell-integration-path fish)

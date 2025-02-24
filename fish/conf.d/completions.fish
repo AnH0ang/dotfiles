@@ -23,3 +23,12 @@ if command -q aichat
         curl https://raw.githubusercontent.com/sigoden/aichat/main/scripts/completions/aichat.fish >"$cache_file"
     end
 end
+
+if command -q gcloud
+    set cache_file "$completions_dir/gcloud.fish"
+    if not test -f "$cache_file"
+        echo "\
+complete -c gcloud -f -a '(__fish_argcomplete_complete gcloud)'
+complete -c gsutil -f -a '(__fish_argcomplete_complete gsutil)'" >"$completions_dir/gcloud.fish"
+    end
+end
