@@ -32,7 +32,7 @@
     stash = format:%C(bold magenta)%gd %C(blue)%>(13,trunc)%ad %C(reset)%s
 
 [pull]
-    ff = only # fast-forward only
+    ff = true
     rebase = true
 
 [push]
