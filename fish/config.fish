@@ -31,8 +31,11 @@ if status is-interactive
     fish_vi_key_bindings
     bind yy fish_clipboard_copy
     bind Y fish_clipboard_copy
+    bind dd "fish_clipboard_copy; commandline -f kill-whole-line"
     bind p fish_clipboard_paste
     bind -M visual y "fish_clipboard_copy; commandline -f end-selection repaint-mode"
+    bind -M visual x "fish_clipboard_copy; commandline -f kill-selection end-selection repaint-mode"
+    bind -M visual d "fish_clipboard_copy; commandline -f kill-selection end-selection repaint-mode"
 
     # selection
     bind -M insert \cf forward-char
