@@ -3,6 +3,7 @@
     ad = add
     br = branch
     co = commit
+    l = log
     lo = log
     me = merge
     pu = push

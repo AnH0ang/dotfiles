@@ -3,15 +3,11 @@ abbr .. "cd ../"
 abbr ... "cd ../../"
 abbr .... "cd ../../../"
 abbr ..... "cd ../../../../"
+abbr ...... "cd ../../../../../"
 
 # shorten long commands
-abbr c cd
-abbr g git
 abbr kc kubectl
-abbr l eza
 abbr lg lazygit
-abbr o code .
-abbr yy yazi
 
 # git commands
 abbr gp git push
