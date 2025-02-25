@@ -36,6 +36,7 @@ abbr ranger yazi
 abbr tree "eza --tree"
 abbr vi nvim
 abbr vim nvim
+abbr sd sed
 
 # new commands
 abbr benchmark hyperfine
