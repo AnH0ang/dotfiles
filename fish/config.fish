@@ -42,6 +42,7 @@ if status is-interactive
     bind -M insert \cb backward-char
     bind -M insert \cn down-or-search
     bind -M insert \cp up-or-search
+    bind -M insert \cu fcmd
 
     # aliases
     bind -M insert \cl yazi-cd
