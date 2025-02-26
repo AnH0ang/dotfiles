@@ -8,6 +8,7 @@ abbr ...... "cd ../../../../../"
 # shorten long commands
 abbr kc kubectl
 abbr lg lazygit
+abbr gg fgrep
 
 # git commands
 abbr gp git push
