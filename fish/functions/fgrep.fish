@@ -1,5 +1,11 @@
 function fgrep
-    rg --color=always --line-number --no-heading --smart-case $argv |
+    set root $argv[1]
+
+    if test -z "$root"
+        set root "."
+    end
+
+    rg --color=always --line-number --no-heading --smart-case $root |
         fzf --ansi \
             --color "hl:-1:underline,hl+:-1:underline:reverse" \
             --delimiter : \
