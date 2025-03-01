@@ -58,6 +58,7 @@ gcloud/*
 
 # fish
 fish/completions
+fish/fish_variables
 
 # karabiner
 karabiner/*

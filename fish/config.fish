@@ -1,6 +1,10 @@
 set -g fish_greeting
 
 if status is-interactive
+    # Theme
+    set fish_color_command blue --bold
+
+    # Cursor
     set fish_cursor_default block
     set fish_cursor_insert line
     set fish_cursor_replace_one underscore
