@@ -38,15 +38,15 @@ if status is-interactive
     bind -M visual d "fish_clipboard_copy; commandline -f kill-selection end-selection repaint-mode"
 
     # selection
-    bind -M insert \cf forward-char
-    bind -M insert \cb backward-char
-    bind -M insert \cn down-or-search
-    bind -M insert \cp up-or-search
-    bind -M insert \cu fcmd
+    bind -M insert ctrl-f forward-char
+    bind -M insert ctrl-b backward-char
+    bind -M insert ctrl-n down-or-search
+    bind -M insert ctrl-p up-or-search
+    bind -M insert ctrl-u fcmd
 
     # aliases
-    bind -M insert \cl yazi-cd
-    bind -M insert \co z-cd
-    bind -M insert \cg fzf-cd
-    bind -M insert \ce edit_command_buffer
+    bind -M insert ctrl-l yazi-cd
+    bind -M insert ctrl-o z-cd
+    bind -M insert ctrl-g fzf-cd
+    bind -M insert ctrl-e edit_command_buffer
 end
