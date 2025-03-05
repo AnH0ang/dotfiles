@@ -57,8 +57,9 @@ zed/*
 gcloud/*
 
 # fish
-fish/completions
 fish/fish_variables
+fish/completions/*
+!fish/completions/kedro.fish
 
 # karabiner
 karabiner/*
