@@ -31,8 +31,11 @@ if status is-interactive
         . (code --locate-shell-integration-path fish)
     end
 
-    # vim
+    # vi mode
     fish_vi_key_bindings
+
+    # NOTE: This is a workaround for copying to clipboard in vi mode.
+    #       Hopefully there is a fish native way to do this soon
     bind yy fish_clipboard_copy
     bind Y fish_clipboard_copy
     bind dd "fish_clipboard_copy; commandline -f kill-whole-line"
