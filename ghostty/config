@@ -1,5 +1,5 @@
 title = ""
-initial-command = "/opt/homebrew/bin/zellij attach -c main"
+# initial-command = "/opt/homebrew/bin/zellij attach -c main"
 
 font-size = 14
 font-family = "SF Mono"
