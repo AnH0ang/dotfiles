@@ -41,3 +41,5 @@ keybind = ctrl+a>n=next_tab
 keybind = ctrl+a>p=previous_tab
 
 keybind = ctrl+a>equal=equalize_splits
+
+keybind = ctrl+a>r=reload_config
