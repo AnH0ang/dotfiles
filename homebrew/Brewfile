@@ -9,6 +9,7 @@ brew "apache-arrow"
 brew "ast-grep"
 brew "atuin"
 brew "bat"
+brew "bottom"
 brew "gmp"
 brew "coreutils"
 brew "cowsay"
@@ -84,6 +85,7 @@ cask "spotify"
 cask "telegram"
 cask "visual-studio-code"
 cask "whatsapp"
+cask "zotero"
 mas "Amphetamine", id: 937984704
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
