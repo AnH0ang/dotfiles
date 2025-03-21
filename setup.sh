@@ -53,23 +53,6 @@ echo "Install mise packages..."
 echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells >/dev/null
 chsh -s /opt/homebrew/bin/fish
 
-# update alacritty icon
-update_alacritty_icon() {
-    icon_path=/Applications/Alacritty.app/Contents/Resources/alacritty.icns
-    if [ ! -f "$icon_path" ]; then
-        echo "Can't find existing icon, make sure Alacritty is installed"
-        exit 1
-    fi
-    echo "Backing up existing icon"
-    hash="$(shasum $icon_path | head -c 10)"
-    mv "$icon_path" "$icon_path.backup-$hash"
-    echo "Downloading replacement icon"
-    icon_url=https://github.com/hmarr/dotfiles/files/8549877/alacritty.icns.gz
-    curl -sL $icon_url | gunzip >"$icon_path"
-    touch /Applications/Alacritty.app
-}
-update_alacritty_icon
-
 # use touch id for sudo
 # If you fuck up read: https://medium.com/@zmre/quick-tip-fixing-the-sudo-file-on-macos-cf3c2a2584d4
 use_touch_id_for_sudo() {
