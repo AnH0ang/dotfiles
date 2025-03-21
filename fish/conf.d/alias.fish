@@ -6,18 +6,18 @@ abbr ..... "cd ../../../../"
 abbr ...... "cd ../../../../../"
 
 # shorten long commands
+abbr gg fgrep
 abbr kc kubectl
 abbr lg lazygit
-abbr gg fgrep
 
 # git commands
-abbr gp git push
-abbr gc git commit
 abbr ga git amend
 abbr gau git autocommit
-abbr gs git status
-abbr gl git log
+abbr gc git commit
 abbr gd git diff
+abbr gl git log
+abbr gp git push
+abbr gs git status
 
 # tools replacements
 abbr cat bat
@@ -34,10 +34,11 @@ abbr npm pnpm
 abbr pipx "uv tool"
 abbr ps procs
 abbr ranger yazi
+abbr sd sed
 abbr tree "eza --tree"
 abbr vi nvim
 abbr vim nvim
-abbr sd sed
+abbr upgrade topgrade
 
 # new commands
 abbr benchmark hyperfine
