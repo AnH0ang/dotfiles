@@ -203,6 +203,26 @@
         "key": "ctrl+enter",
         "when": "notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0"
     },
+    {
+        "key": "shift+t",
+        "command": "notebook.cell.collapseCellInput",
+        "when": "notebookEditorFocused && !inputFocus && !notebookCellInputIsCollapsed"
+    },
+    {
+        "key": "shift+t",
+        "command": "notebook.cell.expandCellInput",
+        "when": "notebookCellInputIsCollapsed && notebookCellListFocused"
+    },
+    {
+        "key": "m",
+        "command": "notebook.cell.changeToMarkdown",
+        "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+        "key": "m",
+        "command": "-notebook.cell.changeToMarkdown",
+        "when": "notebookEditorFocused && !inputFocus && !notebookOutputFocused && activeEditor == 'workbench.editor.notebook' && notebookCellType == 'code'"
+    }
     // ###################################################################################
     // # VIM MOVE WINDOWS                                                                #
     // ###################################################################################
