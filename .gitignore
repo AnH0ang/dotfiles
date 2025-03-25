@@ -60,6 +60,7 @@ gcloud/*
 fish/fish_variables
 fish/completions/*
 !fish/completions/kedro.fish
+!fish/completions/poetry.fish
 
 # karabiner
 karabiner/*

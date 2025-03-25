@@ -987,6 +987,7 @@
     "workbench.panel.showLabels": false,
     "workbench.preferredDarkColorTheme": "Default Dark Modern",
     "workbench.preferredLightColorTheme": "Default Light Modern",
+    "workbench.settings.useWeightedKeySearch": true,
     "workbench.startupEditor": "none",
     "workbench.tree.indent": 14
 }
