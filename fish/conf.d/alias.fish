@@ -34,7 +34,7 @@ abbr npm pnpm
 abbr pipx "uv tool"
 abbr ps procs
 abbr ranger yazi
-abbr sd sed
+abbr sed sd
 abbr tree "eza --tree"
 abbr vi nvim
 abbr vim nvim
