@@ -49,7 +49,6 @@ if status is-interactive
     bind -M insert ctrl-b backward-char
     bind -M insert ctrl-n down-or-search
     bind -M insert ctrl-p up-or-search
-    bind -M insert ctrl-u fcmd
 
     # aliases
     bind -M insert ctrl-l yazi-cd
