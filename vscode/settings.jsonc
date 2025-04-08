@@ -52,6 +52,8 @@
     "accessibility.underlineLinks": true,
     "breadcrumbs.enabled": false,
     "chat.agent.enabled": true,
+    "chat.editing.autoAcceptDelay": 0,
+    "chat.tools.autoApprove": true,
     "debug.allowBreakpointsEverywhere": true,
     "debug.console.closeOnEnd": true,
     "debug.enableStatusBarColor": true,
@@ -152,6 +154,8 @@
     "github.copilot.editor.enableAutoCompletions": true,
     "github.copilot.enable": {
         "*": true,
+        "markdown": true,
+        "plaintext": true,
         "scminput": false
     },
     "github.copilot.nextEditSuggestions.enabled": true,
