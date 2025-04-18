@@ -8,7 +8,7 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Change CAPS LOCK to HYPER & ESC",
+                        "description": "Change CAPS LOCK to HYPER & ESC, and SHIFT+CAPS LOCK to SHIFT+ESC",
                         "manipulators": [
                             {
                                 "from": {
@@ -28,6 +28,25 @@
                                 "to_if_alone": [
                                     {
                                         "key_code": "escape"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "escape",
+                                        "modifiers": [
+                                            "shift"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"

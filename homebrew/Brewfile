@@ -38,6 +38,7 @@ brew "lazygit"
 brew "mas"
 brew "mise"
 brew "neovim"
+brew "p7zip"
 brew "pandoc"
 brew "poppler"
 brew "procs"
@@ -92,14 +93,10 @@ cask "telegram"
 cask "visual-studio-code"
 cask "whatsapp"
 cask "zotero"
-mas "Amphetamine", id: 937984704
-mas "Keynote", id: 409183694
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Reeder", id: 1529448980
 vscode "bmalehorn.vscode-fish"
 vscode "charliermarsh.ruff"
 vscode "christian-kohler.path-intellisense"
+vscode "docker.docker"
 vscode "dubadub.cook"
 vscode "eamodio.gitlens"
 vscode "github.copilot"
