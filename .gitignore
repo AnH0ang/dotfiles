@@ -61,6 +61,7 @@ fish/fish_variables
 fish/completions/*
 !fish/completions/kedro.fish
 !fish/completions/poetry.fish
+!fish/completions/marimo.fish
 
 # karabiner
 karabiner/*

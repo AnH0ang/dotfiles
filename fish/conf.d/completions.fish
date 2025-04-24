@@ -32,3 +32,10 @@ complete -c gcloud -f -a '(__fish_argcomplete_complete gcloud)'
 complete -c gsutil -f -a '(__fish_argcomplete_complete gsutil)'" >"$completions_dir/gcloud.fish"
     end
 end
+
+if command -q marimo
+    set cache_file "$completions_dir/marimo.fish"
+    if not test -f "$cache_file"
+        _MARIMO_COMPLETE=fish_source marimo >"$cache_file"
+    end
+end
