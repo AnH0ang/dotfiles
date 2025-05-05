@@ -144,6 +144,7 @@
     "files.trimTrailingWhitespace": true,
     "git.autofetch": false,
     "git.autoRepositoryDetection": "openEditors",
+    "git.blame.editorDecoration.enabled": true,
     "git.confirmSync": false,
     "git.diagnosticsCommitHook.Enabled": true,
     "git.inputValidation": true,
