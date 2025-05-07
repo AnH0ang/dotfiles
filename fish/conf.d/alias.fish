@@ -9,6 +9,7 @@ abbr ...... "cd ../../../../../"
 abbr gg fgrep
 abbr kc kubectl
 abbr lg lazygit
+abbr tf tofu
 
 # git commands
 abbr ga git amend
@@ -39,7 +40,7 @@ abbr tree "eza --tree"
 abbr vi nvim
 abbr vim nvim
 abbr upgrade topgrade
-abbr tofu terraform
+abbr terraform tofu
 
 # new commands
 abbr benchmark hyperfine
