@@ -30,7 +30,8 @@
         "editor.defaultFormatter": "foxundermoon.shell-format"
     },
     "[toml]": {
-        "editor.defaultFormatter": "tamasfe.even-better-toml"
+        "editor.defaultFormatter": "tamasfe.even-better-toml",
+        "editor.formatOnSave": false
     },
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -207,6 +208,7 @@
         "2164",
         "1091"
     ],
+    "svelte.enable-ts-plugin": true,
     "terminal.integrated.confirmOnKill": "never",
     "terminal.integrated.defaultProfile.osx": "fish",
     "terminal.integrated.enableImages": true,
