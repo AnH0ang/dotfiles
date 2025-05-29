@@ -42,6 +42,7 @@ keybind = ctrl+a>l=goto_split:right
 keybind = ctrl+a>c=new_tab
 keybind = ctrl+a>n=next_tab
 keybind = ctrl+a>p=previous_tab
+keybind = ctrl+a>x=close_tab
 
 keybind = ctrl+a>equal=equalize_splits
 
