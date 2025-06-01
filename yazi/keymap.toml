@@ -3,9 +3,9 @@
 
 # Default keymaps are at https://github.com/sxyazi/yazi/blob/main/yazi-config/preset/keymap-default.toml
 
-"$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
+# "$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
 
-[manager]
+[mgr]
 prepend_keymap = [
     # Goto
     { on = ["g", "k"], run = "cd ~/Desktop", desc = "Go to desktop" },

@@ -97,6 +97,7 @@ cask "visual-studio-code"
 cask "whatsapp"
 cask "zotero"
 mas "Amphetamine", id: 937984704
+mas "AusweisApp", id: 948660805
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
