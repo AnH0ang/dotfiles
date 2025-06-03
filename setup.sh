@@ -40,6 +40,11 @@ touch "${HOME}"/.hushlogin
 echo "Configure shell..."
 ln -sf "${HOME}"/.config/shell/profile "${HOME}"/.profile
 
+# logseq
+echo "Configure logseq..."
+mkdir -p "${HOME}"/.logseq/config
+ln -sf "${HOME}"/.config/logseq/config.edn "${HOME}"/.logseq/config/config.edn
+
 # hidutil (key remaps)
 echo "Configure hidutil..."
 mkdir -p "$HOME"/Library/LaunchAgents
