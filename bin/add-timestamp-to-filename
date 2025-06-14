@@ -1,0 +1,3 @@
+#!/bin/bash
+
+f2 -R -r "{btime.YYYY}{btime.MM}{btime.DD}_{f}{ext}" --exclude "^\d{4}" -x
