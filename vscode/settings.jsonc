@@ -55,6 +55,7 @@
     "chat.agent.enabled": true,
     "chat.commandCenter.enabled": false,
     "chat.editing.autoAcceptDelay": 0,
+    "chat.editing.confirmEditRequestRetry": false,
     "chat.tools.autoApprove": true,
     "debug.allowBreakpointsEverywhere": true,
     "debug.console.closeOnEnd": true,
