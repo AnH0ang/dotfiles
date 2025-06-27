@@ -39,6 +39,15 @@
         "key": "/",
         "when": "listFocus && listSupportsKeyboardNavigation && !inputFocus"
     },
+    {
+        "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
+        "key": "shift+cmd+p",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "command": "workbench.action.quickTextSearch",
+        "key": "shift+cmd+p"
+    },
     // ###################################################################################
     // # POPUP NAVIGATION                                                                #
     // ###################################################################################
@@ -222,7 +231,7 @@
         "key": "m",
         "command": "-notebook.cell.changeToMarkdown",
         "when": "notebookEditorFocused && !inputFocus && !notebookOutputFocused && activeEditor == 'workbench.editor.notebook' && notebookCellType == 'code'"
-    }
+    },
     // ###################################################################################
     // # VIM MOVE WINDOWS                                                                #
     // ###################################################################################
@@ -562,6 +571,9 @@
         "key": "ctrl+n",
         "when": "editorTextFocus && vim.mode == 'Visual'"
     },
+    // ###################################################################################
+    // # INLINE SUGGESTIONS                                                              #
+    // ###################################################################################
     {
         "command": "editor.action.inlineSuggest.showNext",
         "key": "ctrl+f",
@@ -582,15 +594,9 @@
         "key": "alt+[",
         "when": "inlineSuggestionVisible && !editorReadonly"
     },
-    {
-        "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
-        "key": "shift+cmd+p",
-        "when": "inFilesPicker && inQuickOpen"
-    },
-    {
-        "command": "workbench.action.quickTextSearch",
-        "key": "shift+cmd+p"
-    },
+    // ###################################################################################
+    // # Terminal                                                                            #
+    // ###################################################################################
     {
         "key": "cmd+l",
         "command": "workbench.action.terminal.focusNext",
@@ -604,6 +610,19 @@
     {
         "key": "cmd+n",
         "command": "workbench.action.terminal.new",
-        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+        "when": "terminalFocus && terminalProcessSupported || terminalWebExtensionContributedProfile"
+    },
+    // ###################################################################################
+    // # Chat                                                                            #
+    // ###################################################################################
+    {
+        "key": "cmd+n",
+        "command": "workbench.action.chat.newChat",
+        "when": "chatEditingParticipantRegistered && chatIsEnabled && inChat"
+    },
+    {
+        "key": "cmd+p",
+        "command": "workbench.action.chat.history",
+        "when": "inChat"
     }
 ]
