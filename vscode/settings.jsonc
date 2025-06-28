@@ -53,6 +53,7 @@
     "accessibility.underlineLinks": true,
     "breadcrumbs.enabled": false,
     "chat.agent.enabled": true,
+    "chat.commandCenter.enabled": false,
     "chat.editing.autoAcceptDelay": 0,
     "chat.tools.autoApprove": true,
     "debug.allowBreakpointsEverywhere": true,
@@ -168,27 +169,26 @@
     "mcp": {
         "servers": {
             "context7": {
-                "command": "npx",
                 "args": [
                     "-y",
                     "@upstash/context7-mcp@latest"
-                ]
+                ],
+                "command": "npx"
             },
             "playwright": {
-                "command": "npx",
                 "args": [
                     "@playwright/mcp@latest"
-                ]
+                ],
+                "command": "npx"
             },
             "sequential-thinking": {
-                "command": "npx",
                 "args": [
                     "-y",
                     "@modelcontextprotocol/server-sequential-thinking"
-                ]
+                ],
+                "command": "npx"
             },
             "serena": {
-                "command": "uvx",
                 "args": [
                     "--from",
                     "git+https://github.com/oraios/serena",
@@ -197,7 +197,8 @@
                     "false",
                     "--enable-gui-log-window",
                     "false"
-                ]
+                ],
+                "command": "uvx"
             }
         }
     },
@@ -1033,7 +1034,6 @@
     "workbench.panel.showLabels": false,
     "workbench.preferredDarkColorTheme": "Default Dark Modern",
     "workbench.preferredLightColorTheme": "Default Light Modern",
-    "workbench.settings.useWeightedKeySearch": true,
     "workbench.startupEditor": "none",
     "workbench.tree.indent": 14
 }
