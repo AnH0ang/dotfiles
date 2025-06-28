@@ -607,6 +607,28 @@
             "type": "bindings"
         },
         {
+            "bindings": [
+                {
+                    "command": "github.copilot.chat.attachSelection",
+                    "icon": "ports-forward-icon",
+                    "key": "s",
+                    "name": "Add Selection to Chat",
+                    "type": "command"
+                },
+                {
+                    "command": "github.copilot.chat.attachFile",
+                    "icon": "file",
+                    "key": "f",
+                    "name": "Add File to Chat",
+                    "type": "command"
+                }
+            ],
+            "icon": "chat-editor-label-icon",
+            "keys": "c",
+            "name": "+Chat toggles",
+            "type": "bindings"
+        },
+        {
             "keys": "S",
             "position": -1
         },
