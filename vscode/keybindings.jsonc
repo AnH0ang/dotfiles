@@ -600,17 +600,17 @@
     {
         "key": "ctrl+a n",
         "command": "workbench.action.terminal.focusNext",
-        "when": "terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
     },
     {
         "key": "ctrl+a p",
         "command": "workbench.action.terminal.focusPrevious",
-        "when": "terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
     },
     {
         "key": "ctrl+a c",
         "command": "workbench.action.terminal.new",
-        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+        "when": "terminalFocus"
     },
     {
         "key": "ctrl+a x",
