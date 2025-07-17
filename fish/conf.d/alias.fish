@@ -10,6 +10,7 @@ abbr gg fgrep
 abbr kc kubectl
 abbr lg lazygit
 abbr tf tofu
+abbr j just
 
 # git commands
 abbr ga git amend
