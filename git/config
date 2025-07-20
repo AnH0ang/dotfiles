@@ -66,6 +66,7 @@
 [delta]
     navigate = true
     side-by-side = true
+    search-loopback = true
 
 [color]
     ui = true
