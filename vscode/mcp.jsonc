@@ -1,0 +1,41 @@
+{
+    "servers": {
+        "context7": {
+            "args": [
+                "-y",
+                "@upstash/context7-mcp@latest"
+            ],
+            "command": "npx",
+            "type": "stdio"
+        },
+        "playwright": {
+            "args": [
+                "@playwright/mcp@latest"
+            ],
+            "command": "npx",
+            "type": "stdio"
+        },
+        "sequential-thinking": {
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-sequential-thinking"
+            ],
+            "command": "npx",
+            "type": "stdio"
+        },
+        "serena": {
+            "args": [
+                "--from",
+                "git+https://github.com/oraios/serena",
+                "serena-mcp-server",
+                "--enable-web-dashboard",
+                "false",
+                "--enable-gui-log-window",
+                "false"
+            ],
+            "command": "uvx",
+            "type": "stdio"
+        }
+    },
+    "inputs": []
+}
