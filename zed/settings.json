@@ -7,16 +7,40 @@
 // custom settings, run the `zed: Open Default Settings` command
 // from the command palette
 {
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "inlay_hints": {
+    "enabled": true
+  },
+  "project_panel": {
+    "file_icons": false,
+    "folder_icons": false
+  },
+  "title_bar": {
+    "show_branch_icon": false,
+    "show_branch_name": true,
+    "show_project_items": true,
+    "show_onboarding_banner": false,
+    "show_user_picture": false,
+    "show_sign_in": false
+  },
+  "notification_panel": {
+    "button": false
+  },
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false,
+    "selections_menu": false,
+    "agent_review": false,
+    "code_actions": false
+  },
+  "tab_bar": {
+    "show_nav_history_buttons": false,
+    "show_tab_bar_buttons": false
+  },
   "vim_mode": true,
   "vim": {
-    "use_system_clipboard": "always",
-    "use_multiline_find": true
-  },
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "One Dark"
+    "use_system_clipboard": "always"
   }
 }
