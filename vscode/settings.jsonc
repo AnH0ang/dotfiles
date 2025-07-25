@@ -1012,7 +1012,7 @@
     "workbench.activityBar.iconClickBehavior": "toggle",
     "workbench.activityBar.location": "hidden",
     "workbench.colorCustomizations": {
-        "editor.lineHighlightBackground": "#B5BA002A"
+        "editor.lineHighlightBackground": "#DDB10030"
     },
     "workbench.commandPalette.experimental.askChatLocation": "quickChat",
     "workbench.commandPalette.experimental.enableNaturalLanguageSearch": true,
