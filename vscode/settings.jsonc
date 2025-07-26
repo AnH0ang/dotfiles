@@ -6,13 +6,10 @@
     // |___/\___|\__|\__|_|_| |_|\__, |___(_)/ |___/\___/|_| |_|
     //                           |___/     |__/
     "[dockerfile]": {
-        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+        "editor.defaultFormatter": "docker.docker"
     },
     "[fish]": {
         "editor.defaultFormatter": "bmalehorn.vscode-fish"
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
@@ -26,18 +23,9 @@
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff"
     },
-    "[shellscript]": {
-        "editor.defaultFormatter": "foxundermoon.shell-format"
-    },
     "[toml]": {
         "editor.defaultFormatter": "tamasfe.even-better-toml",
         "editor.formatOnSave": false
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[typst-code]": {
         "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
@@ -150,13 +138,9 @@
     "git.autoRepositoryDetection": "openEditors",
     "git.blame.editorDecoration.enabled": true,
     "git.confirmSync": false,
-    "git.diagnosticsCommitHook.Enabled": true,
     "git.inputValidation": true,
     "git.mergeEditor": true,
     "github.copilot.chat.agent.thinkingTool": true,
-    "github.copilot.chat.followUps": "always",
-    "github.copilot.chat.search.semanticTextResults": true,
-    "github.copilot.editor.enableAutoCompletions": true,
     "github.copilot.enable": {
         "*": true,
         "markdown": true,
@@ -195,23 +179,11 @@
     "python.analysis.languageServerMode": "full",
     "python.analysis.supportDocstringTemplate": true,
     "python.analysis.typeCheckingMode": "standard",
-    "rust-analyzer.check.command": "clippy",
-    "rust-analyzer.checkOnSave": true,
-    "rust-analyzer.inlayHints.bindingModeHints.enable": false,
-    "rust-analyzer.inlayHints.chainingHints.enable": false,
-    "rust-analyzer.inlayHints.closingBraceHints.enable": false,
-    "rust-analyzer.inlayHints.typeHints.enable": false,
     "search.quickOpen.includeHistory": false,
     "search.searchEditor.defaultNumberOfContextLines": null,
     "search.smartCase": true,
     "security.promptForRemoteFileProtocolHandling": false,
     "security.workspace.trust.untrustedFiles": "open",
-    "shellcheck.exclude": [
-        "2155",
-        "2164",
-        "1091"
-    ],
-    "svelte.enable-ts-plugin": true,
     "terminal.integrated.confirmOnKill": "never",
     "terminal.integrated.defaultProfile.osx": "fish",
     "terminal.integrated.enableImages": true,
@@ -1010,7 +982,6 @@
     "window.title": "${rootName}",
     "window.zoomLevel": 1,
     "workbench.activityBar.iconClickBehavior": "toggle",
-    "workbench.activityBar.location": "hidden",
     "workbench.colorCustomizations": {
         "editor.lineHighlightBackground": "#DDB10030"
     },
@@ -1025,5 +996,6 @@
     "workbench.preferredDarkColorTheme": "Default Dark Modern",
     "workbench.preferredLightColorTheme": "Default Light Modern",
     "workbench.startupEditor": "none",
-    "workbench.tree.indent": 14
+    "workbench.tree.indent": 14,
+    "workbench.activityBar.location": "hidden"
 }
