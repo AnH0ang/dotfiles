@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Script to SSH into a host and attach/create tmux session
+# Usage: ssh-tmux <hostname>
+
+# Check if hostname is provided
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 <hostname>"
+    echo "Example: $0 myserver"
+    exit 1
+fi
+
+HOST=$1
+
+# ssh into the host and attach or create a tmux session
+ssh -t "$HOST" 'tmux new -A'
