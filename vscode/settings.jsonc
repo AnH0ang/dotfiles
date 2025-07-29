@@ -36,6 +36,7 @@
         "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
     },
     "[yaml]": {
+        "diffEditor.ignoreTrimWhitespace": false,
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
     "accessibility.underlineLinks": true,
@@ -179,6 +180,7 @@
     "python.analysis.languageServerMode": "full",
     "python.analysis.supportDocstringTemplate": true,
     "python.analysis.typeCheckingMode": "standard",
+    "redhat.telemetry.enabled": false,
     "search.quickOpen.includeHistory": false,
     "search.searchEditor.defaultNumberOfContextLines": null,
     "search.smartCase": true,
@@ -982,6 +984,7 @@
     "window.title": "${rootName}",
     "window.zoomLevel": 1,
     "workbench.activityBar.iconClickBehavior": "toggle",
+    "workbench.activityBar.location": "hidden",
     "workbench.colorCustomizations": {
         "editor.lineHighlightBackground": "#DDB10030"
     },
@@ -996,6 +999,5 @@
     "workbench.preferredDarkColorTheme": "Default Dark Modern",
     "workbench.preferredLightColorTheme": "Default Light Modern",
     "workbench.startupEditor": "none",
-    "workbench.tree.indent": 14,
-    "workbench.activityBar.location": "hidden"
+    "workbench.tree.indent": 14
 }
