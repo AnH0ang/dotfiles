@@ -149,6 +149,7 @@
         "scminput": false
     },
     "github.copilot.nextEditSuggestions.enabled": true,
+    "github.copilot.nextEditSuggestions.fixes": true,
     "gitlens.codeLens.enabled": false,
     "inlineChat.enableV2": true,
     "jupyter.askForKernelRestart": false,
