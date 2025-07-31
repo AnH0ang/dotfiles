@@ -5,12 +5,13 @@
 
 # Check if hostname is provided
 if [ $# -eq 0 ]; then
-    echo "Usage: $0 <hostname>"
-    echo "Example: $0 myserver"
+    echo "Usage: $0 <hostname> [session_name]"
+    echo "Example: $0 myserver mysession"
     exit 1
 fi
 
 HOST=$1
+SESSION=${2:-main}
 
 # ssh into the host and attach or create a tmux session
-ssh -t "$HOST" 'tmux new -A'
+ssh -t "$HOST" "tmux new -A -s $SESSION"
