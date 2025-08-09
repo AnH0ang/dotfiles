@@ -1,32 +1,153 @@
 #!/bin/bash
 
-# Check if the correct number of arguments is provided
-if [ $# -ne 2 ]; then
-    echo "Usage: $0 input.pdf output.pdf"
-    exit 1
-fi
-
-# Assign input and output file names
-input="$1"
-output="$2"
-
-# Check if the input file exists
-if [ ! -f "$input" ]; then
-    echo "Input file does not exist: $input"
-    exit 1
-fi
-
-# Check if the output file already exists
-if [ -f "$output" ]; then
-    echo "Output file already exists: $output"
-    exit 1
-fi
+# Script to remove password protection from PDF files using qpdf
+# Usage: ./unlock_pdf.sh [-o|--overwrite] input.pdf [output.pdf] [password]
 
 # Check if qpdf is installed
 if ! command -v qpdf &> /dev/null; then
-    echo "qpdf is not installed. Please install it using 'brew install qpdf'."
+    echo "Error: qpdf is not installed or not in PATH"
+    echo "Please install qpdf first"
     exit 1
 fi
 
-# Convert the PDF to remove restrictions
-qpdf --decrypt "$input" "$output"
+# Parse command line options
+OVERWRITE=false
+ARGS=()
+
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        -o|--overwrite)
+            OVERWRITE=true
+            shift
+            ;;
+        -*)
+            echo "Unknown option $1"
+            exit 1
+            ;;
+        *)
+            ARGS+=("$1")
+            shift
+            ;;
+    esac
+done
+
+# Restore positional parameters
+set -- "${ARGS[@]}"
+
+# Check if input file is provided
+if [ $# -lt 1 ]; then
+    echo "Usage: $0 [-o|--overwrite] input.pdf [output.pdf] [password]"
+    echo "  -o, --overwrite  Overwrite the input file with unlocked version"
+    echo "  input.pdf        The locked PDF file"
+    echo "  output.pdf       Output filename (optional, defaults to input_unlocked.pdf)"
+    echo "                   Ignored when --overwrite is used"
+    echo "  password         PDF password (optional, will prompt if needed)"
+    exit 1
+fi
+
+INPUT_FILE="$1"
+
+# Check if input file exists
+if [ ! -f "$INPUT_FILE" ]; then
+    echo "Error: Input file '$INPUT_FILE' not found"
+    exit 1
+fi
+
+# Set output filename
+if [ "$OVERWRITE" = true ]; then
+    # When overwriting, use a temporary file first
+    OUTPUT_FILE=$(mktemp "${INPUT_FILE}.tmp.XXXXXX")
+    TEMP_FILE="$OUTPUT_FILE"
+    echo "Overwrite mode: Will replace original file after successful unlock"
+elif [ -n "$2" ]; then
+    OUTPUT_FILE="$2"
+else
+    # Create default output filename
+    BASENAME=$(basename "$INPUT_FILE" .pdf)
+    DIRNAME=$(dirname "$INPUT_FILE")
+    OUTPUT_FILE="${DIRNAME}/${BASENAME}_unlocked.pdf"
+fi
+
+# Get password if provided as argument
+if [ "$OVERWRITE" = true ]; then
+    PASSWORD="$2"  # Password is 2nd arg when overwrite is used
+else
+    PASSWORD="$3"  # Password is 3rd arg normally
+fi
+
+# Function to attempt unlocking with password
+unlock_with_password() {
+    local pwd="$1"
+    if [ -n "$pwd" ]; then
+        qpdf --password="$pwd" --decrypt "$INPUT_FILE" "$OUTPUT_FILE"
+    else
+        qpdf --decrypt "$INPUT_FILE" "$OUTPUT_FILE"
+    fi
+}
+
+echo "Attempting to unlock PDF: $INPUT_FILE"
+if [ "$OVERWRITE" = true ]; then
+    echo "Output will overwrite the original file"
+else
+    echo "Output will be saved as: $OUTPUT_FILE"
+fi
+
+# Try to unlock the PDF
+if unlock_with_password "$PASSWORD"; then
+    if [ "$OVERWRITE" = true ]; then
+        # Move temp file to replace original
+        mv "$OUTPUT_FILE" "$INPUT_FILE"
+        echo "Success! Original file has been overwritten with unlocked version: $INPUT_FILE"
+    else
+        echo "Success! Unlocked PDF saved as: $OUTPUT_FILE"
+    fi
+
+    # Show file sizes for comparison (only for non-overwrite mode)
+    if [ "$OVERWRITE" = false ]; then
+        INPUT_SIZE=$(du -h "$INPUT_FILE" | cut -f1)
+        OUTPUT_SIZE=$(du -h "$OUTPUT_FILE" | cut -f1)
+        echo "Original file size: $INPUT_SIZE"
+        echo "Unlocked file size: $OUTPUT_SIZE"
+    fi
+else
+    echo "Failed to unlock PDF."
+
+    # Clean up temp file if in overwrite mode
+    if [ "$OVERWRITE" = true ] && [ -f "$OUTPUT_FILE" ]; then
+        rm "$OUTPUT_FILE"
+    fi
+
+    # If no password was provided and it failed, prompt for password
+    if [ -z "$PASSWORD" ]; then
+        echo "The PDF might be password protected."
+        read -s -p "Enter PDF password (or press Enter to skip): " USER_PASSWORD
+        echo
+
+        if [ -n "$USER_PASSWORD" ]; then
+            echo "Trying with provided password..."
+            if unlock_with_password "$USER_PASSWORD"; then
+                if [ "$OVERWRITE" = true ]; then
+                    mv "$OUTPUT_FILE" "$INPUT_FILE"
+                    echo "Success! Original file has been overwritten with unlocked version: $INPUT_FILE"
+                else
+                    echo "Success! Unlocked PDF saved as: $OUTPUT_FILE"
+                fi
+            else
+                echo "Failed to unlock with provided password."
+                echo "Please check the password and try again."
+                # Clean up temp file if in overwrite mode
+                if [ "$OVERWRITE" = true ] && [ -f "$OUTPUT_FILE" ]; then
+                    rm "$OUTPUT_FILE"
+                fi
+                exit 1
+            fi
+        else
+            echo "No password provided. Exiting."
+            exit 1
+        fi
+    else
+        echo "Failed to unlock with provided password."
+        echo "Please check the password and try again."
+        exit 1
+    fi
+fi
