@@ -46,6 +46,8 @@
     "chat.editing.autoAcceptDelay": 0,
     "chat.editing.confirmEditRequestRemoval": false,
     "chat.editing.confirmEditRequestRetry": false,
+    "chat.math.enabled": true,
+    "chat.todoListTool.enabled": true,
     "chat.tools.autoApprove": true,
     "debug.allowBreakpointsEverywhere": true,
     "debug.console.closeOnEnd": true,
@@ -152,6 +154,7 @@
     "github.copilot.nextEditSuggestions.fixes": true,
     "gitlens.codeLens.enabled": false,
     "inlineChat.enableV2": true,
+    "inlineChat.notebookAgent": true,
     "jupyter.askForKernelRestart": false,
     "jupyter.debugJustMyCode": false,
     "notebook.codeActionsOnSave": {
