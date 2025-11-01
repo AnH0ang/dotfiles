@@ -5,11 +5,25 @@
     // \__ \  __/ |_| |_| | | | | (_| \__ \_ | \__ \ (_) | | | |
     // |___/\___|\__|\__|_|_| |_|\__, |___(_)/ |___/\___/|_| |_|
     //                           |___/     |__/
+    "[dockercompose]": {
+        "editor.autoIndent": "advanced",
+        "editor.defaultFormatter": "redhat.vscode-yaml",
+        "editor.insertSpaces": true,
+        "editor.quickSuggestions": {
+            "comments": false,
+            "other": true,
+            "strings": true
+        },
+        "editor.tabSize": 2
+    },
     "[dockerfile]": {
         "editor.defaultFormatter": "docker.docker"
     },
     "[fish]": {
         "editor.defaultFormatter": "bmalehorn.vscode-fish"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
@@ -24,8 +38,7 @@
         "editor.defaultFormatter": "charliermarsh.ruff"
     },
     "[toml]": {
-        "editor.defaultFormatter": "tamasfe.even-better-toml",
-        "editor.formatOnSave": false
+        "editor.defaultFormatter": "tamasfe.even-better-toml"
     },
     "[typst-code]": {
         "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
@@ -47,8 +60,10 @@
     "chat.editing.confirmEditRequestRemoval": false,
     "chat.editing.confirmEditRequestRetry": false,
     "chat.math.enabled": true,
+    "chat.mcp.gallery.enabled": true,
     "chat.todoListTool.enabled": true,
     "chat.tools.autoApprove": true,
+    "chat.tools.terminal.autoReplyToPrompts": true,
     "debug.allowBreakpointsEverywhere": true,
     "debug.console.closeOnEnd": true,
     "debug.enableStatusBarColor": true,
@@ -153,6 +168,19 @@
     "github.copilot.nextEditSuggestions.enabled": true,
     "github.copilot.nextEditSuggestions.fixes": true,
     "gitlens.codeLens.enabled": false,
+    "gitlens.views.scm.grouped.views": {
+        "branches": true,
+        "commits": true,
+        "contributors": true,
+        "fileHistory": false,
+        "launchpad": false,
+        "remotes": true,
+        "repositories": true,
+        "searchAndCompare": true,
+        "stashes": true,
+        "tags": true,
+        "worktrees": true
+    },
     "inlineChat.enableV2": true,
     "inlineChat.notebookAgent": true,
     "jupyter.askForKernelRestart": false,
@@ -210,6 +238,7 @@
     "testing.automaticallyOpenTestResults": "openOnTestFailure",
     "testing.defaultGutterClickAction": "debug",
     "testing.followRunningTest": false,
+    "testing.showCoverageInExplorer": false,
     "tinymist.formatterMode": "typstyle",
     "typos.config": "~/.config/typos/typos.toml",
     "vim.camelCaseMotion.enable": true,
@@ -988,7 +1017,6 @@
     "window.title": "${rootName}",
     "window.zoomLevel": 1,
     "workbench.activityBar.iconClickBehavior": "toggle",
-    "workbench.activityBar.location": "hidden",
     "workbench.colorCustomizations": {
         "editor.lineHighlightBackground": "#DDB10030"
     },
