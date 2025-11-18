@@ -40,7 +40,6 @@ abbr tree "eza --tree"
 abbr vi nvim
 abbr vim nvim
 abbr upgrade topgrade
-abbr terraform tofu
 
 # new commands
 abbr benchmark hyperfine
