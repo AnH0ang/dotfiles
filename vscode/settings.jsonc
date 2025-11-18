@@ -1028,6 +1028,7 @@
     "window.title": "${rootName}",
     "window.zoomLevel": 1,
     "workbench.activityBar.iconClickBehavior": "toggle",
+    "workbench.activityBar.location": "hidden",
     "workbench.colorCustomizations": {
         "editor.lineHighlightBackground": "#DDB10030"
     },
