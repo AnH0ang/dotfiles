@@ -9,7 +9,7 @@ abbr ...... "cd ../../../../../"
 abbr gg fgrep
 abbr kc kubectl
 abbr lg lazygit
-abbr tf tofu
+abbr tf terraform
 abbr j just
 
 # git commands
@@ -32,7 +32,6 @@ abbr less delta
 abbr lf yazi
 abbr ls eza
 abbr neofetch fastfetch
-abbr npm pnpm
 abbr pipx "uv tool"
 abbr ps procs
 abbr ranger yazi
