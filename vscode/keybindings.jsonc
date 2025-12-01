@@ -213,23 +213,23 @@
         "when": "notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0"
     },
     {
-        "key": "shift+t",
         "command": "notebook.cell.collapseCellInput",
+        "key": "shift+t",
         "when": "notebookEditorFocused && !inputFocus && !notebookCellInputIsCollapsed"
     },
     {
-        "key": "shift+t",
         "command": "notebook.cell.expandCellInput",
+        "key": "shift+t",
         "when": "notebookCellInputIsCollapsed && notebookCellListFocused"
     },
     {
-        "key": "m",
         "command": "notebook.cell.changeToMarkdown",
+        "key": "m",
         "when": "notebookEditorFocused && !inputFocus"
     },
     {
-        "key": "m",
         "command": "-notebook.cell.changeToMarkdown",
+        "key": "m",
         "when": "notebookEditorFocused && !inputFocus && !notebookOutputFocused && activeEditor == 'workbench.editor.notebook' && notebookCellType == 'code'"
     },
     // ###################################################################################
@@ -465,6 +465,46 @@
         "key": "ctrl+j",
         "when": "editorFocus"
     },
+    {
+        "command": "editor.action.pageDownHover",
+        "key": "ctrl+d",
+        "when": "editorHoverFocused"
+    },
+    {
+        "command": "editor.action.pageUpHover",
+        "key": "ctrl+u",
+        "when": "editorHoverFocused"
+    },
+    {
+        "command": "editor.action.scrollDownHover",
+        "key": "ctrl+n",
+        "when": "editorHoverFocused"
+    },
+    {
+        "command": "editor.action.scrollUpHover",
+        "key": "ctrl+p",
+        "when": "editorHoverFocused"
+    },
+    {
+        "command": "editor.action.scrollDownHover",
+        "key": "j",
+        "when": "editorHoverFocused"
+    },
+    {
+        "command": "editor.action.scrollUpHover",
+        "key": "k",
+        "when": "editorHoverFocused"
+    },
+    {
+        "command": "editor.action.pageDownHover",
+        "key": "d",
+        "when": "editorHoverFocused"
+    },
+    {
+        "command": "editor.action.pageUpHover",
+        "key": "u",
+        "when": "editorHoverFocused"
+    },
     // ###################################################################################
     // # QUICK NAVIGATION FOR DIFF VIEW                                                  #
     // ###################################################################################
@@ -598,66 +638,66 @@
     // # Terminal                                                                            #
     // ###################################################################################
     {
-        "key": "ctrl+a n",
         "command": "workbench.action.terminal.focusNext",
+        "key": "ctrl+a n",
         "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
     },
     {
-        "key": "ctrl+a p",
         "command": "workbench.action.terminal.focusPrevious",
+        "key": "ctrl+a p",
         "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
     },
     {
-        "key": "ctrl+a c",
         "command": "workbench.action.terminal.new",
+        "key": "ctrl+a c",
         "when": "terminalFocus"
     },
     {
-        "key": "ctrl+a x",
         "command": "workbench.action.terminal.kill",
+        "key": "ctrl+a x",
         "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
     },
     {
-        "key": "ctrl+a r",
         "command": "workbench.action.terminal.rename",
+        "key": "ctrl+a r",
         "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
     },
     {
+        "command": "workbench.action.terminal.split",
         "key": "ctrl+a s",
-        "command": "workbench.action.terminal.split",
         "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
     },
     {
+        "command": "workbench.action.terminal.split",
         "key": "ctrl+a shift+\\",
-        "command": "workbench.action.terminal.split",
         "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
     },
     {
+        "command": "workbench.action.terminal.split",
         "key": "ctrl+a \\",
-        "command": "workbench.action.terminal.split",
         "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
     },
     {
-        "key": "ctrl+a l",
         "command": "workbench.action.terminal.focusNextPane",
+        "key": "ctrl+a l",
         "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
     },
     {
-        "key": "ctrl+a h",
         "command": "workbench.action.terminal.focusPreviousPane",
+        "key": "ctrl+a h",
         "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
     },
     // ###################################################################################
     // # Chat                                                                            #
     // ###################################################################################
     {
-        "key": "cmd+n",
         "command": "workbench.action.chat.newChat",
+        "key": "cmd+n",
         "when": "chatEditingParticipantRegistered && chatIsEnabled && inChat"
     },
     {
-        "key": "cmd+p",
         "command": "workbench.action.chat.history",
+        "key": "cmd+p",
         "when": "inChat"
     }
 ]
