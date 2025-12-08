@@ -83,6 +83,7 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.useInlineViewWhenSpaceIsLimited": false,
     "diffEditor.wordWrap": "off",
+    "docker.extension.enableComposeLanguageServer": false,
     "editor.accessibilitySupport": "off",
     "editor.codeActionsOnSave": {
         "source.addMissingImports": "explicit",
@@ -242,7 +243,7 @@
     "terminal.integrated.shellIntegration.history": 1000,
     "terminal.integrated.smoothScrolling": true,
     "terminal.integrated.stickyScroll.enabled": false,
-    "terminal.integrated.suggest.cdPath": "relative",
+    "terminal.integrated.suggest.enabled": false,
     "terminal.integrated.tabs.hideCondition": "never",
     "testing.alwaysRevealTestOnStateChange": true,
     "testing.automaticallyOpenPeekView": "failureAnywhere",
