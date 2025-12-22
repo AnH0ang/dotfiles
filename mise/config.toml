@@ -1,7 +1,7 @@
 [settings]
 yes = true
-idiomatic_version_file_enable_tools = ["python"]
 
 [tools]
 usage = "latest"
-python = "latest"
+node = "latest"
+pnpm = "latest"
