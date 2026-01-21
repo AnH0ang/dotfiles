@@ -18,6 +18,10 @@ if status is-interactive
         atuin init fish --disable-up-arrow | source
     end
 
+    if command -q fnox
+        fnox activate fish | source
+    end
+
     if command -q mise
         mise activate fish | source
     end
