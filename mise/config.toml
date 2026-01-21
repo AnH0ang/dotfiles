@@ -2,6 +2,7 @@
 yes = true
 
 [tools]
-usage = "latest"
-node = "latest"
 pnpm = "latest"
+rust = "latest"
+usage = "latest"
+uv = "latest"
