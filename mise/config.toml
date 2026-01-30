@@ -2,6 +2,7 @@
 yes = true
 
 [tools]
+node = "latest"
 pnpm = "latest"
 rust = "latest"
 usage = "latest"
