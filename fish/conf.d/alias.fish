@@ -40,6 +40,7 @@ abbr tree "eza --tree"
 abbr vi nvim
 abbr vim nvim
 abbr upgrade topgrade
+abbr pnpx "pnpm dlx"
 
 # new commands
 abbr benchmark hyperfine
