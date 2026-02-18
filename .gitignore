@@ -1,5 +1,8 @@
 .DS_Store
 
+# nushell
+nushell/history.txt
+
 # aichat
 aichat/*
 !aichat/roles

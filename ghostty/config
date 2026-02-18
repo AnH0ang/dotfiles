@@ -1,6 +1,5 @@
-title = ""
-command = "/opt/homebrew/bin/fish --login --interactive"
-shell-integration = fish
+command = "/opt/homebrew/bin/nu --config ~/.config/nushell/config.nu --env-config ~/.config/nushell/env.nu"
+# shell-integration = fish
 
 font-size = 14
 font-family = "SF Mono"
