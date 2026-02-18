@@ -699,5 +699,10 @@
         "command": "workbench.action.chat.history",
         "key": "cmd+p",
         "when": "inChat"
+    },
+    {
+        "command": "inlineChat.start",
+        "key": "cmd+i",
+        "when": "editorTextFocus"
     }
 ]

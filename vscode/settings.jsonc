@@ -75,6 +75,7 @@
     "chat.editing.confirmEditRequestRetry": false,
     "chat.math.enabled": true,
     "chat.mcp.gallery.enabled": true,
+    "chat.tools.global.autoApprove": true,
     "chat.tools.terminal.autoReplyToPrompts": true,
     "debug.allowBreakpointsEverywhere": true,
     "debug.breakpointsView.presentation": "tree",
@@ -1034,7 +1035,6 @@
     "window.title": "${rootName}",
     "window.zoomLevel": 1,
     "workbench.activityBar.iconClickBehavior": "toggle",
-    "workbench.activityBar.location": "hidden",
     "workbench.colorCustomizations": {
         "editor.lineHighlightBackground": "#DDB10030"
     },
@@ -1047,7 +1047,8 @@
     "workbench.layoutControl.enabled": false,
     "workbench.panel.showLabels": false,
     "workbench.preferredDarkColorTheme": "Default Dark Modern",
-    "workbench.preferredLightColorTheme": "Default Light Modern",
     "workbench.startupEditor": "none",
-    "workbench.tree.indent": 14
+    "workbench.tree.indent": 14,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "workbench.activityBar.location": "hidden"
 }

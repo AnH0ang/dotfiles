@@ -23,6 +23,7 @@ brew "fish"
 brew "fnox"
 brew "fzf"
 brew "gh"
+brew "ghostscript"
 brew "git-delta"
 brew "gnupg"
 brew "graphviz"
@@ -87,17 +88,15 @@ cask "whatsapp"
 cask "zed"
 cask "zotero"
 mas "Amphetamine", id: 937984704
-mas "AusweisApp", id: 948660805
-mas "Keynote", id: 409183694
+mas "Keynote", id: 361285480
 mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
+mas "Pages", id: 361309726
 mas "Reeder", id: 1529448980
 vscode "bmalehorn.vscode-fish"
 vscode "bradlc.vscode-tailwindcss"
 vscode "charliermarsh.ruff"
 vscode "docker.docker"
 vscode "eamodio.gitlens"
-vscode "github.copilot"
 vscode "github.copilot-chat"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
