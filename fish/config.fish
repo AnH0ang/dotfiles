@@ -34,4 +34,8 @@ if status is-interactive
     bind -M insert ctrl-o z-cd
     bind -M insert ctrl-g fzf-cd
     bind -M insert ctrl-e edit_command_buffer
+
+    function fish_prompt
+        string join '' -- (set_color green) (prompt_pwd) (set_color normal) ' > '
+    end
 end
