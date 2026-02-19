@@ -238,7 +238,7 @@
     "security.promptForRemoteFileProtocolHandling": false,
     "security.workspace.trust.untrustedFiles": "open",
     "terminal.integrated.confirmOnKill": "never",
-    "terminal.integrated.defaultProfile.osx": "Nushell",
+    "terminal.integrated.defaultProfile.osx": "fish",
     "terminal.integrated.enableImages": true,
     "terminal.integrated.enableMultiLinePasteWarning": "never",
     "terminal.integrated.enableVisualBell": true,
