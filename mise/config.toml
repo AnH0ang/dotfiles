@@ -5,6 +5,7 @@ yes = true
 bun = "latest"
 node = "latest"
 pnpm = "latest"
+pre-commit = "latest"
 rust = "latest"
 usage = "latest"
 uv = "latest"
