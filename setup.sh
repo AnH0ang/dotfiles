@@ -22,6 +22,8 @@ fix_libomp
 echo "Configure ssh..."
 rm -rf "${HOME}"/.ssh
 ln -fs "${HOME}"/.config/ssh "${HOME}"/.ssh
+sudo rm -f /etc/ssh/sshd_config
+sudo ln -fs "${HOME}/.config/ssh/sshd_config" /etc/ssh/sshd_config
 
 # vscode
 echo "Configure vscode..."
