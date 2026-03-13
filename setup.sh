@@ -12,7 +12,7 @@ echo "Install homebrew packages..."
 # Need to install custom version of libomp for lightgbm (See https://auto.gluon.ai/stable/install.html)
 fix_libomp() {
     /opt/homebrew/bin/brew uninstall -f libomp
-    /opt/homebrew/bin/wget https://raw.githubusercontent.com/Homebrew/homebrew-core/fb8323f2b170bd4ae97e1bac9bf3e2983af3fdb0/Formula/libomp.rb
+    curl https://raw.githubusercontent.com/Homebrew/homebrew-core/fb8323f2b170bd4ae97e1bac9bf3e2983af3fdb0/Formula/libomp.rb -o libomp.rb
     /opt/homebrew/bin/brew install libomp.rb
     rm libomp.rb
 }
@@ -42,15 +42,10 @@ touch "${HOME}"/.hushlogin
 echo "Configure shell..."
 ln -sf "${HOME}"/.config/shell/profile "${HOME}"/.profile
 
-# logseq
-echo "Configure logseq..."
-mkdir -p "${HOME}"/.logseq/config
-ln -sf "${HOME}"/.config/logseq/config.edn "${HOME}"/.logseq/config/config.edn
-
 # hidutil (key remaps)
-echo "Configure hidutil..."
-mkdir -p "$HOME"/Library/LaunchAgents
-ln -sf "$HOME"/.config/hidutil/com.local.KeyRemapping.plist "$HOME"/Library/LaunchAgents/com.local.KeyRemapping.plist
+# echo "Configure hidutil..."
+# mkdir -p "$HOME"/Library/LaunchAgents
+# ln -sf "$HOME"/.config/hidutil/com.local.KeyRemapping.plist "$HOME"/Library/LaunchAgents/com.local.KeyRemapping.plist
 
 # mise
 echo "Install mise packages..."
@@ -73,13 +68,6 @@ $line
 }
 use_touch_id_for_sudo
 
-# uv tool (pipx)
-uv tool install ruff
-uv tool install sqlfluff
-uv tool install nbconvert
-uv tool install pex
-uv tool install pydoclint
-
 ###############################################################################
 # MacOS Setting                                                               #
 ###############################################################################
@@ -94,9 +82,6 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # Set the timezone (see `sudo systemsetup -listtimezones` for other values)
 # sudo systemsetup -settimezone "Europe/Berlin" >/dev/null
-
-# Menu bar: show battery percentage
-defaults write com.apple.menuextra.battery ShowPercent YES
 
 # ------------------------ Keyboard & Input ------------------------
 echo "Configure Keyboard..."
@@ -142,34 +127,6 @@ defaults write com.apple.screencapture location -string "${HOME}/Screenshots"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
-
-# disable autosort of desktops
-defaults write com.apple.dock mru-spaces -bool FALSE
-
-# switch screen when activated
-defaults write -g AppleSpacesSwitchOnActivate -bool true
-
-# ------------------------ Safari ------------------------
-echo "Configure Safari..."
-
-# Disable Password AutoFill
-defaults write -g AutoFillPasswords -int 0
-
-# Enable Extensions
-defaults write -g ExtensionsEnabled -int 1
-
-# Restore last open windows and tabs at launch
-defaults write -g AlwaysRestoreSessionAtLaunch -int 1
-
-# Disable Password Protection of Private Browsing
-defaults write -g PrivateBrowsingRequiresAuthentication -int 0
-
-# ------------------------ iTerm2 ------------------------
-echo "Configure iTerm2..."
-# write preferences folder
-# shellcheck disable=SC2088
-defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.config/iterm2"
-defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -int 1
 
 # ------------------------ Mail ------------------------
 echo "Configure Mail..."
@@ -244,6 +201,9 @@ echo "Configure Dock..."
 # Clear the Dock persistent-apps list (remove all apps)
 defaults write com.apple.dock persistent-apps -array
 
+# Disable autosort of desktops
+defaults write com.apple.dock mru-spaces -bool FALSE
+
 # size
 defaults write com.apple.dock tilesize -int 48
 
@@ -257,44 +217,14 @@ defaults write com.apple.dock wvous-bl-corner -int 0
 defaults write com.apple.dock wvous-br-corner -int 0
 
 # Don't show recently used applications in the Dock
-defaults write com.Apple.Dock show-recents -bool false
+defaults write com.apple.dock show-recents -bool false
+
+# Don't automatilly switch spaces https://apple.stackexchange.com/questions/265501/how-do-i-disable-auto-swoosh-automatic-space-switching-in-macos-sierra
+defaults write com.apple.dock workspaces-auto-swoosh -bool NO
+defaults write -g AppleSpacesSwitchOnActivate -bool false
 
 # Restart
 killall Dock
-
-# ------------------------ Rectangle ------------------------
-echo "Configure Rectangle..."
-
-defaults write com.knollsoft.Rectangle SUEnableAutomaticChecks -int 0
-defaults write com.knollsoft.Rectangle SUHasLaunchedBefore -int 1
-defaults write com.knollsoft.Rectangle allowAnyShortcut -int 1
-defaults write com.knollsoft.Rectangle almostMaximize -dict keyCode -int 3 modifierFlags -int 524288
-defaults write com.knollsoft.Rectangle alternateDefaultShortcuts -int 1
-defaults write com.knollsoft.Rectangle bottomHalf -dict
-defaults write com.knollsoft.Rectangle bottomLeft -dict
-defaults write com.knollsoft.Rectangle bottomRight -dict
-defaults write com.knollsoft.Rectangle center -dict keyCode -int 8 modifierFlags -int 524288
-defaults write com.knollsoft.Rectangle gapSize -int 25
-defaults write com.knollsoft.Rectangle hideMenubarIcon -int 1
-defaults write com.knollsoft.Rectangle larger -dict
-defaults write com.knollsoft.Rectangle lastVersion -int 82
-defaults write com.knollsoft.Rectangle launchOnLogin -int 1
-defaults write com.knollsoft.Rectangle leftHalf -dict keyCode -int 4 modifierFlags -int 524288
-defaults write com.knollsoft.Rectangle maximize -dict keyCode -int 3 modifierFlags -int 655360
-defaults write com.knollsoft.Rectangle maximizeHeight -dict
-defaults write com.knollsoft.Rectangle nextDisplay -dict
-defaults write com.knollsoft.Rectangle previousDisplay -dict
-defaults write com.knollsoft.Rectangle reflowTodo -dict keyCode -int 45 modifierFlags -int 786432
-defaults write com.knollsoft.Rectangle restore -dict keyCode -int 51 modifierFlags -int 524288
-defaults write com.knollsoft.Rectangle rightHalf -dict keyCode -int 37 modifierFlags -int 524288
-defaults write com.knollsoft.Rectangle smaller -dict
-defaults write com.knollsoft.Rectangle subsequentExecutionMode -int 1
-defaults write com.knollsoft.Rectangle toggleTodo -dict keyCode -int 11 modifierFlags -int 786432
-defaults write com.knollsoft.Rectangle topHalf -dict
-defaults write com.knollsoft.Rectangle topLeft -dict
-defaults write com.knollsoft.Rectangle topRight -dict
-defaults write com.knollsoft.Rectangle unsnapRestore -int 2
-defaults write com.knollsoft.Rectangle windowSnapping -int 2
 
 # ------------------------ Hotkeys ------------------------
 echo "Configure Symbolic Hotkey..."
