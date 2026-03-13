@@ -22,26 +22,17 @@
     "[fish]": {
         "editor.defaultFormatter": "bmalehorn.vscode-fish"
     },
-    "[github-actions-workflow]": {
-        "editor.defaultFormatter": "redhat.vscode-yaml"
-    },
     "[html]": {
         "editor.defaultFormatter": "oxc.oxc-vscode"
     },
-    "[javascript]": {
-        "editor.defaultFormatter": "oxc.oxc-vscode"
-    },
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "oxc.oxc-vscode"
-    },
     "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
+        "editor.defaultFormatter": "oxc.oxc-vscode"
     },
     "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
+        "editor.defaultFormatter": "oxc.oxc-vscode"
     },
-    "[latex]": {
-        "editor.wordWrap": "wordWrapColumn"
+    "[just]": {
+        "editor.defaultFormatter": "nefrob.vscode-just-syntax"
     },
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff"
@@ -55,9 +46,6 @@
     "[typescriptreact]": {
         "editor.defaultFormatter": "oxc.oxc-vscode"
     },
-    "[typst-code]": {
-        "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
-    },
     "[typst]": {
         "editor.defaultFormatter": "myriad-dreamin.tinymist",
         "editor.formatOnSave": true,
@@ -69,7 +57,6 @@
     },
     "accessibility.underlineLinks": true,
     "chat.agent.enabled": true,
-    "chat.commandCenter.enabled": false,
     "chat.editing.autoAcceptDelay": 0,
     "chat.editing.confirmEditRequestRemoval": false,
     "chat.editing.confirmEditRequestRetry": false,
@@ -202,6 +189,15 @@
     },
     "inlineChat.enableV2": true,
     "inlineChat.notebookAgent": true,
+    "json.schemaDownload.trustedDomains": {
+        "https://biomejs.dev": true,
+        "https://json-schema.org/": true,
+        "https://json.schemastore.org/": true,
+        "https://raw.githubusercontent.com/": true,
+        "https://schemastore.azurewebsites.net/": true,
+        "https://ui.shadcn.com": true,
+        "https://www.schemastore.org/": true
+    },
     "jupyter.askForKernelRestart": false,
     "jupyter.debugJustMyCode": false,
     "notebook.codeActionsOnSave": {
@@ -237,6 +233,7 @@
     "search.smartCase": true,
     "security.promptForRemoteFileProtocolHandling": false,
     "security.workspace.trust.untrustedFiles": "open",
+    "terminal.external.osxExec": "Ghostty.app",
     "terminal.integrated.confirmOnKill": "never",
     "terminal.integrated.defaultProfile.osx": "fish",
     "terminal.integrated.enableImages": true,
@@ -259,6 +256,7 @@
     "testing.followRunningTest": false,
     "testing.showCoverageInExplorer": false,
     "tinymist.formatterMode": "typstyle",
+    "typescript.updateImportsOnFileMove.enabled": "always",
     "typos.config": "~/.config/typos/typos.toml",
     "vim.camelCaseMotion.enable": true,
     "vim.easymotion": true,
@@ -1035,6 +1033,7 @@
     "window.title": "${rootName}",
     "window.zoomLevel": 1,
     "workbench.activityBar.iconClickBehavior": "toggle",
+    "workbench.activityBar.location": "hidden",
     "workbench.colorCustomizations": {
         "editor.lineHighlightBackground": "#DDB10030"
     },
@@ -1043,12 +1042,11 @@
     "workbench.commandPalette.experimental.suggestCommands": true,
     "workbench.editor.highlightModifiedTabs": false,
     "workbench.editor.tabActionCloseVisibility": false,
+    "workbench.editor.useModal": "some",
     "workbench.iconTheme": null,
     "workbench.layoutControl.enabled": false,
     "workbench.panel.showLabels": false,
     "workbench.preferredDarkColorTheme": "Default Dark Modern",
     "workbench.startupEditor": "none",
-    "workbench.tree.indent": 14,
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "workbench.activityBar.location": "hidden"
+    "workbench.tree.indent": 14
 }
