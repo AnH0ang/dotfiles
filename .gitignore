@@ -1,5 +1,8 @@
 .DS_Store
 
+# docker
+cagent
+
 # nushell
 nushell/history.txt
 
