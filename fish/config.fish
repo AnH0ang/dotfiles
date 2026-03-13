@@ -36,9 +36,9 @@ if status is-interactive
     bind -M insert ctrl-e edit_command_buffer
 
     # Simplify prompt
-    function fish_prompt
-        string join '' -- (set_color green) (prompt_pwd) (set_color normal) ' > '
-    end
+    # function fish_prompt
+    #     string join '' -- (set_color green) (prompt_pwd) (set_color normal) ' > '
+    # end
 
     # Remove mode indicator
     function fish_mode_prompt
