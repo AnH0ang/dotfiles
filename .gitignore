@@ -38,6 +38,7 @@ ssh/*
 !ssh/conf.d
 ssh/conf.d/*
 !ssh/conf.d/.gitkeep
+!ssh/sshd_config
 
 # lazygit
 lazygit/*
