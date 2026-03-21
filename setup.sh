@@ -10,13 +10,13 @@ echo "Install homebrew packages..."
 /opt/homebrew/bin/brew bundle install --file="${HOME}"/.config/homebrew/Brewfile
 
 # Need to install custom version of libomp for lightgbm (See https://auto.gluon.ai/stable/install.html)
-fix_libomp() {
-    /opt/homebrew/bin/brew uninstall -f libomp
-    curl https://raw.githubusercontent.com/Homebrew/homebrew-core/fb8323f2b170bd4ae97e1bac9bf3e2983af3fdb0/Formula/libomp.rb -o libomp.rb
-    /opt/homebrew/bin/brew install libomp.rb
-    rm libomp.rb
-}
-fix_libomp
+# fix_libomp() {
+#     /opt/homebrew/bin/brew uninstall -f libomp
+#     curl https://raw.githubusercontent.com/Homebrew/homebrew-core/fb8323f2b170bd4ae97e1bac9bf3e2983af3fdb0/Formula/libomp.rb -o libomp.rb
+#     /opt/homebrew/bin/brew install libomp.rb
+#     rm libomp.rb
+# }
+# fix_libomp
 
 # ssh
 echo "Configure ssh..."
@@ -222,8 +222,8 @@ defaults write com.apple.dock wvous-br-corner -int 0
 defaults write com.apple.dock show-recents -bool false
 
 # Don't automatilly switch spaces https://apple.stackexchange.com/questions/265501/how-do-i-disable-auto-swoosh-automatic-space-switching-in-macos-sierra
-defaults write com.apple.dock workspaces-auto-swoosh -bool NO
-defaults write -g AppleSpacesSwitchOnActivate -bool false
+# defaults write com.apple.dock workspaces-auto-swoosh -bool NO
+# defaults write -g AppleSpacesSwitchOnActivate -bool false
 
 # Restart
 killall Dock
