@@ -255,7 +255,6 @@
     "testing.defaultGutterClickAction": "debug",
     "testing.followRunningTest": false,
     "testing.showCoverageInExplorer": false,
-    "tinymist.formatterMode": "typstyle",
     "typescript.updateImportsOnFileMove.enabled": "always",
     "typos.config": "~/.config/typos/typos.toml",
     "vim.camelCaseMotion.enable": true,
