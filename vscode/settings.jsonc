@@ -5,31 +5,8 @@
     // \__ \  __/ |_| |_| | | | | (_| \__ \_ | \__ \ (_) | | | |
     // |___/\___|\__|\__|_|_| |_|\__, |___(_)/ |___/\___/|_| |_|
     //                           |___/     |__/
-    "[dockercompose]": {
-        "editor.autoIndent": "advanced",
-        "editor.defaultFormatter": "redhat.vscode-yaml",
-        "editor.insertSpaces": true,
-        "editor.quickSuggestions": {
-            "comments": false,
-            "other": true,
-            "strings": true
-        },
-        "editor.tabSize": 2
-    },
-    "[dockerfile]": {
-        "editor.defaultFormatter": "docker.docker"
-    },
     "[fish]": {
         "editor.defaultFormatter": "bmalehorn.vscode-fish"
-    },
-    "[html]": {
-        "editor.defaultFormatter": "oxc.oxc-vscode"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "oxc.oxc-vscode"
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "oxc.oxc-vscode"
     },
     "[just]": {
         "editor.defaultFormatter": "nefrob.vscode-just-syntax"
@@ -40,28 +17,15 @@
     "[toml]": {
         "editor.defaultFormatter": "tamasfe.even-better-toml"
     },
-    "[typescript]": {
-        "editor.defaultFormatter": "oxc.oxc-vscode"
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "oxc.oxc-vscode"
-    },
     "[typst]": {
         "editor.defaultFormatter": "myriad-dreamin.tinymist",
         "editor.formatOnSave": true,
         "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
     },
     "[yaml]": {
-        "diffEditor.ignoreTrimWhitespace": false,
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
     "accessibility.underlineLinks": true,
-    "chat.agent.enabled": true,
-    "chat.editing.autoAcceptDelay": 0,
-    "chat.editing.confirmEditRequestRemoval": false,
-    "chat.editing.confirmEditRequestRetry": false,
-    "chat.math.enabled": true,
-    "chat.mcp.gallery.enabled": true,
     "chat.tools.global.autoApprove": true,
     "chat.tools.terminal.autoReplyToPrompts": true,
     "debug.allowBreakpointsEverywhere": true,
@@ -78,7 +42,6 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.useInlineViewWhenSpaceIsLimited": false,
     "diffEditor.wordWrap": "off",
-    "docker.extension.enableComposeLanguageServer": false,
     "editor.accessibilitySupport": "off",
     "editor.codeActionsOnSave": {
         "source.addMissingImports": "explicit",
@@ -121,31 +84,9 @@
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmPasteNative": false,
     "explorer.confirmUndo": "light",
-    "explorer.fileNesting.patterns": {
-        "*.db": "${capture}.${extname}-*",
-        "*.db3": "${capture}.${extname}-*",
-        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
-        "*.jsx": "${capture}.js",
-        "*.s3db": "${capture}.${extname}-*",
-        "*.sdb": "${capture}.${extname}-*",
-        "*.sqlite": "${capture}.${extname}-*",
-        "*.sqlite3": "${capture}.${extname}-*",
-        "*.ts": "${capture}.js",
-        "*.tsx": "${capture}.ts",
-        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
-        "tsconfig.json": "tsconfig.*.json"
-    },
     "explorer.incrementalNaming": "smart",
     "explorer.openEditors.sortOrder": "fullPath",
     "extensions.ignoreRecommendations": true,
-    "files.associations": {
-        ".envrc*": "shellscript",
-        "*.cfg": "raw",
-        "*.css": "tailwindcss",
-        "*.plist": "xml",
-        "*.scss": "tailwindcss",
-        "config": "raw"
-    },
     "files.exclude": {
         "**/__pycache__": true,
         "**/.mypy_cache": true,
@@ -162,42 +103,9 @@
     "git.confirmSync": false,
     "git.inputValidation": true,
     "git.mergeEditor": true,
-    "github.copilot.chat.agent.thinkingTool": true,
-    "github.copilot.enable": {
-        "*": true,
-        "markdown": true,
-        "plaintext": true,
-        "scminput": false
-    },
-    "github.copilot.nextEditSuggestions.enabled": true,
-    "github.copilot.nextEditSuggestions.fixes": true,
-    "gitlens.ai.model": "vscode",
-    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
     "gitlens.codeLens.enabled": false,
-    "gitlens.views.scm.grouped.views": {
-        "branches": true,
-        "commits": true,
-        "contributors": true,
-        "fileHistory": false,
-        "launchpad": false,
-        "remotes": true,
-        "repositories": true,
-        "searchAndCompare": true,
-        "stashes": true,
-        "tags": true,
-        "worktrees": true
-    },
     "inlineChat.enableV2": true,
     "inlineChat.notebookAgent": true,
-    "json.schemaDownload.trustedDomains": {
-        "https://biomejs.dev": true,
-        "https://json-schema.org/": true,
-        "https://json.schemastore.org/": true,
-        "https://raw.githubusercontent.com/": true,
-        "https://schemastore.azurewebsites.net/": true,
-        "https://ui.shadcn.com": true,
-        "https://www.schemastore.org/": true
-    },
     "jupyter.askForKernelRestart": false,
     "jupyter.debugJustMyCode": false,
     "notebook.codeActionsOnSave": {
@@ -212,11 +120,6 @@
     "notebook.output.scrolling": true,
     "notebook.output.textLineLimit": 20,
     "notebook.showCellStatusBar": "visible",
-    "python.analysis.aiCodeActions": {
-        "generateDocstring": true,
-        "generateSymbol": true,
-        "implementAbstractClasses": true
-    },
     "python.analysis.autoFormatStrings": true,
     "python.analysis.autoImportCompletions": true,
     "python.analysis.diagnosticMode": "workspace",
@@ -227,35 +130,20 @@
     "python.analysis.languageServerMode": "full",
     "python.analysis.supportDocstringTemplate": true,
     "python.analysis.typeCheckingMode": "standard",
-    "redhat.telemetry.enabled": false,
-    "search.quickOpen.includeHistory": false,
-    "search.searchEditor.defaultNumberOfContextLines": null,
     "search.smartCase": true,
     "security.promptForRemoteFileProtocolHandling": false,
     "security.workspace.trust.untrustedFiles": "open",
     "terminal.external.osxExec": "Ghostty.app",
-    "terminal.integrated.confirmOnKill": "never",
     "terminal.integrated.defaultProfile.osx": "fish",
-    "terminal.integrated.enableImages": true,
     "terminal.integrated.enableMultiLinePasteWarning": "never",
-    "terminal.integrated.enableVisualBell": true,
-    "terminal.integrated.fontLigatures.enabled": true,
-    "terminal.integrated.fontSize": 11,
     "terminal.integrated.persistentSessionScrollback": 10000,
     "terminal.integrated.scrollback": 10000,
-    "terminal.integrated.shellIntegration.enabled": false,
-    "terminal.integrated.shellIntegration.history": 100,
-    "terminal.integrated.smoothScrolling": true,
-    "terminal.integrated.stickyScroll.enabled": false,
-    "terminal.integrated.suggest.enabled": false,
-    "terminal.integrated.tabs.hideCondition": "never",
     "testing.alwaysRevealTestOnStateChange": true,
     "testing.automaticallyOpenPeekView": "failureAnywhere",
     "testing.automaticallyOpenTestResults": "openOnTestFailure",
     "testing.defaultGutterClickAction": "debug",
     "testing.followRunningTest": false,
     "testing.showCoverageInExplorer": false,
-    "typescript.updateImportsOnFileMove.enabled": "always",
     "typos.config": "~/.config/typos/typos.toml",
     "vim.camelCaseMotion.enable": true,
     "vim.easymotion": true,
@@ -1041,7 +929,6 @@
     "workbench.commandPalette.experimental.suggestCommands": true,
     "workbench.editor.highlightModifiedTabs": false,
     "workbench.editor.tabActionCloseVisibility": false,
-    "workbench.editor.useModal": "some",
     "workbench.iconTheme": null,
     "workbench.layoutControl.enabled": false,
     "workbench.panel.showLabels": false,
