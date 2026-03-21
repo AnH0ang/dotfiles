@@ -145,12 +145,6 @@ defaults write com.apple.finder ConversationViewSortDescending -int 1
 # Show 3 lines of the message in the snippet
 defaults write com.apple.finder NumberOfSnippetLines -int 3
 
-# ------------------------ Spotlight ------------------------
-echo "Configure Spotlight..."
-
-defaults write com.apple.Spotlight "NSStatusItem Visible Item-0" -bool false
-defaults write com.apple.Spotlight MenuItemHidden -bool true
-
 # ------------------------ Finder ------------------------
 echo "Configure Finder..."
 
@@ -231,23 +225,23 @@ killall Dock
 # ------------------------ Hotkeys ------------------------
 echo "Configure Symbolic Hotkey..."
 
-# Switch Desktops
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 118 "<dict> <key>enabled</key> <true/> <key>value</key> <dict> <key>parameters</key> <array> <integer>65535</integer> <integer>10</integer> <integer>524288</integer> </array> <key>type</key> <string>standard</string> </dict> </dict>"
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 119 "<dict> <key>enabled</key> <true/> <key>value</key> <dict> <key>parameters</key> <array> <integer>49</integer> <integer>18</integer> <integer>524288</integer> </array> <key>type</key> <string>standard</string> </dict> </dict>"
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 120 "<dict> <key>enabled</key> <true/> <key>value</key> <dict> <key>parameters</key> <array> <integer>50</integer> <integer>19</integer> <integer>524288</integer> </array> <key>type</key> <string>standard</string> </dict> </dict>"
+# # Switch Desktops
+# defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 118 "<dict> <key>enabled</key> <true/> <key>value</key> <dict> <key>parameters</key> <array> <integer>65535</integer> <integer>10</integer> <integer>524288</integer> </array> <key>type</key> <string>standard</string> </dict> </dict>"
+# defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 119 "<dict> <key>enabled</key> <true/> <key>value</key> <dict> <key>parameters</key> <array> <integer>49</integer> <integer>18</integer> <integer>524288</integer> </array> <key>type</key> <string>standard</string> </dict> </dict>"
+# defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 120 "<dict> <key>enabled</key> <true/> <key>value</key> <dict> <key>parameters</key> <array> <integer>50</integer> <integer>19</integer> <integer>524288</integer> </array> <key>type</key> <string>standard</string> </dict> </dict>"
 
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 122 "<dict> <key>enabled</key> <true/> <key>value</key> <dict> <key>parameters</key> <array> <integer>52</integer> <integer>21</integer> <integer>524288</integer> </array> <key>type</key> <string>standard</string> </dict> </dict>"
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 123 "<dict> <key>enabled</key> <true/> <key>value</key> <dict> <key>parameters</key> <array> <integer>53</integer> <integer>23</integer> <integer>524288</integer> </array> <key>type</key> <string>standard</string> </dict> </dict>"
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 124 "<dict> <key>enabled</key> <true/> <key>value</key> <dict> <key>parameters</key> <array> <integer>54</integer> <integer>22</integer> <integer>524288</integer> </array> <key>type</key> <string>standard</string> </dict> </dict>"
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 125 "<dict> <key>enabled</key> <true/> <key>value</key> <dict> <key>parameters</key> <array> <integer>55</integer> <integer>26</integer> <integer>524288</integer> </array> <key>type</key> <string>standard</string> </dict> </dict>"
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 126 "<dict> <key>enabled</key> <true/> <key>value</key> <dict> <key>parameters</key> <array> <integer>56</integer> <integer>28</integer> <integer>524288</integer> </array> <key>type</key> <string>standard</string> </dict> </dict>"
+# defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 122 "<dict> <key>enabled</key> <true/> <key>value</key> <dict> <key>parameters</key> <array> <integer>52</integer> <integer>21</integer> <integer>524288</integer> </array> <key>type</key> <string>standard</string> </dict> </dict>"
+# defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 123 "<dict> <key>enabled</key> <true/> <key>value</key> <dict> <key>parameters</key> <array> <integer>53</integer> <integer>23</integer> <integer>524288</integer> </array> <key>type</key> <string>standard</string> </dict> </dict>"
+# defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 124 "<dict> <key>enabled</key> <true/> <key>value</key> <dict> <key>parameters</key> <array> <integer>54</integer> <integer>22</integer> <integer>524288</integer> </array> <key>type</key> <string>standard</string> </dict> </dict>"
+# defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 125 "<dict> <key>enabled</key> <true/> <key>value</key> <dict> <key>parameters</key> <array> <integer>55</integer> <integer>26</integer> <integer>524288</integer> </array> <key>type</key> <string>standard</string> </dict> </dict>"
+# defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 126 "<dict> <key>enabled</key> <true/> <key>value</key> <dict> <key>parameters</key> <array> <integer>56</integer> <integer>28</integer> <integer>524288</integer> </array> <key>type</key> <string>standard</string> </dict> </dict>"
 
-# Disable Spotlight
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 61 "<dict><key>enabled</key><false/></dict>"
+# # Disable Spotlight
+# defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 61 "<dict><key>enabled</key><false/></dict>"
 
 # Disable Prev/Next Input
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 "<dict><key>enabled</key><false/></dict>"
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 60 "<dict><key>enabled</key><false/></dict>"
+# defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 "<dict><key>enabled</key><false/></dict>"
+# defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 60 "<dict><key>enabled</key><false/></dict>"
 
 # ------------------------ Calendar ------------------------
 echo "Configure Calendar..."
