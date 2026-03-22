@@ -103,6 +103,8 @@
     "git.confirmSync": false,
     "git.inputValidation": true,
     "git.mergeEditor": true,
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
     "gitlens.codeLens.enabled": false,
     "inlineChat.enableV2": true,
     "inlineChat.notebookAgent": true,
@@ -389,20 +391,6 @@
                     "type": "command"
                 },
                 {
-                    "command": "workbench.action.toggleCenteredLayout",
-                    "icon": "list-flat",
-                    "key": "c",
-                    "name": "Toggle centered layout",
-                    "type": "command"
-                },
-                {
-                    "command": "workbench.action.selectIconTheme",
-                    "icon": "symbol-misc",
-                    "key": "i",
-                    "name": "Select icon theme",
-                    "type": "command"
-                },
-                {
                     "command": "workbench.action.togglePanel",
                     "icon": "output",
                     "key": "j",
@@ -417,45 +405,10 @@
                     "type": "command"
                 },
                 {
-                    "command": "workbench.action.selectTheme",
-                    "icon": "paintcan",
-                    "key": "s",
-                    "name": "Select theme",
-                    "type": "command"
-                },
-                {
                     "command": "workbench.action.toggleActivityBarVisibility",
                     "icon": "tools",
                     "key": "t",
                     "name": "Toggle tool/activity bar visibility",
-                    "type": "command"
-                },
-                {
-                    "command": "workbench.action.toggleZenMode",
-                    "icon": "eye",
-                    "key": "z",
-                    "name": "Toggle zen mode",
-                    "type": "command"
-                },
-                {
-                    "command": "workbench.action.toggleFullScreen",
-                    "icon": "screen-full",
-                    "key": "F",
-                    "name": "Toggle full screen",
-                    "type": "command"
-                },
-                {
-                    "command": "editor.action.toggleMinimap",
-                    "icon": "symbol-ruler",
-                    "key": "M",
-                    "name": "Toggle minimap",
-                    "type": "command"
-                },
-                {
-                    "command": "workbench.action.toggleTabsVisibility",
-                    "icon": "files",
-                    "key": "T",
-                    "name": "Toggle tab visibility",
                     "type": "command"
                 },
                 {
@@ -486,160 +439,8 @@
             "type": "bindings"
         },
         {
-            "bindings": [
-                {
-                    "command": "github.copilot.chat.attachSelection",
-                    "icon": "ports-forward-icon",
-                    "key": "s",
-                    "name": "Add Selection to Chat",
-                    "type": "command"
-                },
-                {
-                    "command": "github.copilot.chat.attachFile",
-                    "icon": "file",
-                    "key": "f",
-                    "name": "Add File to Chat",
-                    "type": "command"
-                }
-            ],
-            "icon": "chat-editor-label-icon",
-            "keys": "c",
-            "name": "+Chat toggles",
-            "type": "bindings"
-        },
-        {
             "keys": "S",
             "position": -1
-        },
-        {
-            "bindings": [
-                {
-                    "args": {
-                        "commands": [
-                            {
-                                "command": ":noh"
-                            }
-                        ]
-                    },
-                    "command": "vim.remap",
-                    "icon": "clear-all",
-                    "key": "c",
-                    "name": "Clear highlight",
-                    "type": "command"
-                },
-                {
-                    "command": "editor.action.rename",
-                    "icon": "edit",
-                    "key": "e",
-                    "name": "Edit symbol",
-                    "type": "command"
-                },
-                {
-                    "bindings": [
-                        {
-                            "commands": [
-                                "editor.action.addSelectionToNextFindMatch",
-                                "workbench.action.findInFiles"
-                            ],
-                            "icon": "selection",
-                            "key": "/",
-                            "name": "Search in project with selection",
-                            "type": "commands"
-                        },
-                        {
-                            "command": "editor.action.wordHighlight.next",
-                            "icon": "arrow-down",
-                            "key": "n",
-                            "name": "Next occurrence",
-                            "type": "command"
-                        },
-                        {
-                            "command": "editor.action.wordHighlight.prev",
-                            "icon": "arrow-up",
-                            "key": "p",
-                            "name": "Previous occurrence",
-                            "type": "command"
-                        },
-                        {
-                            "command": "editor.action.wordHighlight.prev",
-                            "icon": "arrow-up",
-                            "key": "N",
-                            "name": "Previous occurrence",
-                            "type": "command"
-                        }
-                    ],
-                    "command": "editor.action.wordHighlight.trigger",
-                    "icon": "symbol-color",
-                    "key": "h",
-                    "name": "Highlight symbol",
-                    "type": "transient"
-                },
-                {
-                    "command": "workbench.action.gotoSymbol",
-                    "icon": "symbol-class",
-                    "key": "j",
-                    "name": "Jump to symbol in buffer",
-                    "type": "command"
-                },
-                {
-                    "command": "workbench.action.findInFiles",
-                    "icon": "search",
-                    "key": "p",
-                    "name": "Search in project",
-                    "type": "command"
-                },
-                {
-                    "command": "editor.action.referenceSearch.trigger",
-                    "icon": "references",
-                    "key": "r",
-                    "name": "Search all references",
-                    "type": "command"
-                },
-                {
-                    "command": "fuzzySearch.activeTextEditorWithCurrentSelection",
-                    "icon": "file",
-                    "key": "s",
-                    "name": "Fuzzy search in current buffer",
-                    "type": "command"
-                },
-                {
-                    "command": "workbench.action.showAllSymbols",
-                    "icon": "symbol-class",
-                    "key": "J",
-                    "name": "Jump to symbol in project",
-                    "type": "command"
-                },
-                {
-                    "commands": [
-                        "editor.action.addSelectionToNextFindMatch",
-                        "workbench.action.findInFiles"
-                    ],
-                    "icon": "selection",
-                    "key": "P",
-                    "name": "Search in project with selection",
-                    "type": "commands"
-                },
-                {
-                    "command": "references-view.find",
-                    "icon": "references",
-                    "key": "R",
-                    "name": "Search all references in side bar",
-                    "type": "command"
-                },
-                {
-                    "commands": [
-                        "editor.action.addSelectionToNextFindMatch",
-                        "fuzzySearch.activeTextEditorWithCurrentSelection"
-                    ],
-                    "icon": "selection",
-                    "key": "S",
-                    "name": "Fuzzy search with selection in current buffer",
-                    "type": "commands"
-                }
-            ],
-            "keys": "S",
-            "name": "+Search",
-            "type": "bindings"
         },
         {
             "keys": "s",
@@ -918,7 +719,7 @@
     "window.autoDetectColorScheme": true,
     "window.commandCenter": false,
     "window.title": "${rootName}",
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0.5,
     "workbench.activityBar.iconClickBehavior": "toggle",
     "workbench.activityBar.location": "hidden",
     "workbench.colorCustomizations": {
