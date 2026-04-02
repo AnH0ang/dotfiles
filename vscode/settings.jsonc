@@ -97,7 +97,7 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
-    "git.autofetch": false,
+    "git.autofetch": true,
     "git.autoRepositoryDetection": "openEditors",
     "git.blame.editorDecoration.enabled": true,
     "git.confirmSync": false,
