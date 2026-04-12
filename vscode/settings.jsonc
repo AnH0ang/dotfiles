@@ -8,14 +8,17 @@
     "[fish]": {
         "editor.defaultFormatter": "bmalehorn.vscode-fish"
     },
+    "[html]": {
+        "editor.defaultFormatter": "oxc.oxc-vscode"
+    },
     "[just]": {
         "editor.defaultFormatter": "nefrob.vscode-just-syntax"
     },
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff"
     },
-    "[toml]": {
-        "editor.defaultFormatter": "tamasfe.even-better-toml"
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "oxc.oxc-vscode"
     },
     "[typst]": {
         "editor.defaultFormatter": "myriad-dreamin.tinymist",
@@ -26,8 +29,10 @@
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
     "accessibility.underlineLinks": true,
+    "chat.agent.maxRequests": 1000,
     "chat.tools.global.autoApprove": true,
     "chat.tools.terminal.autoReplyToPrompts": true,
+    "chat.viewSessions.orientation": "stacked",
     "debug.allowBreakpointsEverywhere": true,
     "debug.breakpointsView.presentation": "tree",
     "debug.console.closeOnEnd": true,
@@ -56,7 +61,7 @@
     "editor.fontSize": 11,
     "editor.formatOnSave": true,
     "editor.guides.indentation": false,
-    "editor.inlayHints.enabled": "on",
+    "editor.inlayHints.enabled": "off",
     "editor.inlineSuggest.edits.showCollapsed": true,
     "editor.inlineSuggest.enabled": true,
     "editor.inlineSuggest.showToolbar": "always",
@@ -103,11 +108,27 @@
     "git.confirmSync": false,
     "git.inputValidation": true,
     "git.mergeEditor": true,
+    "github.copilot.enable": {
+        "*": true,
+        "markdown": true,
+        "plaintext": false,
+        "scminput": false
+    },
     "gitlens.ai.model": "vscode",
     "gitlens.ai.vscode.model": "copilot:gpt-4.1",
     "gitlens.codeLens.enabled": false,
     "inlineChat.enableV2": true,
     "inlineChat.notebookAgent": true,
+    "json.schemaDownload.trustedDomains": {
+        "https://developer.microsoft.com/json-schemas/": true,
+        "https://json-schema.org/": true,
+        "https://json.schemastore.org/": true,
+        "https://raw.githubusercontent.com/devcontainers/spec/": true,
+        "https://raw.githubusercontent.com/microsoft/vscode/": true,
+        "https://schemastore.azurewebsites.net/": true,
+        "https://ui.shadcn.com": true,
+        "https://www.schemastore.org/": true
+    },
     "jupyter.askForKernelRestart": false,
     "jupyter.debugJustMyCode": false,
     "notebook.codeActionsOnSave": {
@@ -122,16 +143,16 @@
     "notebook.output.scrolling": true,
     "notebook.output.textLineLimit": 20,
     "notebook.showCellStatusBar": "visible",
-    "python.analysis.autoFormatStrings": true,
-    "python.analysis.autoImportCompletions": true,
-    "python.analysis.diagnosticMode": "workspace",
-    "python.analysis.enablePytestSupport": true,
-    "python.analysis.includeAliasesFromUserFiles": true,
-    "python.analysis.inlayHints.functionReturnTypes": true,
-    "python.analysis.inlayHints.pytestParameters": true,
-    "python.analysis.languageServerMode": "full",
-    "python.analysis.supportDocstringTemplate": true,
-    "python.analysis.typeCheckingMode": "standard",
+    // "python.analysis.autoFormatStrings": true,
+    // "python.analysis.autoImportCompletions": true,
+    // "python.analysis.diagnosticMode": "workspace",
+    // "python.analysis.enablePytestSupport": true,
+    // "python.analysis.includeAliasesFromUserFiles": true,
+    // "python.analysis.inlayHints.functionReturnTypes": true,
+    // "python.analysis.inlayHints.pytestParameters": true,
+    // "python.analysis.languageServerMode": "full",
+    // "python.analysis.supportDocstringTemplate": true,
+    // "python.analysis.typeCheckingMode": "standard",
     "search.smartCase": true,
     "security.promptForRemoteFileProtocolHandling": false,
     "security.workspace.trust.untrustedFiles": "open",
@@ -140,6 +161,7 @@
     "terminal.integrated.enableMultiLinePasteWarning": "never",
     "terminal.integrated.persistentSessionScrollback": 10000,
     "terminal.integrated.scrollback": 10000,
+    "terminal.integrated.shellIntegration.enabled": false,
     "testing.alwaysRevealTestOnStateChange": true,
     "testing.automaticallyOpenPeekView": "failureAnywhere",
     "testing.automaticallyOpenTestResults": "openOnTestFailure",
@@ -477,10 +499,10 @@
                     "type": "command"
                 },
                 {
-                    "command": "workbench.action.output.toggleOutput",
-                    "icon": "output",
+                    "command": "chatgpt.sidebarSecondaryView.focus",
+                    "icon": "notebook-open-as-text",
                     "key": "o",
-                    "name": "Show output",
+                    "name": "Show codex view",
                     "type": "command"
                 },
                 {
@@ -733,7 +755,6 @@
     "workbench.iconTheme": null,
     "workbench.layoutControl.enabled": false,
     "workbench.panel.showLabels": false,
-    "workbench.preferredDarkColorTheme": "Default Dark Modern",
     "workbench.startupEditor": "none",
     "workbench.tree.indent": 14
 }
