@@ -66,11 +66,13 @@ cask "gitkraken-cli"
 cask "google-chrome"
 cask "karabiner-elements"
 cask "moneymoney"
+cask "notion"
 cask "raycast"
 cask "skim"
 cask "visual-studio-code"
 cask "whatsapp"
 mas "Amphetamine", id: 937984704
+mas "HP", id: 1474276998
 mas "Keynote", id: 361285480
 mas "Numbers", id: 409203825
 mas "Pages", id: 361309726
@@ -81,7 +83,6 @@ vscode "bodil.file-browser"
 vscode "bradlc.vscode-tailwindcss"
 vscode "charliermarsh.ruff"
 vscode "eamodio.gitlens"
-vscode "github.copilot-chat"
 vscode "jacobdufault.fuzzy-search"
 vscode "kahole.magit"
 vscode "ms-python.debugpy"

@@ -112,6 +112,7 @@ defaults write com.jetbrains.intellij ApplePressAndHoldEnabled -bool false
 defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
 defaults write com.citrix.receiver.nomas ApplePressAndHoldEnabled -bool false
 defaults write com.citrix.receiver.icaviewer.mac ApplePressAndHoldEnabled -bool false
+defaults write com.apple.ScreenSharing ApplePressAndHoldEnabled -bool false
 defaults write md.obsidian ApplePressAndHoldEnabled -bool false
 defaults delete -g ApplePressAndHoldEnabled
 
