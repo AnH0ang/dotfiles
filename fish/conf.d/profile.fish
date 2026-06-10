@@ -57,11 +57,8 @@ set -x POETRY_CONFIG_DIR "$XDG_CONFIG_HOME/poetry"
 set -x RYE_HOME "$XDG_CONFIG_HOME/rye"
 set -x PATH "$HOME/.config/rye/shims" $PATH
 
-# rust
-set -x PATH "$HOME/.cargo/bin" $PATH
-
 # mise
-set -x MISE_ENV_FILE ".env"
+# set -x MISE_ENV_FILE ".env"
 
 # direnv
 set -x DIRENV_LOG_FORMAT ""
