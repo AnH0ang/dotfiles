@@ -1,14 +1,8 @@
 [core]
-    pager = delta
-    excludesfile = ~/.config/git/gitignore
     ignorecase = false
 
 [include]
     path = aliases
-    path = user
-
-[init]
-    defaultBranch = main
 
 [commit]
     verbose = true
@@ -47,9 +41,6 @@
 [rebase]
     autoStash = true
 
-[interactive]
-    diffFilter = delta --color-only
-
 [fetch]
     prune = true
     pruneTags = true
@@ -64,16 +55,9 @@
 [help]
     autocorrect = prompt
 
-[delta]
-    navigate = true
-    side-by-side = true
-    search-loopback = true
-
 [color]
     ui = true
 
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+[user]
+	email = an.hoang@dzbank.de
+	name = An Hoang

@@ -1,5 +1,0 @@
-#! /bin/sh
-
-if test -d .venv; then
-    . .venv/bin/activate
-fi

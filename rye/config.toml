@@ -1,8 +1,0 @@
-[default]
-build-system = "setuptools"
-
-[behavior]
-force-rye-managed = true
-global-python = false
-use-uv = true
-autosync = true

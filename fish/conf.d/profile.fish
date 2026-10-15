@@ -1,67 +1,16 @@
-set -x LC_ALL "en_US.UTF-8"
+# ~/.config/fish/config.fish
 
-# local scripts
-set -x PATH $PATH $HOME/.config/bin
+# pnpm
+set -gx PNPM_HOME $HOME/.local/share/pnpm
+fish_add_path -g $PNPM_HOME/bin        # fish_add_path skips duplicates itself
 
-# xdg settings
-set -x XDG_CONFIG_HOME "$HOME/.config"
-set -x XDG_DATA_HOME "$HOME/.local/share"
-set -x XDG_CACHE_HOME "$HOME/.cache"
+# SDKMAN: add the "current" bin dir of each installed tool to PATH
+set -gx SDKMAN_DIR $HOME/.sdkman
+for dir in $SDKMAN_DIR/candidates/*/current/bin
+    fish_add_path -g $dir
+end
+test -d $SDKMAN_DIR/candidates/java/current
+and set -gx JAVA_HOME $SDKMAN_DIR/candidates/java/current
 
-# cd
-set -x CDPATH $CDPATH $HOME
-
-# defaults
-set -x VISUAL nvim
-set -x EDITOR nvim
-set -x GIT_EDITOR nvim
-
-# less
-set -x LESSHISTFILE -
-
-# readline
-set -x INPUTRC "$XDG_CONFIG_HOME/readline/.inputrc"
-
-# fzf
-set -x FZF_DEFAULT_COMMAND "fd --type f --hidden --exclude .git --max-depth 4"
-
-# starship
-set -x STARSHIP_CONFIG "$XDG_CONFIG_HOME/starship/starship.toml"
-
-# pipx
-set -x PATH "$HOME/.local/bin" $PATH
-
-# python
-set -x PYTHONSTARTUP "$XDG_CONFIG_HOME/python/startup.py"
-
-# aichat
-set -x AICHAT_CONFIG_DIR "$XDG_CONFIG_HOME/aichat"
-
-# homebrew
-set -x HOMEBREW_NO_ENV_HINTS 1
-set -x HOMEBREW_PREFIX /opt/homebrew
-set -x HOMEBREW_CELLAR /opt/homebrew/Cellar
-set -x HOMEBREW_REPOSITORY /opt/homebrew
-set -x PATH /opt/homebrew/bin /opt/homebrew/sbin $PATH
-set -x MANPATH /opt/homebrew/share/man $MANPATH
-set -x INFOPATH /opt/homebrew/share/info $INFOPATH
-set -x HOMEBREW_NO_AUTO_UPDATE 1 # disable homebrew auto update
-
-# python venv
-set -x VIRTUAL_ENV_DISABLE_PROMPT true
-
-# poetry
-set -x POETRY_CONFIG_DIR "$XDG_CONFIG_HOME/poetry"
-
-# rye
-set -x RYE_HOME "$XDG_CONFIG_HOME/rye"
-set -x PATH "$HOME/.config/rye/shims" $PATH
-
-# mise
-# set -x MISE_ENV_FILE ".env"
-
-# direnv
-set -x DIRENV_LOG_FORMAT ""
-
-# tex
-set -x PATH /Library/TeX/texbin $PATH
+# NVM (see notes: nvm.sh itself does not work in fish)
+set -gx NVM_DIR $HOME/.nvm

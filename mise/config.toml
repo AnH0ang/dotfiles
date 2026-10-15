@@ -2,6 +2,15 @@
 yes = true
 
 [tools]
-pre-commit = "latest"
-usage = "latest"
+"aqua:fish-shell/fish-shell" = "latest"
+atuin = "latest"
+bat = "latest"
+eza = "latest"
+fzf = "latest"
+k9s = "latest"
+ripgrep = "latest"
+starship = "latest"
+tmux = "latest"
 uv = "latest"
+yazi = "latest"
+zoxide = "latest"
