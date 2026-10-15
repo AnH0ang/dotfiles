@@ -5,11 +5,15 @@
     // \__ \  __/ |_| |_| | | | | (_| \__ \_ | \__ \ (_) | | | |
     // |___/\___|\__|\__|_|_| |_|\__, |___(_)/ |___/\___/|_| |_|
     //                           |___/     |__/
-    "[dockerfile]": {
-        "editor.defaultFormatter": "docker.docker"
+    "[css]": {
+        "editor.defaultFormatter": "oxc.oxc-vscode"
     },
-    "[fish]": {
-        "editor.defaultFormatter": "bmalehorn.vscode-fish"
+    "[dockercompose]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-containers"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": false
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
@@ -17,36 +21,22 @@
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "[latex]": {
-        "editor.wordWrap": "wordWrapColumn"
-    },
     "[python]": {
-        "editor.defaultFormatter": "charliermarsh.ruff"
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true
     },
     "[toml]": {
         "editor.defaultFormatter": "tamasfe.even-better-toml",
         "editor.formatOnSave": false
     },
-    "[typst-code]": {
-        "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
-    },
-    "[typst]": {
-        "editor.defaultFormatter": "myriad-dreamin.tinymist",
-        "editor.formatOnSave": true,
-        "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
-    },
-    "[yaml]": {
-        "diffEditor.ignoreTrimWhitespace": false,
-        "editor.defaultFormatter": "redhat.vscode-yaml"
+    "[typescript]": {
+        "editor.defaultFormatter": "oxc.oxc-vscode"
     },
     "accessibility.underlineLinks": true,
-    "breadcrumbs.enabled": false,
     "chat.agent.enabled": true,
-    "chat.commandCenter.enabled": false,
     "chat.editing.autoAcceptDelay": 0,
     "chat.editing.confirmEditRequestRemoval": false,
     "chat.editing.confirmEditRequestRetry": false,
-    "chat.tools.autoApprove": true,
     "debug.allowBreakpointsEverywhere": true,
     "debug.console.closeOnEnd": true,
     "debug.enableStatusBarColor": true,
@@ -60,6 +50,8 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.useInlineViewWhenSpaceIsLimited": false,
     "diffEditor.wordWrap": "off",
+    "docker.extension.enableComposeLanguageServer": false,
+    "docker.lsp.experimental.scout.criticalHighVulnerabilities": false,
     "editor.accessibilitySupport": "off",
     "editor.codeActionsOnSave": {
         "source.addMissingImports": "explicit",
@@ -70,9 +62,8 @@
     "editor.cursorBlinking": "solid",
     "editor.folding": false,
     "editor.fontFamily": "'SF Mono', 'Cascadia Code', 'FiraCode Nerd Font', Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 11,
-    "editor.formatOnSave": true,
+    "editor.fontLigatures": false,
+    "editor.formatOnSave": false,
     "editor.guides.indentation": false,
     "editor.inlayHints.enabled": "on",
     "editor.inlineSuggest.edits.showCollapsed": true,
@@ -83,6 +74,9 @@
     "editor.minimap.enabled": false,
     "editor.multiCursorModifier": "alt",
     "editor.occurrencesHighlightDelay": 0,
+    "editor.quickSuggestions": {
+        "strings": "on"
+    },
     "editor.quickSuggestionsDelay": 5,
     "editor.renderLineHighlight": "all",
     "editor.scrollbar.horizontal": "hidden",
@@ -91,6 +85,11 @@
     "editor.suggest.preview": true,
     "editor.tabCompletion": "on",
     "editor.wordWrapColumn": 88,
+    "errorLens.enabled": true,
+    "errorLens.enabledDiagnosticLevels": [
+      "warning",
+      "info"
+    ],
     "errorLens.excludeBySource": [
         "cSpell",
         "YAML(0)"
@@ -120,10 +119,7 @@
     "explorer.openEditors.sortOrder": "fullPath",
     "extensions.ignoreRecommendations": true,
     "files.associations": {
-        ".envrc*": "shellscript",
-        "*.cfg": "raw",
-        "*.plist": "xml",
-        "config": "raw"
+        "*.css": "tailwindcss"
     },
     "files.exclude": {
         "**/__pycache__": true,
@@ -134,43 +130,30 @@
     },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
-    "git.autofetch": false,
+    "files.trimTrailingWhitespace": false,
+    "git.autofetch": true,
     "git.autoRepositoryDetection": "openEditors",
     "git.blame.editorDecoration.enabled": true,
     "git.confirmSync": false,
     "git.inputValidation": true,
     "git.mergeEditor": true,
-    "github.copilot.chat.agent.thinkingTool": true,
-    "github.copilot.enable": {
-        "*": true,
-        "markdown": true,
-        "plaintext": true,
-        "scminput": false
-    },
-    "github.copilot.nextEditSuggestions.enabled": true,
-    "github.copilot.nextEditSuggestions.fixes": true,
+    "git.replaceTagsWhenPull": true,
+    "git.suggestSmartCommit": false,
     "gitlens.codeLens.enabled": false,
-    "inlineChat.enableV2": true,
-    "jupyter.askForKernelRestart": false,
-    "jupyter.debugJustMyCode": false,
-    "notebook.codeActionsOnSave": {
-        "notebook.source.fixAll": "explicit"
+    "gitlens.views.scm.grouped.views": {
+        "branches": true,
+        "commits": true,
+        "contributors": true,
+        "fileHistory": false,
+        "launchpad": false,
+        "remotes": true,
+        "repositories": true,
+        "searchAndCompare": true,
+        "stashes": true,
+        "tags": true,
+        "worktrees": true
     },
-    "notebook.consolidatedRunButton": true,
-    "notebook.dragAndDropEnabled": false,
-    "notebook.formatOnSave.enabled": true,
-    "notebook.globalToolbarShowLabel": "never",
-    "notebook.insertToolbarLocation": "hidden",
-    "notebook.output.minimalErrorRendering": true,
-    "notebook.output.scrolling": true,
-    "notebook.output.textLineLimit": 20,
-    "notebook.showCellStatusBar": "visible",
-    "python.analysis.aiCodeActions": {
-        "generateDocstring": true,
-        "generateSymbol": true,
-        "implementAbstractClasses": true
-    },
+    "js/ts.updateImportsOnFileMove.enabled": "always",
     "python.analysis.autoFormatStrings": true,
     "python.analysis.autoImportCompletions": true,
     "python.analysis.diagnosticMode": "workspace",
@@ -178,27 +161,32 @@
     "python.analysis.includeAliasesFromUserFiles": true,
     "python.analysis.inlayHints.functionReturnTypes": true,
     "python.analysis.inlayHints.pytestParameters": true,
-    "python.analysis.languageServerMode": "full",
     "python.analysis.supportDocstringTemplate": true,
     "python.analysis.typeCheckingMode": "standard",
-    "redhat.telemetry.enabled": false,
+    "python.languageServer": "Default",
+    "remote.SSH.remotePlatform": {
+        "localhost": "linux"
+    },
     "search.quickOpen.includeHistory": false,
     "search.searchEditor.defaultNumberOfContextLines": null,
     "search.smartCase": true,
+    "security.allowedUNCHosts": [
+        "dzag.vrnet"
+    ],
     "security.promptForRemoteFileProtocolHandling": false,
     "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.defaultProfile.linux": "fish",
     "terminal.integrated.confirmOnKill": "never",
     "terminal.integrated.defaultProfile.osx": "fish",
     "terminal.integrated.enableImages": true,
     "terminal.integrated.enableMultiLinePasteWarning": "never",
     "terminal.integrated.enableVisualBell": true,
-    "terminal.integrated.fontLigatures.enabled": true,
-    "terminal.integrated.fontSize": 11,
-    "terminal.integrated.persistentSessionScrollback": 1000000,
-    "terminal.integrated.scrollback": 1000000,
+    "terminal.integrated.fontLigatures.enabled": false,
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.persistentSessionScrollback": 10000,
+    "terminal.integrated.scrollback": 10000,
     "terminal.integrated.shellIntegration.enabled": false,
     "terminal.integrated.shellIntegration.history": 1000,
-    "terminal.integrated.smoothScrolling": true,
     "terminal.integrated.stickyScroll.enabled": false,
     "terminal.integrated.suggest.cdPath": "relative",
     "terminal.integrated.tabs.hideCondition": "never",
@@ -207,15 +195,13 @@
     "testing.automaticallyOpenTestResults": "openOnTestFailure",
     "testing.defaultGutterClickAction": "debug",
     "testing.followRunningTest": false,
-    "tinymist.formatterMode": "typstyle",
-    "typos.config": "~/.config/typos/typos.toml",
     "vim.camelCaseMotion.enable": true,
     "vim.easymotion": true,
     "vim.highlightedyank.duration": 300,
     "vim.highlightedyank.enable": true,
     "vim.hlsearch": true,
     "vim.incsearch": true,
-    "vim.leader": ";",
+    "vim.leader": ",",
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "after": [
@@ -392,20 +378,11 @@
             "commands": [
                 "vspacecode.space"
             ]
-        },
-        {
-            "before": [
-                ","
-            ],
-            "commands": [
-                "vspacecode.space",
-                {
-                    "args": "m",
-                    "command": "whichkey.triggerKey"
-                }
-            ]
         }
     ],
+    "vim.sneak": true,
+    "vim.sneakReplacesF": true,
+    "vim.sneakUseIgnorecaseAndSmartcase": true,
     "vim.targets.enable": true,
     "vim.useSystemClipboard": true,
     "vim.visualModeKeyBindingsNonRecursive": [
@@ -416,22 +393,16 @@
             "commands": [
                 "vspacecode.space"
             ]
-        },
-        {
-            "before": [
-                ","
-            ],
-            "commands": [
-                "vspacecode.space",
-                {
-                    "args": "m",
-                    "command": "whichkey.triggerKey"
-                }
-            ]
         }
     ],
     "vim.visualstar": true,
     "vspacecode.bindingOverrides": [
+        {
+            "command": "workbench.action.splitEditorToNextGroup",
+            "keys": "w.g",
+            "name": "Split into next Group",
+            "type": "command"
+        },
         {
             "command": "terminal.focus",
             "icon": "terminal-view-icon",
@@ -836,6 +807,12 @@
             "type": "command"
         },
         {
+            "command": "editor.debug.action.editBreakpoint",
+            "keys": "d.i",
+            "name": "Edit Breakpoint",
+            "type": "command"
+        },
+        {
             "command": "workbench.debug.action.focusCallStackView",
             "keys": "d.a",
             "name": "Call Stack",
@@ -981,10 +958,10 @@
     "whichkey.delay": 500,
     "window.autoDetectColorScheme": true,
     "window.commandCenter": false,
-    "window.customTitleBarVisibility": "never",
+    "window.menuBarVisibility": "compact",
     "window.title": "${rootName}",
-    "window.zoomLevel": 1,
     "workbench.activityBar.iconClickBehavior": "toggle",
+    "workbench.activityBar.location": "hidden",
     "workbench.colorCustomizations": {
         "editor.lineHighlightBackground": "#DDB10030"
     },
@@ -996,8 +973,8 @@
     "workbench.iconTheme": null,
     "workbench.layoutControl.enabled": false,
     "workbench.panel.showLabels": false,
-    "workbench.preferredDarkColorTheme": "Default Dark Modern",
-    "workbench.preferredLightColorTheme": "Default Light Modern",
+    "workbench.preferredDarkColorTheme": "Dark Modern",
+    "workbench.preferredLightColorTheme": "Light Modern",
     "workbench.startupEditor": "none",
     "workbench.tree.indent": 14
 }
