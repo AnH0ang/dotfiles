@@ -1,5 +1,8 @@
 # ~/.config/fish/config.fish
 
+# uv
+set -gx UV_SYSTEM_CERTS 1
+
 # pnpm
 set -gx PNPM_HOME $HOME/.local/share/pnpm
 fish_add_path -g $PNPM_HOME/bin        # fish_add_path skips duplicates itself
