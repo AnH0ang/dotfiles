@@ -1,0 +1,15 @@
+# GEMINI.md
+
+There are general instructions for agents when working on this machine:
+
+- When you finished implementing a feature, create a commit and then create a MR in gitlab. THIS ONLY APPLIES WHEN YOU ARE IN A WORKTREE FOLDER.
+
+- There is glab (gitlab cli) installed on this machine. Use it to work with gitlab.
+
+- There a some folders on this machine which might interest you:
+    - /home/user/Git/sand-odv/releng-shared/pipeline-components: Repositories which contain internal pipeline templates
+    - /home/user/Git/sand-odv/releng-shared/pipeline-components: Repositories which contain internal pipeline templates
+    - /home/user/Git/sand-odv/releng-shared/helm: Internal shared helm charts
+    - /home/user/Git/sand-odv/releng-shared/crossplane: Crossplane charts
+    - /home/user/Git/sand-odv/releng-shared/project-templates: Project templates following internal best practices
+    - /home/user/Git/sand-odv/github.com: This folder contains a some git repos which might be relevant for your work. (Like dagster, hacksoftware etc.)
