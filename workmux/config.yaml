@@ -1,1 +1,12 @@
 nerdfont: true
+
+panes:
+  - command: <agent>
+    focus: true
+  - split: vertical
+
+agent: ggemini
+
+post_create:
+  - mise install
+  - just install
