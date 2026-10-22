@@ -11,6 +11,7 @@ abbr kc kubectl
 abbr lg lazygit
 abbr tf terraform
 abbr j just
+abbr zz "zellij attach --create main"
 
 # git commands
 abbr ga git amend
