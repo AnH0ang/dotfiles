@@ -30,8 +30,6 @@
     "accessibility.underlineLinks": true,
     "chat.agent.enabled": true,
     "chat.editing.autoAcceptDelay": 0,
-    "chat.editing.confirmEditRequestRemoval": false,
-    "chat.editing.confirmEditRequestRetry": false,
     "debug.allowBreakpointsEverywhere": true,
     "debug.console.closeOnEnd": true,
     "debug.enableStatusBarColor": true,
@@ -172,11 +170,32 @@
     "search.smartCase": true,
     "security.promptForRemoteFileProtocolHandling": false,
     "security.workspace.trust.untrustedFiles": "open",
-    "terminal.integrated.defaultProfile.linux": "tmux",
+    "terminal.integrated.defaultProfile.linux": "zellij-main",
     // "terminal.integrated.confirmOnKill": "never",
     // "terminal.integrated.defaultProfile.osx": "fish",
     "terminal.integrated.enableMultiLinePasteWarning": "never",
     "terminal.integrated.fontLigatures.enabled": false,
+    "terminal.integrated.profiles.linux": {
+        "tmux-main": {
+            "args": [
+                "new-session",
+                "-A",
+                "-s",
+                "main"
+            ],
+            "icon": "terminal-tmux",
+            "path": "tmux"
+        },
+        "zellij-main": {
+            "args": [
+                "attach",
+                "--create",
+                "main"
+            ],
+            "icon": "terminal-tmux",
+            "path": "/home/user/.local/share/mise/installs/zellij/latest/zellij"
+        }
+    },
     // "terminal.integrated.fontSize": 12,
     // "terminal.integrated.persistentSessionScrollback": 10000,
     // "terminal.integrated.scrollback": 10000,
