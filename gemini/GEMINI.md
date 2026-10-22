@@ -4,7 +4,9 @@ There are general instructions for agents when working on this machine:
 
 - When you finished implementing a feature, create a commit and then create a MR in gitlab. THIS ONLY APPLIES WHEN YOU ARE IN A WORKTREE FOLDER.
 
-- There is glab (gitlab cli) installed on this machine. Use it to work with gitlab.
+- There is `glab` (gitlab cli) installed on this machine. Use it to work with gitlab.
+
+- Use `rg` (ripgrep) instead of `find` to search for values
 
 - There a some folders on this machine which might interest you:
     - /home/user/Git/sand-odv/releng-shared/pipeline-components: Repositories which contain internal pipeline templates
