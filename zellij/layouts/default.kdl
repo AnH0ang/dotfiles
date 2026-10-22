@@ -1,9 +1,46 @@
 layout {
-    pane
-    pane size=1 borderless=true {
-        plugin location="compact-bar"
+    default_tab_template {
+        children
+        pane size=1 borderless=true {
+            plugin location="https://github.com/dj95/zjstatus/releases/latest/download/zjstatus.wasm" {
+                format_left  "#[fg=7,bold]{mode} #[bg=default] {tabs}"
+                format_right "{swap_layout}"
+                format_space ""
+
+                // Mode indicator
+                mode_normal        "#[bg=2,fg=0,bold] NORMAL #[fg=2]"
+                mode_locked        "#[bg=1,fg=0,bold] LOCKED #[fg=1]"
+                mode_pane          "#[bg=5,fg=0,bold] PANE #[fg=5]"
+                mode_tab           "#[bg=5,fg=0,bold] TAB #[fg=5]"
+                mode_resize        "#[bg=3,fg=0,bold] RESIZE #[fg=3]"
+                mode_move          "#[bg=3,fg=0,bold] MOVE #[fg=3]"
+                mode_scroll        "#[bg=3,fg=0,bold] SCROLL #[fg=3]"
+                mode_search        "#[bg=3,fg=0,bold] SEARCH #[fg=3]"
+                mode_session       "#[bg=5,fg=0,bold] SESSION #[fg=5]"
+                mode_tmux          "#[bg=3,fg=0,bold] TMUX #[fg=3]"
+                mode_default_to_mode "normal"
+
+                // Tabs (powerline arrows like compact-bar)
+                // tab_normal              "#[bg=8,fg=0]#[bg=8,fg=7] {name} #[fg=8]"
+                // tab_normal_fullscreen   "#[bg=8,fg=0]#[bg=8,fg=7] {name} [] #[fg=8]"
+                // tab_normal_sync         "#[bg=8,fg=0]#[bg=8,fg=7] {name} <> #[fg=8]"
+                // tab_active              "#[bg=2,fg=0]#[bg=2,fg=0,bold] {name} #[fg=2]"
+                // tab_active_fullscreen   "#[bg=2,fg=0]#[bg=2,fg=0,bold] {name} [] #[fg=2]"
+                // tab_active_sync         "#[bg=2,fg=0]#[bg=2,fg=0,bold] {name} <> #[fg=2]"
+                // Tabs: [colored number][gray name]
+                tab_normal              "#[bg=4,fg=0]#[bg=4,fg=0,bold] {index} #[bg=8,fg=4]#[bg=8,fg=7] {name} #[fg=8]"
+                tab_normal_fullscreen   "#[bg=4,fg=0]#[bg=4,fg=0,bold] {index} #[bg=8,fg=4]#[bg=8,fg=7] {name} [] #[fg=8]"
+                tab_normal_sync         "#[bg=4,fg=0]#[bg=4,fg=0,bold] {index} #[bg=8,fg=4]#[bg=8,fg=7] {name} <> #[fg=8]"
+                tab_active              "#[bg=2,fg=0]#[bg=2,fg=0,bold] {index} #[bg=8,fg=2]#[bg=8,fg=15,bold] {name} #[fg=8]"
+                tab_active_fullscreen   "#[bg=2,fg=0]#[bg=2,fg=0,bold] {index} #[bg=8,fg=2]#[bg=8,fg=15,bold] {name} [] #[fg=8]"
+                tab_active_sync         "#[bg=2,fg=0]#[bg=2,fg=0,bold] {index} #[bg=8,fg=2]#[bg=8,fg=15,bold] {name} <> #[fg=8]"
+                tab_separator "#[bg=default] "
+
+
+                // Swap layout on the right, like compact-bar
+                swap_layout_format        "#[fg=7] {name} "
+                swap_layout_hide_if_empty "true"
+            }
+        }
     }
-    // pane size=1 borderless=true {
-    //     plugin location="status-bar"
-    // }
 }

@@ -1,7 +1,7 @@
 # ~/.config/fish/config.fish
 
 # gcp
-set -gx GOOGLE_CLOUD_PROJECT "p-2005471-ceu-ops-0001"
+set -gx GOOGLE_CLOUD_PROJECT "p-2005472-ceu-ops-0000"
 set -gx GOOGLE_CLOUD_LOCATION "europe-west3"
 
 # pnpm
