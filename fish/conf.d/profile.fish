@@ -1,5 +1,9 @@
 # ~/.config/fish/config.fish
 
+# gcp
+set -gx GOOGLE_CLOUD_PROJECT "p-2005471-ceu-ops-0001"
+set -gx GOOGLE_CLOUD_LOCATION "europe-west3"
+
 # pnpm
 set -gx PNPM_HOME $HOME/.local/share/pnpm
 fish_add_path -g $PNPM_HOME/bin        # fish_add_path skips duplicates itself

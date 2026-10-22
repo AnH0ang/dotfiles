@@ -7,3 +7,5 @@ ln -sf "${HOME}/.config/vscode/keybindings.jsonc" "${HOME}/.vscode-server/data/M
 # Gemini
 rm -f "${HOME}/.gemini/GEMINI.md"
 ln -sf "${HOME}/.config/gemini/GEMINI.md" "${HOME}/.gemini/GEMINI.md"
+rm -f "${HOME}/.gemini/settings.json"
+ln -sf "${HOME}/.config/gemini/settings.json" "${HOME}/.gemini/settings.json"

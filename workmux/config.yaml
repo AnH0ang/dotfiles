@@ -5,7 +5,7 @@ panes:
     focus: true
   - split: vertical
 
-agent: ggemini
+agent: gemini
 
 post_create:
   - mise install
