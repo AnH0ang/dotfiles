@@ -7,6 +7,7 @@ atuin = "latest"
 bat = "latest"
 crane = "latest"
 eza = "latest"
+fastfetch = "latest"
 fzf = "latest"
 gemini = { version = "latest", allow_builds = ["@github/keytar", "node-pty"] }
 glab = "latest"
