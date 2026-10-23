@@ -1,4 +1,4 @@
-function z-cd
+function zcd
     set path (zoxide query --interactive);
     if test -n "$path"
         cd $path;

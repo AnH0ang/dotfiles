@@ -30,9 +30,9 @@ if status is-interactive
     bind -M insert ctrl-p up-or-search
 
     # aliases
-    bind -M insert ctrl-l yazi-cd
-    bind -M insert ctrl-o z-cd
-    bind -M insert ctrl-g fzf-cd
+    bind -M insert ctrl-l ycd
+    bind -M insert ctrl-o zcd
+    bind -M insert ctrl-g fcd
     bind -M insert ctrl-e edit_command_buffer
 
     # Remove mode indicator

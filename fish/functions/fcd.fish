@@ -1,4 +1,4 @@
-function fzf-cd
+function fcd
     set fd_opts "--hidden --exclude .git"
     set preview_dir "eza --icons --group-directories-first {}"
     set preview_file "bat --plain --theme ansi --force-colorization {}"
