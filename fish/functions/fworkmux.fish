@@ -16,9 +16,9 @@ function fworkmux --description 'fzf picker for workmux worktrees'
         set -l out (workmux list --json | jq -r $jq_prog | fzf \
             --multi --delimiter \t --with-nth 4,5,6 \
             --layout reverse --height 80% --border --prompt 'workmux> ' \
-            --header 'enter: open   ctrl-o: cd   alt-e: VS Code   ctrl-x: remove' \
+            --header 'enter: open | ctrl-o: cd | ctrl-e: code | ctrl-x: rm' \
             --preview 'git -C {2} -c color.ui=always status -sb; echo; git -C {2} log --oneline --color=always -15' \
-            --expect ctrl-o,ctrl-x,alt-e)
+            --expect ctrl-o,ctrl-x,ctrl-e)
         or return 0
         test (count $out) -ge 2; or return 0
 
@@ -35,7 +35,7 @@ function fworkmux --description 'fzf picker for workmux worktrees'
                 cd $f[2]
                 return
 
-            case alt-e
+            case ctrl-e
                 if not command -q code
                     echo "fworkmux: 'code' not found in PATH" >&2
                     return 1
