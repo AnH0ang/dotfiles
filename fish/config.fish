@@ -34,6 +34,7 @@ if status is-interactive
     bind -M insert ctrl-o zcd
     bind -M insert ctrl-g fcd
     bind -M insert ctrl-e edit_command_buffer
+    bind -M insert ctrl-x fworkmux
 
     # Remove mode indicator
     function fish_mode_prompt

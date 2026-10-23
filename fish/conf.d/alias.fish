@@ -12,6 +12,7 @@ abbr lg lazygit
 abbr tf terraform
 abbr j just
 abbr zz "zellij attach --create main"
+abbr fx fworkmux
 
 # git commands
 abbr ga git amend
