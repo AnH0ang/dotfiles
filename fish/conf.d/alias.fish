@@ -6,6 +6,7 @@ abbr ..... "cd ../../../../"
 abbr ...... "cd ../../../../../"
 
 # shorten long commands
+abbr d dumpfiles
 abbr gg fgrep
 abbr kc kubectl
 abbr lg lazygit
