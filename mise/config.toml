@@ -9,7 +9,7 @@ crane = "latest"
 eza = "latest"
 fastfetch = "latest"
 fzf = "latest"
-gemini = { version = "latest", allow_builds = ["@github/keytar", "node-pty"] }
+gemini = { version = "0.61.0", allow_builds = ["@github/keytar", "node-pty"] }
 glab = "latest"
 k9s = "latest"
 neovim = "latest"

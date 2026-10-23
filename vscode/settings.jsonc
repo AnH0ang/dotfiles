@@ -170,7 +170,7 @@
     "search.smartCase": true,
     "security.promptForRemoteFileProtocolHandling": false,
     "security.workspace.trust.untrustedFiles": "open",
-    "terminal.integrated.defaultProfile.linux": "zellij-main",
+    "terminal.integrated.defaultProfile.linux": "fish",
     // "terminal.integrated.confirmOnKill": "never",
     // "terminal.integrated.defaultProfile.osx": "fish",
     "terminal.integrated.enableMultiLinePasteWarning": "never",

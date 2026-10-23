@@ -15,3 +15,4 @@ There are general instructions for agents when working on this machine:
     - /home/user/Git/sand-odv/releng-shared/crossplane: Crossplane charts
     - /home/user/Git/sand-odv/releng-shared/project-templates: Project templates following internal best practices
     - /home/user/Git/sand-odv/github.com: This folder contains a some git repos which might be relevant for your work. (Like dagster, hacksoftware etc.)
+    - /home/user/Git/sand-odv/releng-customers/: GitOps repos for other projects on the plattform
