@@ -8,6 +8,10 @@ There are general instructions for agents when working on this machine:
 
 - Use `rg` (ripgrep) instead of `find` to search for values
 
+- Use `eza` instead of `ls`
+
+- Use `eza --tree` instead of `tree`
+
 - The most important folder on this machine are
     - /home/user/Git/sand-odv/sand: Source of the sand monorepo monlith
     - /home/user/Git/sand-odv/sand-odv-gitops: GitOps repo of sand containing helm charts
