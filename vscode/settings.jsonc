@@ -54,7 +54,7 @@
     "editor.codeActionWidget.includeNearbyQuickFixes": true,
     "editor.cursorBlinking": "solid",
     "editor.folding": false,
-    "editor.fontFamily": "'SF Mono', 'CaskaydiaCove Nerd Font' , Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'Cascadia Code', 'CaskaydiaCove Nerd Font' , Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": false,
     // "editor.fontSize": 12,
     "editor.formatOnSave": false,

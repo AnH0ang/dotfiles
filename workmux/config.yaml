@@ -6,7 +6,3 @@ panes:
   - split: vertical
 
 agent: gemini
-
-post_create:
-  - mise install
-  - just install
