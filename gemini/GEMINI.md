@@ -7,10 +7,11 @@ There are general instructions for agents when working on this machine:
 - There is `glab` (gitlab cli) installed on this machine. Use it to work with gitlab.
 
 - Use `rg` (ripgrep) instead of `find` to search for values
-
 - Use `eza` instead of `ls`
-
 - Use `eza --tree` instead of `tree`
+- Use `fd` instead of `find`
+- Use `yq` instead of `jq`
+- Use `bat` instead of `cat`
 
 - The most important folder on this machine are
     - /home/user/Git/sand-odv/sand: Source of the sand monorepo monlith
@@ -24,3 +25,49 @@ There are general instructions for agents when working on this machine:
     - /home/user/Git/sand-odv/releng-shared/project-templates: Project templates following internal best practices
     - /home/user/Git/sand-odv/github.com: This folder contains a some git repos which might be relevant for your work. (Like dagster, hacksoftware etc.)
     - /home/user/Git/sand-odv/releng-customers/: GitOps repos for other projects on the plattform
+
+This are the repos that can be found for sand-odv. You may read them if they are helpful. This list might not be up to date:
+/home/user/Git/sand-odv/
+├── github.com
+│   ├── HackSoftware
+│   │   ├── Django-Styleguide  [git]
+│   │   └── Django-Styleguide-Example  [git]
+│   └── dagster-io
+│       └── dagster  [git]
+├── releng-customers
+│   ├── ir-pricer
+│   │   └── ir-pricer-gitops  [git]
+│   ├── lava-pricer
+│   │   └── lava-pricer-gitops  [git]
+│   └── pbp
+│       └── pbp-gitops  [git]
+├── releng-shared
+│   ├── crossplane
+│   │   ├── crossplane-claim-charts  [git]
+│   │   └── crossplane-umbrella-chart  [git]
+│   ├── helm
+│   │   └── common-chart  [git]
+│   ├── kargo
+│   │   └── kargo-promotion-tasks  [git]
+│   ├── pipeline-components
+│   │   ├── conjur  [git]
+│   │   ├── docker  [git]
+│   │   ├── helm  [git]
+│   │   ├── helpers  [git]
+│   │   ├── kargo  [git]
+│   │   ├── maven  [git]
+│   │   ├── npm  [git]
+│   │   ├── python  [git]
+│   │   ├── scanning  [git]
+│   │   ├── super-components
+│   │   │   ├── docker-pipeline  [git]
+│   │   │   └── helm-pipeline  [git]
+│   │   └── xray  [git]
+│   └── project-templates
+│       ├── angular-template  [git]
+│       ├── bundle-repo-template  [git]
+│       ├── gitops-repo-template  [git]
+│       ├── spring-boot-template  [git]
+│       └── uv-python-template  [git]
+├── sand  [git]
+└── sand-odv-gitops  [git]
