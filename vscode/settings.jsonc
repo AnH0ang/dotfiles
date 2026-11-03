@@ -27,6 +27,9 @@
     "[typescript]": {
         "editor.defaultFormatter": "oxc.oxc-vscode"
     },
+    "[yaml]": {
+        "editor.defaultFormatter": "oxc.oxc-vscode"
+    },
     "accessibility.underlineLinks": true,
     "chat.agent.enabled": true,
     "chat.editing.autoAcceptDelay": 0,
@@ -158,18 +161,16 @@
     "python.analysis.inlayHints.pytestParameters": true,
     "python.analysis.supportDocstringTemplate": true,
     "python.analysis.typeCheckingMode": "standard",
-    "python.languageServer": "Default",
+    "python.languageServer": "None",
     "python.pyrefly.diagnosticMode": "workspace",
     "python.terminal.activateEnvironment": false,
     "redhat.telemetry.enabled": false,
-    "remote.SSH.remotePlatform": {
-        "localhost": "linux"
-    },
     "search.quickOpen.includeHistory": false,
     "search.searchEditor.defaultNumberOfContextLines": null,
     "search.smartCase": true,
-    "security.promptForRemoteFileProtocolHandling": false,
-    "security.workspace.trust.untrustedFiles": "open",
+    "security.allowedUNCHosts": [
+        "dzag.vrnet"
+    ],
     "terminal.integrated.defaultProfile.linux": "fish",
     // "terminal.integrated.confirmOnKill": "never",
     // "terminal.integrated.defaultProfile.osx": "fish",
