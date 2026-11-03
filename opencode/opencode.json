@@ -1,0 +1,19 @@
+{
+    "$schema": "https://opencode.ai/config.json",
+    "plugin": [
+        "opencode-gemini-auth@latest"
+    ],
+    "model": "google/gemini-3.8-flash",
+    "provider": {
+        "google": {
+            "options": {
+                "projectId": "p-2005472-ceu-ops-0000"
+            },
+            "models": {
+                "gemini-3.8-flash": {
+                    "name": "Gemini 3.8 Flash"
+                }
+            }
+        }
+    }
+}
