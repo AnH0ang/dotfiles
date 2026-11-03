@@ -1,6 +1,10 @@
-node_modules
-package.json
-package-lock.json
-bun.lock
-service.json
+*
+# node_modules
+# package.json
+# package-lock.json
+# bun.lock
+# service.json
 !.gitignore
+!cli.json
+!opencode.json
+!AGENTS.md
