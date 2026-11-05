@@ -1,0 +1,82 @@
+# Uses terminal palette only: "default" = terminal fg/bg
+# ANSI 0-7:  black maroon green olive navy purple teal silver
+# ANSI 8-15: gray red lime yellow blue fuchsia aqua white
+k9s:
+  body:
+    fgColor: default
+    bgColor: default
+    logoColor: navy
+  prompt:
+    fgColor: default
+    bgColor: default
+    suggestColor: gray
+  info:
+    fgColor: purple
+    sectionColor: default
+  dialog:
+    fgColor: default
+    bgColor: default
+    buttonFgColor: default
+    buttonBgColor: silver
+    buttonFocusFgColor: white
+    buttonFocusBgColor: navy
+    labelFgColor: purple
+    fieldFgColor: default
+  frame:
+    border:
+      fgColor: gray
+      focusColor: navy
+    menu:
+      fgColor: default
+      keyColor: navy
+      numKeyColor: purple
+    crumbs:
+      fgColor: white
+      bgColor: teal
+      activeColor: navy
+    status:
+      newColor: navy
+      modifyColor: purple
+      addColor: green
+      pendingColor: olive
+      errorColor: maroon
+      highlightColor: teal
+      killColor: gray
+      completedColor: gray
+    title:
+      fgColor: default
+      bgColor: default
+      highlightColor: purple
+      counterColor: navy
+      filterColor: teal
+  views:
+    charts:
+      bgColor: default
+      defaultDialColors: [navy, maroon]
+      defaultChartColors: [navy, maroon]
+    table:
+      fgColor: default
+      bgColor: default
+      cursorFgColor: white
+      cursorBgColor: navy
+      markColor: purple
+      header:
+        fgColor: default
+        bgColor: default
+        sorterColor: teal
+    xray:
+      fgColor: default
+      bgColor: default
+      cursorColor: navy
+      graphicColor: teal
+      showIcons: false
+    yaml:
+      keyColor: navy
+      colonColor: gray
+      valueColor: default
+    logs:
+      fgColor: default
+      bgColor: default
+      indicator:
+        fgColor: default
+        bgColor: default

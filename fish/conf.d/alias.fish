@@ -14,6 +14,8 @@ abbr tf terraform
 abbr j just
 abbr zz "zellij attach --create main"
 abbr fx fworkmux
+abbr kns kubens
+abbr kcx kubectx
 
 # git commands
 abbr ga git amend

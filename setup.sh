@@ -10,6 +10,10 @@ ln -sf "${HOME}/.config/gemini/GEMINI.md" "${HOME}/.gemini/GEMINI.md"
 rm -f "${HOME}/.gemini/settings.json"
 ln -sf "${HOME}/.config/gemini/settings.json" "${HOME}/.gemini/settings.json"
 
+# Kubernetes
+rm -rf "${HOME}/.kube"
+ln -sf "${HOME}/.config/kube" "${HOME}/.kube"
+
 # Remove system uv
 rm -f ~/.local/bin/uv ~/.local/bin/uvx
 

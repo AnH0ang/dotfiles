@@ -133,3 +133,7 @@ All paths below are relative to `/home/user/Git/sand-odv/`.
   │       └── uv-python-template
   ├── sand
   └── sand-odv-gitops
+
+## Kubernets
+
+kubectl is configure to connect to `dcgvdshared01`, the cluster on which the development version of the sand app runs. There a are other apps on the cluster in different namespaces but the allows namespaces are `sand-*` which contains sand infra
