@@ -64,6 +64,7 @@ Consult these directories when relevant to the task:
 | `releng-shared/crossplane/` | Crossplane charts |
 | `releng-shared/kargo/` | Shared Kargo promotion tasks |
 | `releng-shared/project-templates/` | Project templates following internal best practices |
+| `pbp` | Core components of pbp plattform |
 | `github.com/` | Local copies of upstream repositories, including Dagster and HackSoftware examples |
 | `releng-customers/` | GitOps repositories for other projects on the platform |
 
@@ -77,49 +78,58 @@ The following inventory is a reference, not a guarantee of the current
 directory layout. Verify paths before using them.
 
 All paths below are relative to `/home/user/Git/sand-odv/`.
-Entries marked `[git]` are Git repositories.
 
-    .
-    ├── github.com
-    │   ├── HackSoftware
-    │   │   ├── Django-Styleguide [git]
-    │   │   └── Django-Styleguide-Example [git]
-    │   └── dagster-io
-    │       └── dagster [git]
-    ├── releng-customers
-    │   ├── ir-pricer
-    │   │   └── ir-pricer-gitops [git]
-    │   ├── lava-pricer
-    │   │   └── lava-pricer-gitops [git]
-    │   └── pbp
-    │       └── pbp-gitops [git]
-    ├── releng-shared
-    │   ├── crossplane
-    │   │   ├── crossplane-claim-charts [git]
-    │   │   └── crossplane-umbrella-chart [git]
-    │   ├── helm
-    │   │   └── common-chart [git]
-    │   ├── kargo
-    │   │   └── kargo-promotion-tasks [git]
-    │   ├── pipeline-components
-    │   │   ├── conjur [git]
-    │   │   ├── docker [git]
-    │   │   ├── helm [git]
-    │   │   ├── helpers [git]
-    │   │   ├── kargo [git]
-    │   │   ├── maven [git]
-    │   │   ├── npm [git]
-    │   │   ├── python [git]
-    │   │   ├── scanning [git]
-    │   │   ├── super-components
-    │   │   │   ├── docker-pipeline [git]
-    │   │   │   └── helm-pipeline [git]
-    │   │   └── xray [git]
-    │   └── project-templates
-    │       ├── angular-template [git]
-    │       ├── bundle-repo-template [git]
-    │       ├── gitops-repo-template [git]
-    │       ├── spring-boot-template [git]
-    │       └── uv-python-template [git]
-    ├── sand [git]
-    └── sand-odv-gitops [git]
+  .
+  ├── github.com
+  │   ├── dagster-io
+  │   │   └── dagster
+  │   └── HackSoftware
+  │       ├── Django-Styleguide
+  │       └── Django-Styleguide-Example
+  ├── pbp
+  │   ├── ci
+  │   │   └── pbp-pipeline
+  │   ├── gateway
+  │   │   └── pricing-gateway-helm
+  │   └── templates
+  │       ├── demo-pricer
+  │       └── python-pricer-template
+  ├── releng-customers
+  │   ├── ir-pricer
+  │   │   └── ir-pricer-gitops
+  │   ├── lava-pricer
+  │   │   └── lava-pricer-gitops
+  │   └── pbp
+  │       └── pbp-gitops
+  ├── releng-shared
+  │   ├── crossplane
+  │   │   ├── crossplane-claim-charts
+  │   │   └── crossplane-umbrella-chart
+  │   ├── helm
+  │   │   ├── common-chart
+  │   │   └── releng-messaging-helm
+  │   ├── kargo
+  │   │   └── kargo-promotion-tasks
+  │   ├── pipeline-components
+  │   │   ├── conjur
+  │   │   ├── docker
+  │   │   ├── helm
+  │   │   ├── helpers
+  │   │   ├── kargo
+  │   │   ├── maven
+  │   │   ├── npm
+  │   │   ├── python
+  │   │   ├── scanning
+  │   │   ├── super-components
+  │   │   │   ├── deployment-extension
+  │   │   │   ├── docker-pipeline
+  │   │   │   └── helm-pipeline
+  │   │   └── xray
+  │   └── project-templates
+  │       ├── angular-template
+  │       ├── bundle-repo-template
+  │       ├── gitops-repo-template
+  │       ├── spring-boot-template
+  │       └── uv-python-template
+  ├── sand
+  └── sand-odv-gitops
