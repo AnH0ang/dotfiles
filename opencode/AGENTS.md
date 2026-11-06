@@ -72,6 +72,10 @@ You may read these repositories for examples, conventions, and implementation
 details. Keep modifications within the scope of the task; do not change
 supporting repositories merely because they are available.
 
+## Worktree repositories
+
+Next to the repositories may be `*__worktrees/` repositories which contain different development versions of the repository code (for example `sand/` may have `sand__worktrees/<feature_name>` containing feature code).
+
 ## Repository inventory
 
 The following inventory is a reference, not a guarantee of the current
