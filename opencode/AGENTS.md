@@ -83,61 +83,76 @@ directory layout. Verify paths before using them.
 
 All paths below are relative to `/home/user/Git/sand-odv/`.
 
-  .
-  ├── github.com
-  │   ├── dagster-io
-  │   │   └── dagster
-  │   └── HackSoftware
-  │       ├── Django-Styleguide
-  │       └── Django-Styleguide-Example
-  ├── pbp
-  │   ├── ci
-  │   │   └── pbp-pipeline
-  │   ├── gateway
-  │   │   └── pricing-gateway-helm
-  │   └── templates
-  │       ├── demo-pricer
-  │       └── python-pricer-template
-  ├── releng-customers
-  │   ├── ir-pricer
-  │   │   └── ir-pricer-gitops
-  │   ├── lava-pricer
-  │   │   └── lava-pricer-gitops
-  │   └── pbp
-  │       └── pbp-gitops
-  ├── releng-shared
-  │   ├── crossplane
-  │   │   ├── crossplane-claim-charts
-  │   │   └── crossplane-umbrella-chart
-  │   ├── helm
-  │   │   ├── common-chart
-  │   │   └── releng-messaging-helm
-  │   ├── kargo
-  │   │   └── kargo-promotion-tasks
-  │   ├── pipeline-components
-  │   │   ├── conjur
-  │   │   ├── docker
-  │   │   ├── helm
-  │   │   ├── helpers
-  │   │   ├── kargo
-  │   │   ├── maven
-  │   │   ├── npm
-  │   │   ├── python
-  │   │   ├── scanning
-  │   │   ├── super-components
-  │   │   │   ├── deployment-extension
-  │   │   │   ├── docker-pipeline
-  │   │   │   └── helm-pipeline
-  │   │   └── xray
-  │   └── project-templates
-  │       ├── angular-template
-  │       ├── bundle-repo-template
-  │       ├── gitops-repo-template
-  │       ├── spring-boot-template
-  │       └── uv-python-template
-  ├── sand
-  └── sand-odv-gitops
+
+```
+.
+├── github.com
+│   ├── dagster-io
+│   │   └── dagster
+│   └── HackSoftware
+│       ├── Django-Styleguide
+│       └── Django-Styleguide-Example
+├── ir-pricer
+│   ├── financial-engineering-tool
+│   │   └── ares-ratespricer
+│   ├── services
+│   │   └── ratespricer-service
+│   └── ui
+│       └── ir-pricer-sales-app
+├── pbp
+│   ├── ci
+│   │   └── pbp-pipeline
+│   ├── gateway
+│   │   ├── pricing-gateway
+│   │   └── pricing-gateway-helm
+│   └── templates
+│       ├── demo-pricer
+│       └── python-pricer-template
+├── releng-customers
+│   ├── ir-pricer
+│   │   └── ir-pricer-gitops
+│   ├── lava-pricer
+│   │   └── lava-pricer-gitops
+│   └── pbp
+│       └── pbp-gitops
+├── releng-shared
+│   ├── crossplane
+│   │   ├── crossplane-claim-charts
+│   │   └── crossplane-umbrella-chart
+│   ├── helm
+│   │   ├── common-chart
+│   │   └── releng-messaging-helm
+│   ├── kargo
+│   │   └── kargo-promotion-tasks
+│   ├── pipeline-components
+│   │   ├── conjur
+│   │   ├── docker
+│   │   ├── helm
+│   │   ├── helpers
+│   │   ├── kargo
+│   │   ├── maven
+│   │   ├── npm
+│   │   ├── python
+│   │   ├── scanning
+│   │   ├── super-components
+│   │   │   ├── deployment-extension
+│   │   │   ├── docker-pipeline
+│   │   │   └── helm-pipeline
+│   │   └── xray
+│   └── project-templates
+│       ├── angular-template
+│       ├── bundle-repo-template
+│       ├── gitops-repo-template
+│       ├── spring-boot-template
+│       └── uv-python-template
+├── sand
+└── sand-odv-gitops
+```
 
 ## Kubernets
 
 kubectl is configure to connect to `dcgvdshared01`, the cluster on which the development version of the sand app runs. There a are other apps on the cluster in different namespaces but the allows namespaces are `sand-*` which contains sand infra
+
+## Google Cloud
+
+All cloud infrastrucure is hosted on google cloud. For develoment the kubernetes cluster is in project `d-2006243-relengcust-ops-0000`. All sand infrastrture (storage, postgres etc) is in `d-2006243-relengcust-ops-0440`. If the cli is not authenticated ask the use to log in.

@@ -3,9 +3,12 @@ yes = true
 
 [tools]
 "aqua:fish-shell/fish-shell" = "latest"
+"npm:oxfmt" = "latest"
+"npm:oxlint" = "latest"
 atuin = "latest"
 bat = "latest"
 crane = "latest"
+dust = "latest"
 eza = "latest"
 fastfetch = "latest"
 fd = "latest"

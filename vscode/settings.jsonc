@@ -161,7 +161,7 @@
     "python.analysis.inlayHints.pytestParameters": true,
     "python.analysis.supportDocstringTemplate": true,
     "python.analysis.typeCheckingMode": "standard",
-    "python.languageServer": "None",
+    "python.languageServer": "Default",
     "python.pyrefly.diagnosticMode": "workspace",
     "python.terminal.activateEnvironment": false,
     "redhat.telemetry.enabled": false,
