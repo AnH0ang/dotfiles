@@ -1,12 +1,22 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": [],
+    "actions": [
+        {
+            "command": {
+                "action": "sendInput",
+                "input": "\u001b\r"
+            },
+            "id": "User.sendInput.ShiftEnter"
+        }
+    ],
     "copyFormatting": "none",
+    "font": {
+        "face": "CaskaydiaCove Nerd Font Mono"
+    },
     "copyOnSelect": false,
     "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-    "keybindings": 
-    [
+    "keybindings": [
         {
             "id": "Terminal.CopyToClipboard",
             "keys": "ctrl+c"
@@ -18,22 +28,22 @@
         {
             "id": "Terminal.DuplicatePaneAuto",
             "keys": "alt+shift+d"
+        },
+        {
+            "id": "User.sendInput.ShiftEnter",
+            "keys": "shift+enter"
         }
     ],
-    "newTabMenu": 
-    [
+    "newTabMenu": [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles": 
-    {
-        "defaults": 
-        {
+    "profiles": {
+        "defaults": {
             "colorScheme": "One Half Dark"
         },
-        "list": 
-        [
+        "list": [
             {
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
@@ -53,7 +63,11 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
+                "colorScheme": "One Half Light",
                 "commandline": "powershell.exe -NoExit -Command ws",
+                "font": {
+                    "face": "CaskaydiaCove Nerd Font Mono"
+                },
                 "guid": "{6f1c2a8e-3b4d-4e5f-9a7b-1c2d3e4f5a6b}",
                 "hidden": false,
                 "icon": "\u2601\ufe0f",
