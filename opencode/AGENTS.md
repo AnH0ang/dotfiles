@@ -96,6 +96,8 @@ All paths below are relative to `/home/user/Git/sand-odv/`.
 │   ├── financial-engineering-tool
 │   │   └── ares-ratespricer
 │   ├── services
+│   │   ├── ir-calculation-service
+│   │   ├── issuer-service
 │   │   └── ratespricer-service
 │   └── ui
 │       └── ir-pricer-sales-app
@@ -105,6 +107,13 @@ All paths below are relative to `/home/user/Git/sand-odv/`.
 │   ├── gateway
 │   │   ├── pricing-gateway
 │   │   └── pricing-gateway-helm
+│   ├── marketdata
+│   │   ├── md-bloomberg
+│   │   ├── md-commons
+│   │   ├── md-config
+│   │   ├── md-gateway
+│   │   └── md-python-sdk
+│   ├── rfq-gateway
 │   └── templates
 │       ├── demo-pricer
 │       └── python-pricer-template
@@ -118,12 +127,17 @@ All paths below are relative to `/home/user/Git/sand-odv/`.
 ├── releng-shared
 │   ├── crossplane
 │   │   ├── crossplane-claim-charts
-│   │   └── crossplane-umbrella-chart
+│   │   ├── crossplane-configuration-packages
+│   │   ├── crossplane-umbrella-chart
+│   │   └── iam-webhook-chart
 │   ├── helm
 │   │   ├── common-chart
 │   │   └── releng-messaging-helm
 │   ├── kargo
 │   │   └── kargo-promotion-tasks
+│   ├── kubernetes-bundle
+│   │   ├── kubernetes-bundle
+│   │   └── kubernetes-bundle-kargo
 │   ├── pipeline-components
 │   │   ├── conjur
 │   │   ├── docker
@@ -133,6 +147,7 @@ All paths below are relative to `/home/user/Git/sand-odv/`.
 │   │   ├── maven
 │   │   ├── npm
 │   │   ├── python
+│   │   ├── renovate
 │   │   ├── scanning
 │   │   ├── super-components
 │   │   │   ├── deployment-extension
@@ -147,6 +162,7 @@ All paths below are relative to `/home/user/Git/sand-odv/`.
 │       └── uv-python-template
 ├── sand
 └── sand-odv-gitops
+
 ```
 
 ## Kubernets
