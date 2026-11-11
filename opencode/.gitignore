@@ -1,11 +1,7 @@
-# node_modules
-# package.json
-# package-lock.json
-# bun.lock
-# service.json
-# .workmux-status.json
-*
-!.gitignore
-!cli.json
-!opencode.json
-!AGENTS.md
+node_modules/
+package.json
+package-lock.json
+plugins/
+bun.lock
+service.json
+.workmux-status.json

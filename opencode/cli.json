@@ -10,5 +10,5 @@
     "paste": "compact",
     "image_preview": true
   },
-  "plugins": ["./herdr-opencode"]
+  "plugins": []
 }
