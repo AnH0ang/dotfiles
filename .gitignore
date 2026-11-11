@@ -1,3 +1,4 @@
+
 .DS_Store
 
 # docker
@@ -75,3 +76,5 @@ karabiner/*
 !karabiner/karabiner.json
 
 ngrok/*
+
+go/

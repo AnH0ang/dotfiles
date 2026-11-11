@@ -83,7 +83,6 @@ directory layout. Verify paths before using them.
 
 All paths below are relative to `/home/user/Git/sand-odv/`.
 
-
 ```
 .
 ├── github.com
@@ -165,7 +164,77 @@ All paths below are relative to `/home/user/Git/sand-odv/`.
 
 ```
 
-## Kubernets
+## Repository Groups and Architecture
+
+The platform is organized into distinct repository groups that separate application development, shared platform services, and declarative deployment lifecycles.
+
+### What the Repositories Do
+
+- **Sand (`sand/`)**:
+  The primary business application repository. Contains the full Sand application: the Django REST Framework backend, the Angular single-page frontend, Dagster data pipelines for batch processing financial assets, and end-to-end tests. Sand relies on PostgreSQL for transactional data and Cloud Storage for asset dumps.
+
+- **Sand GitOps (`sand-odv-gitops/`)**:
+  The GitOps delivery repository for Sand. Manages declarative deployment configurations across all stages (`dev`, `test`, `int`, `prod`) using Argo CD and Kargo. It provisions the frontend and backend workloads, manages cloud infrastructure claims (Cloud SQL, GCS buckets) via Crossplane, sets up external secrets, and configures ingress routing. It also configures the Sand frontend to route all backend API communication securely through the Pricing Gateway.
+
+- **Pricing Platform & Gateway (`pbp/`)**:
+  The core pricing and market data platform shared across pricing applications:
+  - **Pricing Gateway**: The central security gateway and reverse proxy (Spring Cloud Gateway). It is the single entry point for frontend API traffic, responsible for validating Microsoft Entra ID (Azure AD) tokens, preventing header spoofing by injecting verified user/role claims, and enforcing role-based routing before requests reach downstream services.
+  - **Market Data Services**: Ingests live financial data (e.g. from Bloomberg), distributes real-time market data snapshots, and provides APIs/SDKs consumed by pricing engines and analytical workloads.
+  - **RFQ Gateway & Pricer Templates**: Handles quote negotiation workflows and provides reusable templates for implementing new pricing services.
+
+- **PBP GitOps (`releng-customers/pbp/pbp-gitops`)**:
+  The GitOps repository for the Pricing Platform and shared infrastructure. Deploys core PBP applications (the Pricing Gateway, market data services, data importers, and GraphQL APIs) and manages shared cluster infrastructure in the `pbp-infra` namespace, including the central RabbitMQ messaging cluster and Istio service mesh waypoints.
+
+- **Pricers & Tenant Services (`ir-pricer/`, `releng-customers/*`)**:
+  Domain-specific pricing suites, such as Interest Rate Pricer (`ir-pricer`) and LAVA Pricer. These comprise financial calculation engines, dedicated frontend apps, and tenant GitOps repos that manage their deployment into dedicated namespaces.
+
+- **Platform Engineering Foundations (`releng-shared/`)**:
+  Provides common foundation components used by all teams: the standardized RelEng Helm chart (Common Chart), Crossplane infrastructure composition packages, Kargo promotion workflows, and shared GitLab CI pipeline components (Docker, Helm, Python, security scanning).
+
+---
+
+### High-Level Interconnection
+
+```
+[ Web Browsers / SPAs ]
+(Sand Frontend, Pricer UIs)
+           │
+           │ 1. HTTPS + Entra ID JWT
+           ▼
+┌────────────────────────────────────────────────────────┐
+│                    Pricing Gateway                     │
+│  - Validates Entra ID JWT tokens                       │
+│  - Strips untrusted headers & injects verified claims  │
+│  - Enforces role-based route access                    │
+└──────┬──────────────────┬──────────────────┬───────────┘
+       │                  │                  │
+       │ 2. Proxied API   │ 2. Proxied API   │ 2. Proxied API
+       ▼                  ▼                  ▼
+┌──────────────┐   ┌──────────────┐   ┌──────────────┐
+│ Sand Backend │   │ Market Data  │   │ Rate Pricers │
+│ & Pipelines  │   │  (PBP Core)  │   │ (IR / LAVA)  │
+└──────┬───────┘   └──────┬───────┘   └──────┬───────┘
+       │                  │                  │
+       │                  │ 3. Market Events │
+       │                  └────────┐         │
+       │                           ▼         ▼
+       │                    ┌──────────────────────┐
+       └───────────────────►│ RabbitMQ (pbp-infra) │
+         Background /       │ Shared Event & Quote │
+         Data Ingestion     │      Messaging       │
+                            └──────────────────────┘
+```
+
+1. **Central Ingress & Authentication**:
+   Frontend applications (such as the Sand Angular UI and pricer sales apps) authenticate users against Microsoft Entra ID. Instead of communicating directly with their backends, external API requests route through the **Pricing Gateway**. The gateway validates identity, strips forged headers, injects trusted user and role headers, and forwards requests to the appropriate backend service (`sand-odv-backend`, market data, or pricer microservices) across namespace boundaries.
+
+2. **Market Data & Event Bus**:
+   Market data ingestion components feed real-time pricing and reference data into the central **RabbitMQ** messaging cluster hosted in `pbp-infra`. Downstream calculation engines (such as IR Pricer) and Sand analytical pipelines subscribe to these queues or call market data gateway APIs to drive calculations and bond valuations.
+
+3. **Declarative GitOps Delivery**:
+   Application repositories (`sand`, `pbp`, `ir-pricer`) only contain source code and CI pipelines that build container images. The GitOps repositories (`sand-odv-gitops`, `pbp-gitops`) own the declarative environment definitions. **Kargo** monitors image registries and promotes changes across stages (`dev` -> `test` -> `int` -> `prod`), while **Argo CD** continuously reconciles Kubernetes cluster state against the GitOps definitions.
+
+## Kubernetes
 
 kubectl is configure to connect to `dcgvdshared01`, the cluster on which the development version of the sand app runs. There a are other apps on the cluster in different namespaces but the allows namespaces are `sand-*` which contains sand infra
 
