@@ -172,3 +172,10 @@ enter_accept = true
 #
 # Set commands that should be totally stripped and ignored from stats
 #common_prefix = ["sudo"]
+
+[daemon]
+enabled = true
+autostart = true
+
+[threads]
+capture = true

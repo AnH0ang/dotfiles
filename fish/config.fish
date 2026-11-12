@@ -35,6 +35,7 @@ if status is-interactive
     bind -M insert ctrl-g fcd
     bind -M insert ctrl-e edit_command_buffer
     bind -M insert ctrl-x fworkmux
+    bind -M insert ctrl-] _atuin_ai_resume
 
     # Remove mode indicator
     function fish_mode_prompt
